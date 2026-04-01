@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>EZ IT Remedy | Local IT Specialist – Repairs & Data Recovery</title>
+  <!-- Google Fonts & simple CSS reset -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0a0c10;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* buttons & utility */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #1e3a5f;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .btn:hover {
+      background: #0f2c48;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -8px rgba(0,0,0,0.15);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #1e3a5f;
+      color: #1e3a5f;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a5f;
+      color: white;
+    }
+
+    /* header / nav */
+    .navbar {
+      background: white;
+      padding: 18px 0;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(2px);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .nav-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #1e3a5f, #2b5a7a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .logo p {
+      font-size: 0.85rem;
+      color: #2c3e50;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1e293b;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1e3a5f;
+    }
+
+    /* hero */
+    .hero {
+      padding: 60px 0 40px 0;
+      background: linear-gradient(120deg, #ffffff 0%, #f1f5f9 100%);
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .hero-badge {
+      background: #e2f0fa;
+      color: #1e4a76;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #334155;
+      margin-bottom: 32px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 20px;
+    }
+
+    .stat {
+      font-weight: 700;
+    }
+
+    .stat span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #1e3a5f;
+      display: block;
+    }
+
+    /* trust bar */
+    .trust-bar {
+      background: white;
+      padding: 20px 0;
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .trust-flex {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+    }
+
+    /* services */
+    .services {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #475569;
+      max-width: 650px;
+      margin: 0 auto 48px auto;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border: 1px solid #eef2ff;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+      border-color: #cbdff2;
+    }
+
+    .service-icon {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1e3a5f;
+      margin: 12px 0 8px;
+    }
+
+    .price small {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #4a5b6e;
+    }
+
+    .service-feature {
+      font-size: 0.85rem;
+      background: #f1f5f9;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 30px;
+      margin: 12px 0 16px;
+    }
+
+    /* guarantee banner */
+    .guarantee {
+      background: #eef4ff;
+      padding: 48px 0;
+      text-align: center;
+      border-radius: 48px;
+      margin: 20px 0 40px;
+    }
+
+    /* contact / hours */
+    .contact-section {
+      padding: 60px 0;
+      background: white;
+      border-radius: 48px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: #f9fcff;
+      padding: 28px;
+      border-radius: 32px;
+      border: 1px solid #e2edf7;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #cfdfed;
+      border-radius: 28px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: 0.2s;
+      background: white;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #1e3a5f;
+      box-shadow: 0 0 0 3px rgba(30,58,95,0.2);
+    }
+
+    .hours-card {
+      background: #f1f6fe;
+      padding: 20px 24px;
+      border-radius: 28px;
+      margin-top: 24px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 18px 0;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e6;
+      padding: 32px 0;
+      text-align: center;
+      margin-top: 40px;
+      border-radius: 32px 32px 0 0;
+    }
+
+    @media (max-width: 780px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .nav-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-grid {
+        flex-direction: column;
+      }
+      .btn {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-flex">
+    <div class="logo">
+      <h1>⚡ EZ IT Remedy</h1>
+      <p>Your Local IT Specialist</p>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-outline btn" style="padding: 8px 20px;">Get help</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero section -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">⭐ Over 7 years serving your community</div>
+      <h1>Fast, friendly IT support & data recovery</h1>
+      <p>Hardware failure? Lost files? Virus troubles? We fix it fast — on-site, remote, or pick-up. No recovery, no pay for data diagnostics.</p>
+      <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+        <a href="#contact" class="btn">📞 Request callback</a>
+        <a href="#services" class="btn-outline btn">🔧 Explore services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>500+</span> devices repaired</div>
+        <div class="stat"><span>98%</span> data recovery success</div>
+      </div>
+    </div>
+    <div style="flex:0.8; text-align:center;">
+      <div style="background: #e9f2fa; border-radius: 48px; padding: 20px;">
+        <span style="font-size: 7rem;">🖥️🔧</span>
+        <p style="font-weight:600; margin-top: 12px;">Local & reliable — we show up when we say</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust bar: key promises -->
+<div class="trust-bar">
+  <div class="container trust-flex">
+    <div class="trust-item">📍 Based in your area</div>
+    <div class="trust-item">✅ 7+ Years experience</div>
+    <div class="trust-item">💰 No Recovery, No Pay*</div>
+    <div class="trust-item">🚚 On-site & remote</div>
+  </div>
+</div>
+
+<!-- Services section -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Our IT remedies 🛠️</h2>
+    <p class="section-sub">On-site support, remote assistance, or convenient pick-up & drop-off — we make tech easy.</p>
+    <div class="service-grid">
+      
+      <div class="service-card">
+        <div class="service-icon">💾📂</div>
+        <h3>Data Recovery</h3>
+        <p>Lost files? We recover from failed drives, corrupted systems, accidental deletions, and SSDs.</p>
+        <div class="price">From R99 <small>+ diagnostic</small></div>
+        <div class="service-feature">✅ No recovery = No pay</div>
+        <a href="#contact" style="font-weight:600; color:#1e3a5f;">Request quote →</a>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🔧💻</div>
+        <h3>Computer Repair</h3>
+        <p>Hardware failures, virus removal, motherboard issues, system optimization & full diagnostics.</p>
+        <div class="price">From R79 <small>diagnostic fee</small></div>
+        <div class="service-feature">⚡ Same-day assessment</div>
+        <a href="#contact" style="font-weight:600; color:#1e3a5f;">Book repair →</a>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🖱️🌐</div>
+        <h3>Remote Support</h3>
+        <p>Fast remote assistance for software issues, driver problems, email setup & tech guidance.</p>
+        <div class="price">From R49 <small>per session</small></div>
+        <div class="service-feature">📡 Screen sharing in minutes</div>
+        <a href="#contact" style="font-weight:600; color:#1e3a5f;">Connect now →</a>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🚐🏠</div>
+        <h3>On-Site Service</h3>
+        <p>We come to your home or office! Network setup, printer installation, and full repairs on location.</p>
+        <div class="price">From R89 <small>travel included*</small></div>
+        <div class="service-feature">📍 Same-day available</div>
+        <a href="#contact" style="font-weight:600; color:#1e3a5f;">Schedule visit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee banner -->
+<div class="container">
+  <div class="guarantee">
+    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">💎 No Recovery, No Pay guarantee</h3>
+    <p style="max-width: 600px; margin: 0 auto;">If we cannot recover your valuable data, you don’t pay a cent for the diagnostic. Trusted by locals since 2018.</p>
+  </div>
+</div>
+
+<!-- Contact + hours + form section -->
+<section id="contact" class="contact-section">
+  <div class="container contact-flex">
+    <div class="contact-info">
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">📞 Get in touch</h2>
+      <p style="margin-bottom: 20px;">Call, email or visit — we’re here to get your tech back on track.</p>
+      <div class="contact-detail">
+        <span style="font-size: 1.6rem;">📱</span> <span><strong>Phone / WhatsApp</strong><br>+27 82 123 4567</span>
+      </div>
+      <div class="contact-detail">
+        <span style="font-size: 1.6rem;">✉️</span> <span><strong>Email</strong><br>help@ezitremedy.co.za</span>
+      </div>
+      <div class="hours-card">
+        <h3>🕒 Opening hours</h3>
+        <p><strong>Opens 5:30 PM Thu</strong><br>Mon–Fri: 9:00 AM – 6:30 PM<br>Sat: 9:00 AM – 2:00 PM<br>Sun: Closed (emergency on-call)</p>
+        <small style="color:#2c4c6e;">Call for current hours & same-day slots</small>
+      </div>
+      <div style="margin-top: 24px;">
+        <p><strong>📍 Service Area:</strong> Cape Town metro & surrounds — on-site & remote across South Africa.</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3 style="font-size: 1.7rem; margin-bottom: 16px;">Request a callback</h3>
+      <p style="margin-bottom: 20px;">Tell us about your issue, and we’ll reply within 2 hours.</p>
+      <form id="callbackForm" action="#" method="post">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" placeholder="Phone number" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email address">
+        </div>
+        <div class="form-group">
+          <textarea rows="3" id="message" placeholder="Describe the issue (e.g., laptop won't boot, data recovery, virus)"></textarea>
+        </div>
+        <button type="submit" class="btn" style="width:100%; justify-content:center;">📨 Send message</button>
+        <p style="font-size:0.75rem; margin-top: 14px; text-align:center;">We respect your privacy — no spam, ever.</p>
+      </form>
+      <div id="formFeedback" style="margin-top: 16px; text-align:center; font-weight:500;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p><strong>EZ IT Remedy</strong> – Local IT Specialists | Data Recovery & Computer Repair</p>
+    <p style="margin-top: 10px; font-size: 0.85rem;">📍 Based in Cape Town | On-site & remote support for homes and small businesses</p>
+    <p style="margin-top: 18px; font-size: 0.75rem;">© 2025 EZ IT Remedy — No Recovery, No Pay for data diagnostics. Trusted reliability.</p>
+    <p style="margin-top: 8px;">Made with ❤️ in South Africa</p>
+  </div>
+</footer>
+
+<!-- Simple interactive form handling -->
+<script>
+  (function() {
+    const form = document.getElementById('callbackForm');
+    const feedbackDiv = document.getElementById('formFeedback');
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name')?.value.trim() || '';
+        const phone = document.getElementById('phone')?.value.trim() || '';
+        const email = document.getElementById('email')?.value.trim() || '';
+        const message = document.getElementById('message')?.value.trim() || '';
+
+        if (!name || !phone) {
+          feedbackDiv.innerHTML = '<span style="color:#b91c1c;">❌ Please enter your name and phone number.</span>';
+          return;
+        }
+
+        // simulate send (for static demo, just show success)
+        feedbackDiv.innerHTML = '<span style="color:#166534;">✅ Thanks ' + name + '! We\'ll contact you within 2 hours. (demo message)</span>';
+        form.reset();
+        setTimeout(() => {
+          feedbackDiv.innerHTML = '';
+        }, 5000);
+        console.log(`Callback request: ${name}, ${phone}, ${email}, issue: ${message}`);
+      });
+    }
+
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || href === "") return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
