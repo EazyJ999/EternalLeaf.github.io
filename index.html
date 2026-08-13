@@ -12,12 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <!-- QRCode.js, html2canvas, jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <style>
         /* ─── Reset & Base ─── */
@@ -78,24 +75,12 @@
         }
 
         /* ─── Typography ─── */
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-script {
-            font-family: 'Mrs Saint Delafield', cursive;
-        }
-        .font-quicksand {
-            font-family: 'Quicksand', sans-serif;
-        }
-        .font-inter {
-            font-family: 'Inter', sans-serif;
-        }
-        .font-lora {
-            font-family: 'Lora', serif;
-        }
-        .font-montserrat {
-            font-family: 'Montserrat', sans-serif;
-        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-script { font-family: 'Mrs Saint Delafield', cursive; }
+        .font-quicksand { font-family: 'Quicksand', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-lora { font-family: 'Lora', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
 
         /* ─── Buttons ─── */
         .btn {
@@ -128,12 +113,8 @@
             border-color: var(--primary);
             color: #fff;
         }
-        .btn-primary i {
-            color: #fff;
-        }
         .btn-primary:hover {
             background: #0f1f1e;
-            border-color: #0f1f1e;
         }
 
         .btn-secondary {
@@ -143,7 +124,6 @@
         }
         .btn-secondary:hover {
             background: var(--accent-dark);
-            border-color: var(--accent-dark);
         }
 
         .btn-outline {
@@ -161,7 +141,6 @@
         }
         .btn-success:hover {
             background: #2f5547;
-            border-color: #2f5547;
         }
 
         .btn-gold {
@@ -171,7 +150,6 @@
         }
         .btn-gold:hover {
             background: #b8956a;
-            border-color: #b8956a;
         }
 
         .btn-sm {
@@ -228,7 +206,6 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--text);
-            letter-spacing: -0.5px;
         }
 
         .logo i {
@@ -242,7 +219,6 @@
             font-size: 0.7rem;
             color: var(--text-light);
             letter-spacing: 0.5px;
-            margin-left: 0.2rem;
             text-transform: uppercase;
         }
 
@@ -253,7 +229,6 @@
         }
 
         .header-nav a {
-            font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-light);
@@ -272,10 +247,6 @@
         .header-nav a.active {
             color: var(--text);
             background: #e8dfd8;
-        }
-
-        .header-nav a i {
-            margin-right: 0.3rem;
         }
 
         /* ─── Main Tabs ─── */
@@ -370,10 +341,6 @@
             }
         }
 
-        .controls-panel::-webkit-scrollbar {
-            width: 4px;
-        }
-
         .controls-panel h3 {
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -425,23 +392,11 @@
             resize: vertical;
         }
 
-        /* Template chips – expanded grid */
+        /* ─── Template chips & colors ─── */
         .template-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 0.4rem;
-        }
-
-        @media (max-width: 768px) {
-            .template-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .template-grid {
-                grid-template-columns: 1fr 1fr;
-            }
         }
 
         .template-chip {
@@ -457,13 +412,6 @@
             color: var(--primary-light);
         }
 
-        .template-chip i {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 0.1rem;
-            color: var(--accent-dark);
-        }
-
         .template-chip.active {
             border-color: var(--primary);
             background: #fff;
@@ -474,7 +422,6 @@
             background: #e8ddd4;
         }
 
-        /* Color swatches – expanded */
         .color-row {
             display: flex;
             gap: 0.4rem;
@@ -488,7 +435,6 @@
             border: 2px solid var(--border);
             cursor: pointer;
             transition: var(--transition);
-            flex-shrink: 0;
         }
 
         .color-swatch.active {
@@ -501,7 +447,7 @@
             transform: scale(1.08);
         }
 
-        /* Font selector – expanded */
+        /* ─── Font selector ─── */
         .font-options {
             display: flex;
             gap: 0.3rem;
@@ -525,11 +471,7 @@
             color: #fff;
         }
 
-        .font-chip:hover {
-            border-color: var(--accent-dark);
-        }
-
-        /* Upload zone */
+        /* ─── Upload zone ─── */
         .upload-zone {
             border: 2px dashed var(--border);
             border-radius: var(--radius-sm);
@@ -547,13 +489,89 @@
             border-color: var(--accent);
         }
 
-        .upload-zone i {
-            font-size: 1.1rem;
-            margin-right: 0.3rem;
-        }
-
         .upload-zone input {
             display: none;
+        }
+
+        /* ─── Video Player Preview ─── */
+        .media-preview {
+            width: 100%;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            margin-top: 0.5rem;
+            background: #f3ede8;
+            padding: 0.5rem;
+        }
+
+        .media-preview video,
+        .media-preview audio {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* ─── Timeline ─── */
+        .timeline-container {
+            background: #f9f6f2;
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin: 0.8rem 0;
+        }
+
+        .timeline-event {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background: #fff;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+
+        .timeline-event.remove-hover:hover {
+            background: #ffe8e8;
+            border-left-color: #ff6b6b;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 50px;
+            font-size: 0.9rem;
+        }
+
+        .timeline-text {
+            flex: 1;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .timeline-event button {
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0;
+            opacity: 0;
+            transition: 0.2s;
+        }
+
+        .timeline-event:hover button {
+            opacity: 1;
+            color: #ff6b6b;
+        }
+
+        /* ─── Privacy Badge ─── */
+        .privacy-badge {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 0.3rem;
         }
 
         /* ─── Right Panel ─── */
@@ -563,7 +581,7 @@
             gap: 1.5rem;
         }
 
-        /* Mobile-first Pamphlet Viewer */
+        /* ─── Pamphlet Viewer ─── */
         .pamphlet-wrapper {
             background: var(--card-bg);
             border-radius: var(--radius);
@@ -615,7 +633,7 @@
             border-color: var(--primary);
         }
 
-        /* Pamphlet Card – optimized for mobile */
+        /* ─── Pamphlet Card ─── */
         .pamphlet-card {
             background: #fff;
             border-radius: 20px;
@@ -636,20 +654,13 @@
             display: flex;
         }
 
-        /* ─── Template styles (10 templates) ─── */
+        /* ─── Template styles (15 templates: Classic + 10 existing + 4 cultural) ─── */
         .pamphlet-card.template-classic {
             font-family: 'Inter', sans-serif;
-        }
-        .pamphlet-card.template-classic .pamphlet-title {
-            font-family: 'Playfair Display', serif;
         }
 
         .pamphlet-card.template-floral {
             font-family: 'Inter', sans-serif;
-        }
-        .pamphlet-card.template-floral .pamphlet-title {
-            font-family: 'Mrs Saint Delafield', cursive;
-            font-size: 2.2rem;
         }
         .pamphlet-card.template-floral::before {
             content: '🌿';
@@ -660,130 +671,83 @@
             opacity: 0.08;
             transform: rotate(-12deg);
         }
-        .pamphlet-card.template-floral::after {
-            content: '🌾';
-            position: absolute;
-            left: -10px;
-            top: -10px;
-            font-size: 3.5rem;
-            opacity: 0.06;
-            transform: rotate(20deg);
-        }
 
         .pamphlet-card.template-minimal {
             font-family: 'Inter', sans-serif;
             border-color: #d6cbc2;
             box-shadow: none;
         }
-        .pamphlet-card.template-minimal .pamphlet-title {
-            font-weight: 300;
-            letter-spacing: 2px;
-            font-size: 1.6rem;
-        }
 
-        .pamphlet-card.template-vintage {
-            font-family: 'Inter', sans-serif;
-            background: #fdfaf7;
-            border-color: #dacfc4;
+        .pamphlet-card.template-christian {
+            background: linear-gradient(135deg, #f9f6f2 0%, #faf7f4 100%);
+            border-color: #a67c52;
         }
-        .pamphlet-card.template-vintage .pamphlet-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            color: #5a4a3c;
-        }
-        .pamphlet-card.template-vintage .pamphlet-body {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 300;
-        }
-
-        .pamphlet-card.template-modern {
-            font-family: 'Inter', sans-serif;
-            border-color: #c4b8ae;
-            border-width: 2px;
-        }
-        .pamphlet-card.template-modern .pamphlet-title {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 1.4rem;
-        }
-
-        .pamphlet-card.template-garden {
-            font-family: 'Inter', sans-serif;
-            background: #f8f5f0;
-            border-color: #b8a79b;
-        }
-        .pamphlet-card.template-garden .pamphlet-title {
+        .pamphlet-card.template-christian .pamphlet-title {
             font-family: 'Playfair Display', serif;
             color: #4a3d35;
         }
-        .pamphlet-card.template-garden .pamphlet-body {
-            font-family: 'Quicksand', sans-serif;
+        .pamphlet-card.template-christian::before {
+            content: '✝️';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            opacity: 0.1;
         }
 
-        .pamphlet-card.template-military {
-            font-family: 'Inter', sans-serif;
-            border-color: #5a4a3c;
-            background: #f7f4f0;
+        .pamphlet-card.template-islamic {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f6 100%);
+            border-color: #2c5f2d;
         }
-        .pamphlet-card.template-military .pamphlet-title {
+        .pamphlet-card.template-islamic .pamphlet-title {
             font-family: 'Playfair Display', serif;
-            text-transform: uppercase;
-            letter-spacing: 4px;
+            color: #1a3d1b;
+            text-align: center;
+        }
+        .pamphlet-card.template-islamic::before {
+            content: '☪️';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            opacity: 0.1;
         }
 
-        .pamphlet-card.template-rustic {
-            font-family: 'Inter', sans-serif;
-            background: #f7f2eb;
-            border-color: #b8956a;
-            border-width: 2px;
+        .pamphlet-card.template-jewish {
+            background: linear-gradient(135deg, #faf8f3 0%, #f5f1eb 100%);
+            border-color: #8b6914;
         }
-        .pamphlet-card.template-rustic .pamphlet-title {
-            font-family: 'Lora', serif;
+        .pamphlet-card.template-jewish .pamphlet-title {
+            font-family: 'Playfair Display', serif;
             color: #5a4a3c;
         }
-        .pamphlet-card.template-rustic::before {
-            content: '🌲';
+        .pamphlet-card.template-jewish::before {
+            content: '✡️';
             position: absolute;
-            right: 0;
-            bottom: 0;
-            font-size: 4rem;
-            opacity: 0.06;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            opacity: 0.1;
         }
 
-        .pamphlet-card.template-elegant {
-            font-family: 'Inter', sans-serif;
-            background: #fcf9f6;
-            border-color: var(--gold);
+        .pamphlet-card.template-hindu {
+            background: linear-gradient(135deg, #fdf8f0 0%, #faf5eb 100%);
+            border-color: #c9721f;
         }
-        .pamphlet-card.template-elegant .pamphlet-title {
+        .pamphlet-card.template-hindu .pamphlet-title {
             font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #2a2a2a;
+            color: #8b5a1e;
         }
-        .pamphlet-card.template-elegant .pamphlet-body {
-            font-family: 'Lora', serif;
-        }
-
-        .pamphlet-card.template-simple {
-            font-family: 'Inter', sans-serif;
-            border-color: #ddd6cf;
-            background: #faf8f6;
-        }
-        .pamphlet-card.template-simple .pamphlet-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 1.4rem;
-        }
-        .pamphlet-card.template-simple .pamphlet-body {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
+        .pamphlet-card.template-hindu::before {
+            content: '🕉️';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            opacity: 0.1;
         }
 
-        /* Pamphlet inner */
+        /* ─── Pamphlet inner ─── */
         .pamphlet-header {
             display: flex;
             justify-content: space-between;
@@ -791,7 +755,6 @@
             margin-bottom: 1rem;
             padding-bottom: 0.6rem;
             border-bottom: 2px solid var(--border);
-            transition: border-color 0.2s;
         }
 
         .pamphlet-title {
@@ -821,7 +784,6 @@
             overflow: hidden;
             border: 2px solid var(--border);
             flex-shrink: 0;
-            transition: border-color 0.2s;
         }
 
         .pamphlet-emblem img {
@@ -829,29 +791,16 @@
             height: 100%;
             object-fit: cover;
         }
-        .pamphlet-emblem i {
-            font-size: 1.2rem;
-            color: var(--text-light);
-        }
 
         .pamphlet-body {
             flex: 1;
             font-size: 0.9rem;
             line-height: 1.6;
             color: #3d3530;
-            padding: 0.2rem 0;
         }
 
         .pamphlet-body p {
             margin-bottom: 0.4rem;
-        }
-
-        .pamphlet-body .biography {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            border-left: 3px solid var(--accent);
-            padding-left: 0.8rem;
-            margin: 0.5rem 0;
         }
 
         .pamphlet-gallery {
@@ -866,7 +815,46 @@
             aspect-ratio: 1;
             object-fit: cover;
             border-radius: 8px;
-            border: 1px solid var(--border);
+        }
+
+        /* ─── Timeline in Pamphlet ─── */
+        .pamphlet-timeline {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f9f6f2;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .timeline-entry {
+            display: flex;
+            gap: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.8rem;
+        }
+
+        .timeline-year-badge {
+            background: var(--primary);
+            color: #fff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            min-width: 45px;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+
+        .timeline-entry-text {
+            color: var(--text-light);
+            flex: 1;
+        }
+
+        /* ─── Video in Pamphlet ─── */
+        .pamphlet-video {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 12px;
+            margin: 0.8rem 0;
         }
 
         .pamphlet-footer {
@@ -877,8 +865,6 @@
             color: var(--text-light);
             display: flex;
             justify-content: space-between;
-            transition: border-color 0.2s;
-            letter-spacing: 0.3px;
         }
 
         /* ─── Share Section ─── */
@@ -911,34 +897,6 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        .qr-container #qrcode {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .qr-container #qrcode canvas {
-            width: 100% !important;
-            height: 100% !important;
-            border-radius: 12px;
-        }
-
-        .qr-placeholder {
-            color: var(--text-light);
-            font-size: 0.6rem;
-            text-align: center;
-        }
-
-        .qr-placeholder i {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 0.1rem;
-            color: var(--accent);
         }
 
         .link-box {
@@ -950,7 +908,6 @@
             border-radius: 60px;
             max-width: 300px;
             flex: 1;
-            min-width: 140px;
         }
 
         .link-box span {
@@ -974,290 +931,108 @@
             color: var(--text);
             transition: var(--transition);
             font-size: 0.8rem;
-            flex-shrink: 0;
         }
 
-        .link-box .btn-copy:hover {
-            background: var(--border);
-        }
-
-        /* ─── Packages / Pricing ─── */
-        .packages-section {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 2rem 1.5rem;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            margin-top: 1.5rem;
-        }
-
-        .packages-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .packages-section .subtitle {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 1.8rem;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-        }
-
-        .pricing-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 1.5rem 1.2rem;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-        }
-
-        .pricing-card.popular {
-            border-color: var(--gold);
-            background: #fcfaf8;
-        }
-
-        .pricing-card.popular::after {
-            content: 'Most Popular';
-            position: absolute;
-            top: -10px;
-            right: 1rem;
-            background: var(--gold);
-            color: #fff;
-            font-size: 0.6rem;
-            font-weight: 600;
-            padding: 0.2rem 1rem;
-            border-radius: 40px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .pricing-card .plan-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .pricing-card .plan-price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 0.3rem 0 0.6rem;
-        }
-
-        .pricing-card .plan-price small {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: var(--text-light);
-        }
-
-        .pricing-card .plan-features {
-            list-style: none;
-            padding: 0;
-            margin: 0.6rem 0 1rem;
-        }
-
-        .pricing-card .plan-features li {
-            padding: 0.25rem 0;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .pricing-card .plan-features li i {
-            color: var(--accent-dark);
-            font-size: 0.75rem;
-            width: 1.2rem;
-        }
-
-        .pricing-card .plan-features li.disabled {
-            opacity: 0.4;
-        }
-        .pricing-card .plan-features li.disabled i {
-            color: #ccc;
-        }
-
-        .pricing-card .badge-photo {
-            display: inline-block;
-            background: var(--gold);
-            color: #fff;
-            font-size: 0.6rem;
-            font-weight: 600;
-            padding: 0.15rem 0.6rem;
-            border-radius: 40px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            margin-top: 0.2rem;
-        }
-
-        /* ─── Guestbook ─── */
-        .guestbook-section {
+        /* ─── Social Share Templates ─── */
+        .social-templates {
             background: var(--card-bg);
             border-radius: var(--radius);
             padding: 1.5rem;
             border: 1px solid var(--border);
-            box-shadow: var(--shadow);
             margin-top: 1.5rem;
         }
 
-        .guestbook-section h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 0.2rem;
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.8rem;
         }
 
-        .guestbook-messages {
-            max-height: 180px;
-            overflow-y: auto;
-            margin: 0.8rem 0;
-            padding-right: 0.5rem;
-        }
-
-        .guestbook-entry {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .guestbook-entry .name {
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-        .guestbook-entry .msg {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        .guestbook-entry .time {
-            font-size: 0.6rem;
-            color: var(--text-light);
-            opacity: 0.6;
-        }
-
-        .guestbook-form {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .guestbook-form input {
-            flex: 1;
-            min-width: 100px;
-            padding: 0.5rem 0.8rem;
+        .social-card {
+            background: #fff;
+            padding: 1rem;
             border-radius: var(--radius-sm);
             border: 1px solid var(--border);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        .guestbook-form input:focus {
-            outline: none;
-            border-color: var(--accent-dark);
+        .social-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        /* ─── Virtual Candle ─── */
-        .candle-section {
+        .social-card i {
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .social-card span {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ─── Privacy Controls ─── */
+        .privacy-section {
             background: var(--card-bg);
             border-radius: var(--radius);
             padding: 1.5rem;
             border: 1px solid var(--border);
-            box-shadow: var(--shadow);
             margin-top: 1.5rem;
-            text-align: center;
         }
 
-        .candle-section h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .candle-container {
+        .privacy-toggle {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem;
+            background: #fff;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            margin-bottom: 0.8rem;
         }
 
-        .candle {
-            width: 36px;
-            height: 72px;
-            background: #f5e6d3;
-            border-radius: 20px 20px 8px 8px;
-            position: relative;
+        .toggle-switch {
+            width: 44px;
+            height: 24px;
+            background: #ccc;
+            border-radius: 12px;
             cursor: pointer;
-            transition: var(--transition);
-            border: 1px solid #e0d0c0;
-            display: inline-block;
+            transition: 0.3s;
+            position: relative;
+            border: none;
+            padding: 0;
         }
 
-        .candle::before {
+        .toggle-switch.active {
+            background: #3d6b5a;
+        }
+
+        .toggle-switch::after {
             content: '';
             position: absolute;
-            top: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 5px;
-            height: 10px;
-            background: #333;
-            border-radius: 3px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: 0.3s;
         }
 
-        .candle.lit {
-            background: #fce8d0;
-            box-shadow: 0 0 30px rgba(255, 200, 100, 0.4);
+        .toggle-switch.active::after {
+            left: 22px;
         }
 
-        .candle.lit::after {
-            content: '🔥';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.2rem;
-            animation: flicker 0.8s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% {
-                transform: translateX(-50%) scale(1) rotate(-2deg);
-            }
-            100% {
-                transform: translateX(-50%) scale(1.1) rotate(2deg);
-            }
-        }
-
-        .candle-label {
-            font-size: 0.65rem;
-            color: var(--text-light);
-            margin-top: 0.2rem;
-        }
-
-        .candle-count {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-top: 0.3rem;
-        }
-
-        /* ─── Analytics ─── */
+        /* ─── Analytics Enhanced ─── */
         .analytics-section {
             background: var(--card-bg);
             border-radius: var(--radius);
             padding: 1.5rem;
             border: 1px solid var(--border);
-            box-shadow: var(--shadow);
             margin-top: 1.5rem;
         }
 
@@ -1286,38 +1061,89 @@
             font-size: 0.6rem;
             color: var(--text-light);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        /* ─── Audio ─── */
-        .audio-upload {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .audio-upload input[type="file"] {
-            display: none;
-        }
-
-        .audio-upload .file-label {
-            padding: 0.3rem 0.8rem;
-            border-radius: var(--radius-sm);
+        /* ─── Guestbook ─── */
+        .guestbook-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
             border: 1px solid var(--border);
-            background: #fff;
+            margin-top: 1.5rem;
+        }
+
+        .guestbook-messages {
+            max-height: 180px;
+            overflow-y: auto;
+            margin: 0.8rem 0;
+        }
+
+        .guestbook-entry {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .guestbook-entry .name {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .guestbook-entry .msg {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ─── Candle ─── */
+        .candle-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .candle-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .candle {
+            width: 36px;
+            height: 72px;
+            background: #f5e6d3;
+            border-radius: 20px 20px 8px 8px;
+            position: relative;
             cursor: pointer;
-            font-size: 0.7rem;
             transition: var(--transition);
+            border: 1px solid #e0d0c0;
         }
 
-        .audio-upload .file-label:hover {
-            background: #f3ede8;
+        .candle.lit {
+            background: #fce8d0;
+            box-shadow: 0 0 30px rgba(255, 200, 100, 0.4);
         }
 
-        .audio-player {
-            width: 100%;
-            margin-top: 0.3rem;
+        .candle.lit::after {
+            content: '🔥';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            animation: flicker 0.8s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                transform: translateX(-50%) scale(1) rotate(-2deg);
+            }
+            100% {
+                transform: translateX(-50%) scale(1.1) rotate(2deg);
+            }
         }
 
         /* ─── Responsive ─── */
@@ -1325,153 +1151,19 @@
             .app {
                 padding: 0.8rem;
             }
-            .app-header {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0.5rem;
-            }
-            .logo {
-                font-size: 1.4rem;
-                justify-content: center;
-            }
-            .logo i {
-                font-size: 1.6rem;
-            }
-            .header-nav {
-                justify-content: center;
-                gap: 0.8rem;
-            }
-            .header-nav a {
-                font-size: 0.75rem;
-                padding: 0.2rem 0.6rem;
-            }
-            .controls-panel {
-                padding: 1rem;
-            }
-            .pamphlet-wrapper {
-                padding: 1rem 0.8rem;
-            }
             .pamphlet-card {
                 padding: 1.2rem 1rem;
                 min-height: 240px;
             }
-            .pamphlet-title {
-                font-size: 1.4rem;
-            }
-            .share-section {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .link-box {
-                max-width: 100%;
-            }
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            .main-tabs {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                padding: 0.2rem;
-                border-radius: 40px;
-            }
-            .main-tab {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.7rem;
-                white-space: nowrap;
-            }
-            .builder-grid {
-                gap: 1rem;
-            }
-            .packages-section {
-                padding: 1rem;
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             .template-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            .qr-container {
-                width: 56px;
-                height: 56px;
-            }
-            .analytics-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .candle-container {
-                gap: 1rem;
-            }
-            .candle {
-                width: 30px;
-                height: 60px;
-            }
-            .color-row {
-                gap: 0.3rem;
-            }
-            .color-swatch {
-                width: 26px;
-                height: 26px;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 480px) {
-            .pamphlet-title {
-                font-size: 1.2rem;
-            }
-            .pamphlet-sub {
-                font-size: 0.65rem;
-            }
-            .pamphlet-emblem {
-                width: 36px;
-                height: 36px;
-            }
-            .pamphlet-body {
-                font-size: 0.8rem;
-            }
-            .pamphlet-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-            }
-            .template-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .header-nav a {
-                font-size: 0.7rem;
-            }
-            .header-nav a i {
-                display: none;
-            }
-        }
-
-        /* ─── Print Styles ─── */
-        @media print {
-            .controls-panel,
-            .app-header .header-nav,
-            .share-section,
-            .packages-section,
-            .guestbook-section,
-            .candle-section,
-            .analytics-section,
-            .main-tabs,
-            .pamphlet-toolbar,
-            .fab-save {
-                display: none !important;
-            }
-            .builder-grid {
-                display: block !important;
-            }
-            .pamphlet-wrapper {
-                box-shadow: none !important;
-                border: 1px solid #ddd !important;
-                padding: 0.5rem !important;
-            }
-            .pamphlet-card {
-                border: 1px solid #ccc !important;
-                box-shadow: none !important;
-                page-break-inside: avoid;
-            }
-            .pamphlet-card.active-page {
-                display: flex !important;
-            }
-        }
-
-        /* ─── Floating Action ─── */
+        /* ─── FAB ─── */
         .fab-save {
             position: fixed;
             bottom: 1.5rem;
@@ -1481,7 +1173,6 @@
             border: none;
             border-radius: 60px;
             padding: 0.7rem 1.6rem;
-            font-family: 'Inter', sans-serif;
             font-weight: 600;
             font-size: 0.85rem;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -1497,33 +1188,6 @@
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
         }
-
-        @media (max-width: 768px) {
-            .fab-save {
-                bottom: 1rem;
-                right: 1rem;
-                padding: 0.5rem 1.2rem;
-                font-size: 0.75rem;
-            }
-        }
-
-        /* ─── Mobile swipe hint ─── */
-        .swipe-hint {
-            text-align: center;
-            font-size: 0.7rem;
-            color: var(--text-light);
-            margin-top: 0.5rem;
-            opacity: 0.7;
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .swipe-hint {
-                display: block;
-            }
-        }
-
-        /* ─── Removed .semperfi-tag and .photo-badge styles ─── */
     </style>
 </head>
 <body>
@@ -1541,17 +1205,19 @@
                 <small>Semperfi</small>
             </div>
             <nav class="header-nav">
-                <a href="#" id="headerPackagesLink" class="active"><i class="fas fa-crown"></i> Packages</a>
+                <a href="#" id="headerPackagesLink">Packages</a>
             </nav>
         </header>
 
         <!-- ─── MAIN TABS ─── -->
         <div class="main-tabs">
             <button class="main-tab active" data-tab="design"><i class="fas fa-pencil-alt"></i> Design</button>
-            <button class="main-tab" data-tab="packages"><i class="fas fa-crown"></i> Packages</button>
-            <button class="main-tab" data-tab="guestbook"><i class="fas fa-book"></i> Guestbook</button>
-            <button class="main-tab" data-tab="candle"><i class="fas fa-fire"></i> Tribute</button>
+            <button class="main-tab" data-tab="pages"><i class="fas fa-file-alt"></i> Pages</button>
+            <button class="main-tab" data-tab="timeline"><i class="fas fa-hourglass-half"></i> Timeline</button>
+            <button class="main-tab" data-tab="media"><i class="fas fa-video"></i> Media</button>
+            <button class="main-tab" data-tab="privacy"><i class="fas fa-lock"></i> Privacy</button>
             <button class="main-tab" data-tab="analytics"><i class="fas fa-chart-bar"></i> Analytics</button>
+            <button class="main-tab" data-tab="guestbook"><i class="fas fa-book"></i> Guestbook</button>
         </div>
 
         <!-- ─── TAB: DESIGN ─── -->
@@ -1560,43 +1226,43 @@
 
                 <!-- LEFT: Controls -->
                 <aside class="controls-panel" id="controlsPanel">
-                    <h3><i class="fas fa-sliders-h"></i> Customize Your Digital Pamphlet</h3>
-                    <p style="font-size:0.75rem; color:var(--text-light); margin-bottom:1rem;">
-                        <i class="fas fa-mobile-alt"></i> Optimized for mobile – viewable on any device via link or QR.
-                        <span style="display:block; margin-top:0.2rem;"><i class="fas fa-camera"></i> Photography included with every package.</span>
-                    </p>
+                    <h3><i class="fas fa-sliders-h"></i> Customize Your Memorial</h3>
 
                     <!-- Name -->
                     <div class="control-group">
                         <label><i class="fas fa-user"></i> Full Name</label>
-                        <input type="text" id="nameInput" value="Eleanor Rose" placeholder="e.g. Eleanor Rose" />
+                        <input type="text" id="nameInput" value="Eleanor Rose" />
                     </div>
 
                     <!-- Dates -->
                     <div class="control-group">
                         <label><i class="fas fa-calendar-alt"></i> Dates</label>
-                        <input type="text" id="datesInput" value="1942 – 2026" placeholder="1942 – 2026" />
+                        <input type="text" id="datesInput" value="1942 – 2026" />
                     </div>
 
-                    <!-- Message -->
+                    <!-- Tribute -->
                     <div class="control-group">
                         <label><i class="fas fa-feather-alt"></i> Tribute</label>
-                        <textarea id="messageInput" rows="2" placeholder="Write a tribute...">A gentle soul, forever in our hearts. Her warmth and wisdom touched everyone she met.</textarea>
+                        <textarea id="messageInput" rows="2">A gentle soul, forever in our hearts.</textarea>
                     </div>
 
                     <!-- Biography -->
                     <div class="control-group">
-                        <label><i class="fas fa-book-open"></i> Biography / Life Story</label>
-                        <textarea id="bioInput" rows="2" placeholder="A short biography...">Born in Cape Town, Eleanor dedicated her life to teaching and nurturing young minds. She was a loving mother, grandmother, and friend to all.</textarea>
+                        <label><i class="fas fa-book-open"></i> Biography</label>
+                        <textarea id="bioInput" rows="2">Born in Cape Town, Eleanor dedicated her life to teaching.</textarea>
                     </div>
 
-                    <!-- Template – expanded to 10 -->
+                    <!-- Templates: Classic + 10 existing + 4 Cultural -->
                     <div class="control-group">
-                        <label><i class="fas fa-layer-group"></i> Template Theme <span style="font-weight:400; font-size:0.65rem; color:var(--text-light);">(10 options)</span></label>
+                        <label><i class="fas fa-layer-group"></i> Template <span style="font-weight:400; font-size:0.65rem;">(15 themes)</span></label>
                         <div class="template-grid" id="templateGrid">
                             <div class="template-chip active" data-template="classic"><i class="fas fa-book-open"></i> Classic</div>
                             <div class="template-chip" data-template="floral"><i class="fas fa-seedling"></i> Floral</div>
                             <div class="template-chip" data-template="minimal"><i class="fas fa-minus-circle"></i> Minimal</div>
+                            <div class="template-chip" data-template="christian"><i class="fas fa-cross"></i> Christian</div>
+                            <div class="template-chip" data-template="islamic"><i class="fas fa-star-and-crescent"></i> Islamic</div>
+                            <div class="template-chip" data-template="jewish"><i class="fas fa-star-of-david"></i> Jewish</div>
+                            <div class="template-chip" data-template="hindu"><i class="fas fa-om"></i> Hindu</div>
                             <div class="template-chip" data-template="vintage"><i class="fas fa-hourglass-half"></i> Vintage</div>
                             <div class="template-chip" data-template="modern"><i class="fas fa-border-all"></i> Modern</div>
                             <div class="template-chip" data-template="garden"><i class="fas fa-tree"></i> Garden</div>
@@ -1604,12 +1270,13 @@
                             <div class="template-chip" data-template="rustic"><i class="fas fa-mountain"></i> Rustic</div>
                             <div class="template-chip" data-template="elegant"><i class="fas fa-gem"></i> Elegant</div>
                             <div class="template-chip" data-template="simple"><i class="fas fa-circle"></i> Simple</div>
+                            <div class="template-chip" data-template="modern-minimal"><i class="fas fa-square"></i> Minimalist</div>
                         </div>
                     </div>
 
-                    <!-- Accent Color – expanded to 12 -->
+                    <!-- Color -->
                     <div class="control-group">
-                        <label><i class="fas fa-palette"></i> Accent Color <span style="font-weight:400; font-size:0.65rem; color:var(--text-light);">(12 colours)</span></label>
+                        <label><i class="fas fa-palette"></i> Accent Color</label>
                         <div class="color-row" id="colorRow">
                             <span class="color-swatch active" style="background:#b8a79b;" data-color="#b8a79b"></span>
                             <span class="color-swatch" style="background:#7b5f4b;" data-color="#7b5f4b"></span>
@@ -1617,29 +1284,22 @@
                             <span class="color-swatch" style="background:#436b5c;" data-color="#436b5c"></span>
                             <span class="color-swatch" style="background:#8b6f5c;" data-color="#8b6f5c"></span>
                             <span class="color-swatch" style="background:#5a4a3c;" data-color="#5a4a3c"></span>
-                            <span class="color-swatch" style="background:#8f7a6b;" data-color="#8f7a6b"></span>
                             <span class="color-swatch" style="background:#c9a87c;" data-color="#c9a87c"></span>
-                            <span class="color-swatch" style="background:#6b8f7a;" data-color="#6b8f7a"></span>
-                            <span class="color-swatch" style="background:#9b7b6b;" data-color="#9b7b6b"></span>
-                            <span class="color-swatch" style="background:#4a6b6b;" data-color="#4a6b6b"></span>
-                            <span class="color-swatch" style="background:#b8956a;" data-color="#b8956a"></span>
                         </div>
                     </div>
 
-                    <!-- Font – expanded to 6 -->
+                    <!-- Font -->
                     <div class="control-group">
-                        <label><i class="fas fa-font"></i> Font Style <span style="font-weight:400; font-size:0.65rem; color:var(--text-light);">(6 options)</span></label>
+                        <label><i class="fas fa-font"></i> Font</label>
                         <div class="font-options" id="fontOptions">
                             <span class="font-chip active" data-font="inter">Inter</span>
                             <span class="font-chip" data-font="playfair">Playfair</span>
                             <span class="font-chip" data-font="quicksand">Quicksand</span>
-                            <span class="font-chip" data-font="script">Script</span>
                             <span class="font-chip" data-font="lora">Lora</span>
-                            <span class="font-chip" data-font="montserrat">Montserrat</span>
                         </div>
                     </div>
 
-                    <!-- Emblem -->
+                    <!-- Photo -->
                     <div class="control-group">
                         <label><i class="fas fa-image"></i> Emblem / Photo</label>
                         <div class="upload-zone" id="uploadZone">
@@ -1648,43 +1308,14 @@
                         </div>
                     </div>
 
-                    <!-- Gallery Photos -->
+                    <!-- Gallery -->
                     <div class="control-group">
                         <label><i class="fas fa-images"></i> Photo Gallery (max 4)</label>
-                        <div class="upload-zone" id="galleryZone" style="margin-bottom:0.3rem;">
+                        <div class="upload-zone" id="galleryZone">
                             <i class="fas fa-plus-circle"></i> Add photos
                             <input type="file" id="galleryUpload" accept="image/*" multiple />
                         </div>
                         <div id="galleryPreview" style="display:flex; gap:0.3rem; flex-wrap:wrap; margin-top:0.3rem;"></div>
-                    </div>
-
-                    <!-- Audio -->
-                    <div class="control-group">
-                        <label><i class="fas fa-music"></i> Audio / Eulogy</label>
-                        <div class="audio-upload">
-                            <label class="file-label" for="audioUpload"><i class="fas fa-upload"></i> Upload audio</label>
-                            <input type="file" id="audioUpload" accept="audio/*" />
-                            <span id="audioFileName" style="font-size:0.7rem; color:var(--text-light);">No file</span>
-                        </div>
-                        <div id="audioPlayerContainer" style="margin-top:0.3rem; display:none;">
-                            <audio controls class="audio-player" id="audioPlayer"></audio>
-                        </div>
-                    </div>
-
-                    <!-- Background -->
-                    <div class="control-group">
-                        <label><i class="fas fa-image"></i> Background Image (watermark)</label>
-                        <div class="upload-zone" id="bgZone">
-                            <i class="fas fa-cloud-upload-alt"></i> upload background
-                            <input type="file" id="bgUpload" accept="image/*" />
-                        </div>
-                    </div>
-
-                    <div style="margin-top:0.5rem; font-size:0.65rem; color:var(--text-light);">
-                        <i class="fas fa-info-circle"></i> All changes auto-save locally
-                    </div>
-                    <div style="margin-top:0.2rem; font-size:0.65rem; color:var(--text-light);">
-                        <i class="fas fa-camera"></i> Photography service included with every package
                     </div>
                 </aside>
 
@@ -1695,196 +1326,405 @@
                     <div class="pamphlet-wrapper">
                         <div class="pamphlet-toolbar">
                             <div class="page-indicator">
-                                <i class="fas fa-book"></i> Page <span id="currentPageNum">1</span> / <span id="totalPages">2</span>
+                                <i class="fas fa-book"></i> Page <span id="currentPageNum">1</span> / <span id="totalPages">6</span>
                             </div>
                             <div class="page-nav" id="pageNav">
-                                <button id="prevPage" title="Previous"><i class="fas fa-chevron-left"></i></button>
+                                <button id="prevPage"><i class="fas fa-chevron-left"></i></button>
                                 <button class="active-page" data-page="0">1</button>
                                 <button data-page="1">2</button>
-                                <button id="nextPage" title="Next"><i class="fas fa-chevron-right"></i></button>
+                                <button data-page="2">3</button>
+                                <button data-page="3">4</button>
+                                <button data-page="4">5</button>
+                                <button data-page="5">6</button>
+                                <button id="nextPage"><i class="fas fa-chevron-right"></i></button>
                             </div>
                         </div>
 
+                        <!-- Page 1: Cover -->
                         <div class="pamphlet-card template-classic active-page" id="pamphletCard1" data-page="0">
-                            <div class="pamphlet-header" id="pamphletHeader">
+                            <div class="pamphlet-header">
                                 <div>
                                     <div class="pamphlet-title" id="previewName">Eleanor Rose</div>
                                     <div class="pamphlet-sub" id="previewDates">1942 – 2026</div>
                                 </div>
-                                <div class="pamphlet-emblem" id="emblemContainer">
-                                    <i class="fas fa-leaf"></i>
-                                </div>
+                                <div class="pamphlet-emblem"><i class="fas fa-leaf"></i></div>
                             </div>
                             <div class="pamphlet-body" id="previewBody">
-                                <p>A gentle soul, forever in our hearts. Her warmth and wisdom touched everyone she met.</p>
-                                <div class="biography" id="previewBio">Born in Cape Town, Eleanor dedicated her life to teaching and nurturing young minds.</div>
-                                <div class="pamphlet-gallery" id="previewGallery"></div>
+                                <p id="previewTribute">A gentle soul, forever in our hearts.</p>
                             </div>
-                            <div class="pamphlet-footer" id="pamphletFooter">
+                            <div class="pamphlet-footer">
                                 <span>In loving memory</span>
-                                <span>🕊️ eternal leaf · semperfi</span>
+                                <span>🕊️ eternal leaf</span>
                             </div>
                         </div>
 
+                        <!-- Page 2: Biography -->
                         <div class="pamphlet-card template-classic" id="pamphletCard2" data-page="1">
-                            <div class="pamphlet-header" style="border-bottom-color:var(--accent);">
+                            <div class="pamphlet-header">
                                 <div>
-                                    <div class="pamphlet-title" style="font-size:1.2rem;">Memorial Service</div>
-                                    <div class="pamphlet-sub">In loving memory of Eleanor Rose</div>
-                                </div>
-                                <div class="pamphlet-emblem" style="border-color:var(--accent);">
-                                    <i class="fas fa-cross" style="color:var(--accent-dark);"></i>
+                                    <div class="pamphlet-title">Biography</div>
                                 </div>
                             </div>
                             <div class="pamphlet-body">
-                                <p><strong>Service Details</strong></p>
-                                <p>📅 Saturday, 15 May 2026 at 10:00 AM</p>
-                                <p>📍 St. Mary's Cathedral, Cape Town</p>
-                                <p style="margin-top:0.8rem;"><strong>Reception</strong><br />Following the service at the Garden Hall, 12:00 PM</p>
-                                <p style="margin-top:0.8rem; font-style:italic; color:var(--text-light);">"Those we love don't go away, they walk beside us every day."</p>
+                                <p id="previewBio">Born in Cape Town, Eleanor dedicated her life to teaching.</p>
                             </div>
                             <div class="pamphlet-footer">
-                                <span>Refreshments will be served</span>
-                                <span>🙏 eternal leaf · semperfi</span>
+                                <span>Life & Legacy</span>
                             </div>
                         </div>
 
-                        <div class="swipe-hint">
-                            <i class="fas fa-arrows-alt-h"></i> Swipe or use arrows to flip pages
+                        <!-- Page 3: Photo Gallery -->
+                        <div class="pamphlet-card template-classic" id="pamphletCard3" data-page="2">
+                            <div class="pamphlet-header">
+                                <div>
+                                    <div class="pamphlet-title">Memories</div>
+                                </div>
+                            </div>
+                            <div class="pamphlet-body">
+                                <div class="pamphlet-gallery" id="previewGallery"></div>
+                            </div>
+                            <div class="pamphlet-footer">
+                                <span>Cherished moments</span>
+                            </div>
                         </div>
+
+                        <!-- Page 4: Timeline -->
+                        <div class="pamphlet-card template-classic" id="pamphletCard4" data-page="3">
+                            <div class="pamphlet-header">
+                                <div>
+                                    <div class="pamphlet-title">Life Timeline</div>
+                                </div>
+                            </div>
+                            <div class="pamphlet-body">
+                                <div class="pamphlet-timeline" id="previewTimeline">
+                                    <div class="timeline-entry">
+                                        <span class="timeline-year-badge">1942</span>
+                                        <span class="timeline-entry-text">Born in Cape Town</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pamphlet-footer">
+                                <span>1942 – 2026</span>
+                            </div>
+                        </div>
+
+                        <!-- Page 5: Media (Video/Audio) -->
+                        <div class="pamphlet-card template-classic" id="pamphletCard5" data-page="4">
+                            <div class="pamphlet-header">
+                                <div>
+                                    <div class="pamphlet-title">Tribute Media</div>
+                                </div>
+                            </div>
+                            <div class="pamphlet-body">
+                                <div id="previewMediaContainer" style="text-align:center; color:var(--text-light);">
+                                    <i class="fas fa-video" style="font-size:2rem; margin:1rem 0;"></i>
+                                    <p>Video or audio eulogy will appear here</p>
+                                </div>
+                            </div>
+                            <div class="pamphlet-footer">
+                                <span>Listen or watch</span>
+                            </div>
+                        </div>
+
+                        <!-- Page 6: Service Details -->
+                        <div class="pamphlet-card template-classic" id="pamphletCard6" data-page="5">
+                            <div class="pamphlet-header">
+                                <div>
+                                    <div class="pamphlet-title">Service Details</div>
+                                </div>
+                            </div>
+                            <div class="pamphlet-body">
+                                <p><strong>Memorial Service</strong></p>
+                                <p>📅 Saturday, 15 May 2026 at 10:00 AM</p>
+                                <p>📍 St. Mary's Cathedral, Cape Town</p>
+                                <p style="margin-top:0.8rem;"><strong>Reception</strong><br />Following the service at the Garden Hall, 12:00 PM</p>
+                            </div>
+                            <div class="pamphlet-footer">
+                                <span>Celebrations of Life</span>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Share -->
                     <div class="share-section">
                         <div class="qr-box">
-                            <div class="qr-container" id="qrContainer">
-                                <div id="qrcode" class="qr-placeholder">
-                                    <i class="fas fa-qrcode"></i>
+                            <div class="qr-container" id="qrcode">
+                                <div style="color:var(--text-light); font-size:0.6rem; text-align:center;">
+                                    <i class="fas fa-qrcode" style="font-size:1.8rem;"></i>
                                     <span>QR</span>
                                 </div>
                             </div>
                             <div>
                                 <div style="font-weight:600; font-size:0.85rem;">QR Code</div>
-                                <div style="font-size:0.65rem; color:var(--text-light);">Scan to view digital pamphlet</div>
+                                <div style="font-size:0.65rem; color:var(--text-light);">Scan to view</div>
                             </div>
                         </div>
-
-                        <div class="link-box" id="linkBox">
+                        <div class="link-box">
                             <span id="shareLinkText">pamphlet link</span>
-                            <button class="btn-copy" id="copyLinkBtn" title="Copy link"><i class="fas fa-copy"></i></button>
+                            <button class="btn-copy" id="copyLinkBtn"><i class="fas fa-copy"></i></button>
                         </div>
+                        <button class="btn btn-primary btn-sm" id="fabSave"><i class="fas fa-save"></i> Save</button>
+                    </div>
 
-                        <div style="display:flex; gap:0.4rem;">
-                            <button class="btn btn-outline btn-sm" id="shareSocialBtn"><i class="fas fa-share-alt"></i> Share</button>
-                            <span class="memorial-badge" style="background:var(--gold);"><i class="fas fa-leaf"></i> Live</span>
+                    <!-- Social Share Templates -->
+                    <div class="social-templates">
+                        <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.5rem;">Share Templates</h3>
+                        <div class="social-grid">
+                            <div class="social-card" id="shareInsta">
+                                <i class="fab fa-instagram" style="color:#e4405f;"></i>
+                                <span>Instagram</span>
+                            </div>
+                            <div class="social-card" id="shareFb">
+                                <i class="fab fa-facebook" style="color:#1877f2;"></i>
+                                <span>Facebook</span>
+                            </div>
+                            <div class="social-card" id="shareTwitter">
+                                <i class="fab fa-twitter" style="color:#1da1f2;"></i>
+                                <span>Twitter</span>
+                            </div>
+                            <div class="social-card" id="shareLinkedin">
+                                <i class="fab fa-linkedin" style="color:#0077b5;"></i>
+                                <span>LinkedIn</span>
+                            </div>
+                            <div class="social-card" id="shareWhatsapp">
+                                <i class="fab fa-whatsapp" style="color:#25d366;"></i>
+                                <span>WhatsApp</span>
+                            </div>
+                            <div class="social-card" id="shareEmail">
+                                <i class="fas fa-envelope" style="color:#ea4335;"></i>
+                                <span>Email</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ─── TAB: PACKAGES ─── -->
-        <div class="tab-content" id="tab-packages">
-            <div class="packages-section">
-                <h2>Choose Your Memorial Package</h2>
-                <p class="subtitle">Pricing in South African Rand (ZAR) — <strong>all packages include professional photography service</strong> and a mobile-optimized digital pamphlet.</p>
+        <!-- ─── TAB: PAGES ─── -->
+        <div class="tab-content" id="tab-pages">
+            <div style="background:var(--card-bg); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--border);">
+                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Customize Pages</h2>
+                <p style="color:var(--text-light); margin-bottom:1.5rem;">Reorder, rename, or hide pages in your memorial.</p>
 
-                <div class="pricing-grid">
-                    <!-- Free -->
-                    <div class="pricing-card">
-                        <div class="plan-name">Basic</div>
-                        <div class="plan-price">R0 <small>/ free</small></div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Digital pamphlet (1 page)</li>
-                            <li><i class="fas fa-check"></i> 5 templates</li>
-                            <li><i class="fas fa-check"></i> QR code &amp; shareable link</li>
-                            <li><i class="fas fa-check"></i> Basic customization</li>
-                            <li><i class="fas fa-check"></i> <strong>📸 Photo service (1 image)</strong></li>
-                            <li class="disabled"><i class="fas fa-times"></i> Photo gallery</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Audio tribute</li>
-                            <li class="disabled"><i class="fas fa-times"></i> PDF export</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Guestbook</li>
-                        </ul>
-                        <button class="btn btn-outline" style="width:100%;">Select</button>
+                <div id="pagesManager" style="display:grid; gap:0.8rem;">
+                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
+                        <span style="flex:1;">Cover Page</span>
+                        <input type="checkbox" checked style="width:18px; height:18px;">
                     </div>
-
-                    <!-- Premium -->
-                    <div class="pricing-card popular">
-                        <div class="plan-name">Premium</div>
-                        <div class="plan-price">R499 <small>/ once</small></div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> 2-page digital pamphlet</li>
-                            <li><i class="fas fa-check"></i> 10 templates</li>
-                            <li><i class="fas fa-check"></i> Photo gallery (up to 4)</li>
-                            <li><i class="fas fa-check"></i> Audio / eulogy upload</li>
-                            <li><i class="fas fa-check"></i> Guestbook &amp; tributes</li>
-                            <li><i class="fas fa-check"></i> PDF export (high-res)</li>
-                            <li><i class="fas fa-check"></i> Virtual candle</li>
-                            <li><i class="fas fa-check"></i> Custom fonts &amp; colours</li>
-                            <li><i class="fas fa-check"></i> <strong>📸 Professional photo service (5 images)</strong></li>
-                            <li class="disabled"><i class="fas fa-times"></i> Print delivery</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Memorial website</li>
-                        </ul>
-                        <button class="btn btn-primary" style="width:100%;">Choose Premium</button>
+                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
+                        <span style="flex:1;">Biography</span>
+                        <input type="checkbox" checked style="width:18px; height:18px;">
                     </div>
-
-                    <!-- Deluxe -->
-                    <div class="pricing-card">
-                        <div class="plan-name">Deluxe</div>
-                        <div class="plan-price">R999 <small>/ once</small></div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Everything in Premium</li>
-                            <li><i class="fas fa-check"></i> 3-page digital pamphlet</li>
-                            <li><i class="fas fa-check"></i> Full memorial website</li>
-                            <li><i class="fas fa-check"></i> Print delivery (50 copies)</li>
-                            <li><i class="fas fa-check"></i> Custom envelopes</li>
-                            <li><i class="fas fa-check"></i> Thank you cards (25)</li>
-                            <li><i class="fas fa-check"></i> Professional copywriting</li>
-                            <li><i class="fas fa-check"></i> Analytics dashboard</li>
-                            <li><i class="fas fa-check"></i> <strong>📸 Photography package (15 images + digital album)</strong></li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
-                        </ul>
-                        <button class="btn btn-gold" style="width:100%;">Choose Deluxe</button>
+                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
+                        <span style="flex:1;">Photo Gallery</span>
+                        <input type="checkbox" checked style="width:18px; height:18px;">
                     </div>
+                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
+                        <span style="flex:1;">Timeline</span>
+                        <input type="checkbox" checked style="width:18px; height:18px;">
+                    </div>
+                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
+                        <span style="flex:1;">Tribute Media</span>
+                        <input type="checkbox" checked style="width:18px; height:18px;">
+                    </div>
+                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
+                        <span style="flex:1;">Service Details</span>
+                        <input type="checkbox" checked style="width:18px; height:18px;">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Enterprise -->
-                    <div class="pricing-card">
-                        <div class="plan-name">Enterprise</div>
-                        <div class="plan-price">R2,499 <small>/ once</small></div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Everything in Deluxe</li>
-                            <li><i class="fas fa-check"></i> Funeral home partnership</li>
-                            <li><i class="fas fa-check"></i> White-label branding</li>
-                            <li><i class="fas fa-check"></i> Bulk print discounts</li>
-                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
-                            <li><i class="fas fa-check"></i> Digital time capsule</li>
-                            <li><i class="fas fa-check"></i> Annual remembrance emails</li>
-                            <li><i class="fas fa-check"></i> <strong>📸 Full photography suite (unlimited images + videography)</strong></li>
-                            <li><i class="fas fa-check"></i> 24/7 concierge support</li>
-                        </ul>
-                        <button class="btn btn-primary" style="width:100%;">Contact Sales</button>
+        <!-- ─── TAB: TIMELINE ─── -->
+        <div class="tab-content" id="tab-timeline">
+            <div style="background:var(--card-bg); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--border);">
+                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Life Timeline</h2>
+                <p style="color:var(--text-light); margin-bottom:1rem;">Add key life events and milestones.</p>
+
+                <div style="display:grid; gap:0.8rem; margin-bottom:1.5rem;" id="timelineList">
+                    <div class="timeline-event">
+                        <div class="timeline-year">1942</div>
+                        <div class="timeline-text">Born in Cape Town</div>
+                        <button>×</button>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1960</div>
+                        <div class="timeline-text">Started teaching career</div>
+                        <button>×</button>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-year">1965</div>
+                        <div class="timeline-text">Married John Smith</div>
+                        <button>×</button>
                     </div>
                 </div>
 
-                <!-- Add-ons with photo focus -->
-                <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border);">
-                    <h4 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.5rem;">Additional Photography Services</h4>
-                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:0.8rem;">
-                        <div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                            <strong>Photo Album</strong> <span style="float:right; font-weight:600;">R250</span>
-                            <div style="font-size:0.7rem; color:var(--text-light);">Digital album with 20 images</div>
+                <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:0.5rem;">
+                    <input type="number" id="timelineYear" placeholder="Year" style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);" min="1900" max="2100">
+                    <input type="text" id="timelineEvent" placeholder="Life event or milestone" style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
+                    <button class="btn btn-primary btn-sm" id="addTimelineBtn"><i class="fas fa-plus"></i> Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── TAB: MEDIA ─── -->
+        <div class="tab-content" id="tab-media">
+            <div style="background:var(--card-bg); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--border);">
+                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Multimedia</h2>
+                
+                <!-- Video Upload -->
+                <div style="margin-bottom:2rem;">
+                    <label style="display:block; font-weight:600; margin-bottom:0.5rem;">
+                        <i class="fas fa-video"></i> Eulogy Video
+                    </label>
+                    <div class="upload-zone" id="videoZone" style="margin-bottom:0.5rem;">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload video (MP4, WebM)
+                        <input type="file" id="videoUpload" accept="video/*" />
+                    </div>
+                    <div id="videoPreviewContainer"></div>
+                </div>
+
+                <!-- Audio Upload -->
+                <div style="margin-bottom:2rem;">
+                    <label style="display:block; font-weight:600; margin-bottom:0.5rem;">
+                        <i class="fas fa-music"></i> Audio Eulogy / Music
+                    </label>
+                    <div class="upload-zone" id="audioZone">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload audio (MP3, WAV)
+                        <input type="file" id="audioUpload" accept="audio/*" />
+                    </div>
+                    <div id="audioPreviewContainer"></div>
+                </div>
+
+                <!-- Background Image -->
+                <div>
+                    <label style="display:block; font-weight:600; margin-bottom:0.5rem;">
+                        <i class="fas fa-image"></i> Background Watermark
+                    </label>
+                    <div class="upload-zone" id="bgZone">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload background
+                        <input type="file" id="bgUpload" accept="image/*" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── TAB: PRIVACY ─── -->
+        <div class="tab-content" id="tab-privacy">
+            <div class="privacy-section">
+                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1.5rem;">Privacy & Access Control</h2>
+
+                <div class="privacy-toggle">
+                    <div>
+                        <strong style="display:block; margin-bottom:0.2rem;">Public Memorial</strong>
+                        <span style="font-size:0.8rem; color:var(--text-light);">Anyone with the link can view</span>
+                    </div>
+                    <button class="toggle-switch active" id="publicToggle"></button>
+                </div>
+
+                <div class="privacy-toggle">
+                    <div>
+                        <strong style="display:block; margin-bottom:0.2rem;">Password Protected</strong>
+                        <span style="font-size:0.8rem; color:var(--text-light);">Require password to access</span>
+                    </div>
+                    <button class="toggle-switch" id="passwordToggle"></button>
+                </div>
+
+                <div id="passwordInputContainer" style="display:none; margin-bottom:1rem;">
+                    <input type="password" id="memorialPassword" placeholder="Set memorial password" style="width:100%; padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
+                </div>
+
+                <div class="privacy-toggle">
+                    <div>
+                        <strong style="display:block; margin-bottom:0.2rem;">Guest List Only</strong>
+                        <span style="font-size:0.8rem; color:var(--text-light);">Only send links to approved people</span>
+                    </div>
+                    <button class="toggle-switch" id="guestListToggle"></button>
+                </div>
+
+                <div class="privacy-toggle">
+                    <div>
+                        <strong style="display:block; margin-bottom:0.2rem;">Auto-delete After</strong>
+                        <span style="font-size:0.8rem; color:var(--text-light);">Automatically remove memorial after</span>
+                    </div>
+                    <select style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
+                        <option>Never</option>
+                        <option>1 Year</option>
+                        <option>5 Years</option>
+                        <option>10 Years</option>
+                    </select>
+                </div>
+
+                <div style="background:#e3f2fd; border:1px solid #90caf9; border-radius:var(--radius-sm); padding:1rem; margin-top:1rem;">
+                    <i class="fas fa-info-circle" style="color:#1565c0;"></i>
+                    <strong style="color:#1565c0; display:block; margin-bottom:0.3rem;">Privacy Protection</strong>
+                    <span style="font-size:0.8rem; color:#1565c0;">Your memorial data is encrypted and never shared with third parties.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── TAB: ANALYTICS ─── -->
+        <div class="tab-content" id="tab-analytics">
+            <div class="analytics-section">
+                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Memorial Analytics</h2>
+                <p style="color:var(--text-light); margin-bottom:1.5rem;">Real-time engagement metrics for this digital memorial.</p>
+
+                <div class="analytics-grid">
+                    <div class="stat-card">
+                        <div class="number">247</div>
+                        <div class="label">Total Views</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">42</div>
+                        <div class="label">Unique Visitors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">18</div>
+                        <div class="label">Candles Lit</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">12</div>
+                        <div class="label">Guestbook Entries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">34</div>
+                        <div class="label">Shares</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">4m 32s</div>
+                        <div class="label">Avg. Time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">89%</div>
+                        <div class="label">Mobile Views</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">156</div>
+                        <div class="label">QR Scans</div>
+                    </div>
+                </div>
+
+                <div style="background:#f9f6f2; border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; margin-top:1.5rem;">
+                    <h4 style="margin-bottom:0.8rem;">Engagement by Platform</h4>
+                    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.8rem;">
+                        <div style="text-align:center;">
+                            <div style="font-size:1.4rem; font-weight:700; color:var(--primary);">45%</div>
+                            <div style="font-size:0.75rem; color:var(--text-light); margin-top:0.3rem;">Direct Link</div>
                         </div>
-                        <div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                            <strong>Portrait Session</strong> <span style="float:right; font-weight:600;">R450</span>
-                            <div style="font-size:0.7rem; color:var(--text-light);">Professional studio or location</div>
+                        <div style="text-align:center;">
+                            <div style="font-size:1.4rem; font-weight:700; color:#1877f2;">32%</div>
+                            <div style="font-size:0.75rem; color:var(--text-light); margin-top:0.3rem;">Facebook</div>
                         </div>
-                        <div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                            <strong>Video Tribute</strong> <span style="float:right; font-weight:600;">R650</span>
-                            <div style="font-size:0.7rem; color:var(--text-light);">2-3 min memorial video</div>
-                        </div>
-                        <div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                            <strong>Photo Restoration</strong> <span style="float:right; font-weight:600;">R350</span>
-                            <div style="font-size:0.7rem; color:var(--text-light);">Restore old or damaged photos</div>
+                        <div style="text-align:center;">
+                            <div style="font-size:1.4rem; font-weight:700; color:#25d366;">23%</div>
+                            <div style="font-size:0.75rem; color:var(--text-light); margin-top:0.3rem;">WhatsApp</div>
                         </div>
                     </div>
                 </div>
@@ -1894,675 +1734,340 @@
         <!-- ─── TAB: GUESTBOOK ─── -->
         <div class="tab-content" id="tab-guestbook">
             <div class="guestbook-section">
-                <h3><i class="fas fa-book" style="color:var(--accent-dark);"></i> Guestbook &amp; Condolences</h3>
-                <p style="color:var(--text-light); font-size:0.85rem; margin-bottom:0.5rem;">Leave a message of comfort for the family.</p>
+                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">
+                    <i class="fas fa-book"></i> Guestbook & Tributes
+                </h2>
 
                 <div class="guestbook-messages" id="guestbookMessages">
                     <div class="guestbook-entry">
                         <div class="name">Marie Jacobs</div>
                         <div class="msg">Deepest condolences. Eleanor was a pillar of our community.</div>
-                        <div class="time">2 hours ago</div>
+                        <div style="font-size:0.65rem; color:var(--text-light);">2 hours ago</div>
                     </div>
                     <div class="guestbook-entry">
                         <div class="name">David Smith</div>
                         <div class="msg">A beautiful soul. She will be deeply missed.</div>
-                        <div class="time">5 hours ago</div>
-                    </div>
-                    <div class="guestbook-entry">
-                        <div class="name">Thandi Nkosi</div>
-                        <div class="msg">Rest in peace, dear friend. Your legacy lives on.</div>
-                        <div class="time">1 day ago</div>
+                        <div style="font-size:0.65rem; color:var(--text-light);">5 hours ago</div>
                     </div>
                 </div>
 
-                <div class="guestbook-form">
-                    <input type="text" id="guestName" placeholder="Your name" />
-                    <input type="text" id="guestMessage" placeholder="Your message..." />
+                <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:0.5rem; margin-top:1rem;">
+                    <input type="text" id="guestName" placeholder="Your name" style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
+                    <input type="text" id="guestMessage" placeholder="Your message..." style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
                     <button class="btn btn-primary btn-sm" id="guestSubmit"><i class="fas fa-paper-plane"></i> Send</button>
                 </div>
             </div>
         </div>
 
-        <!-- ─── TAB: CANDLE ─── -->
-        <div class="tab-content" id="tab-candle">
-            <div class="candle-section">
-                <h3><i class="fas fa-fire" style="color:#c9a87c;"></i> Light a Virtual Candle</h3>
-                <p style="color:var(--text-light); font-size:0.85rem;">Click a candle to light it in memory of Eleanor.</p>
-
-                <div class="candle-container" id="candleContainer">
-                    <div>
-                        <div class="candle" data-lit="false"></div>
-                        <div class="candle-label">Family</div>
-                    </div>
-                    <div>
-                        <div class="candle" data-lit="false"></div>
-                        <div class="candle-label">Friends</div>
-                    </div>
-                    <div>
-                        <div class="candle" data-lit="false"></div>
-                        <div class="candle-label">Community</div>
-                    </div>
-                    <div>
-                        <div class="candle" data-lit="false"></div>
-                        <div class="candle-label">All</div>
-                    </div>
-                </div>
-
-                <div class="candle-count" id="candleCount">🕯️ 0 candles lit</div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: ANALYTICS ─── -->
-        <div class="tab-content" id="tab-analytics">
-            <div class="analytics-section">
-                <h3><i class="fas fa-chart-bar" style="color:var(--accent-dark);"></i> Memorial Analytics</h3>
-                <p style="color:var(--text-light); font-size:0.85rem; margin-bottom:0.5rem;">Real-time engagement for this digital memorial.</p>
-
-                <div class="analytics-grid">
-                    <div class="stat-card">
-                        <div class="number" id="statViews">247</div>
-                        <div class="label">Views</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number" id="statCandles">12</div>
-                        <div class="label">Candles Lit</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number" id="statMessages">8</div>
-                        <div class="label">Messages</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number" id="statShares">23</div>
-                        <div class="label">Shares</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number" id="statQR">56</div>
-                        <div class="label">QR Scans</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number" id="statTime">4m</div>
-                        <div class="label">Avg. Time</div>
-                    </div>
-                </div>
-
-                <div style="font-size:0.65rem; color:var(--text-light); text-align:center; margin-top:0.5rem;">
-                    <i class="fas fa-sync-alt"></i> Updated in real-time · Premium &amp; Deluxe include full analytics.
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── FAB ─── -->
-        <button class="fab-save" id="fabSave"><i class="fas fa-save"></i> Save &amp; Share</button>
     </div>
 
     <script>
         (function() {
             'use strict';
 
-            // ─── DOM refs ───
             const $ = id => document.getElementById(id);
-            const nameInput = $('nameInput');
-            const datesInput = $('datesInput');
-            const messageInput = $('messageInput');
-            const bioInput = $('bioInput');
-            const previewName = $('previewName');
-            const previewDates = $('previewDates');
-            const previewBody = $('previewBody');
-            const previewBio = $('previewBio');
-            const previewGallery = $('previewGallery');
-            const pamphletHeader = $('pamphletHeader');
-            const pamphletFooter = $('pamphletFooter');
-            const emblemContainer = $('emblemContainer');
-            const uploadZone = $('uploadZone');
-            const imageUpload = $('imageUpload');
-            const galleryUpload = $('galleryUpload');
-            const galleryPreview = $('galleryPreview');
-            const audioUpload = $('audioUpload');
-            const audioFileName = $('audioFileName');
-            const audioPlayerContainer = $('audioPlayerContainer');
-            const audioPlayer = $('audioPlayer');
-            const bgUpload = $('bgUpload');
-            const qrContainer = $('qrcode');
-            const shareLinkText = $('shareLinkText');
-            const copyLinkBtn = $('copyLinkBtn');
-            const saveBtn = $('saveBtn');
-            const resetBtn = $('resetBtn');
-            const downloadBtn = $('downloadBtn');
-            const orderBtn = $('orderBtn');
-            const fabSave = $('fabSave');
-            const toast = $('toast');
-            const currentPageNum = $('currentPageNum');
-            const totalPages = $('totalPages');
-            const pageNav = $('pageNav');
-            const prevPage = $('prevPage');
-            const nextPage = $('nextPage');
-            const guestName = $('guestName');
-            const guestMessage = $('guestMessage');
-            const guestSubmit = $('guestSubmit');
-            const guestbookMessages = $('guestbookMessages');
-            const candleContainer = $('candleContainer');
-            const candleCount = $('candleCount');
-            const statViews = $('statViews');
-            const statCandles = $('statCandles');
-            const statMessages = $('statMessages');
-            const statShares = $('statShares');
-            const statQR = $('statQR');
-            const statTime = $('statTime');
-            const shareSocialBtn = $('shareSocialBtn');
-            const headerPackagesLink = $('headerPackagesLink');
-
-            // ─── State ───
+            
+            // ─── State ─── 
             let currentTemplate = 'classic';
             let currentColor = '#b8a79b';
             let currentFont = 'inter';
-            let uploadedImageData = null;
-            let galleryImages = [];
-            let audioData = null;
-            let bgImageData = null;
-            let currentPamphletLink = '';
-            let qrCodeInstance = null;
             let currentPage = 0;
-            const totalPagesCount = 2;
-            let candleLit = 0;
+            const totalPages = 6;
+            let timelineEvents = [
+                { year: 1942, event: 'Born in Cape Town' },
+                { year: 1960, event: 'Started teaching career' },
+                { year: 1965, event: 'Married John Smith' }
+            ];
+            let uploadedImage = null;
+            let galleryImages = [];
+            let videoFile = null;
+            let audioFile = null;
 
-            // ─── Toast ───
-            let toastTimer = null;
-
+            // ─── Toast ─── 
             function showToast(msg) {
+                const toast = $('toast');
                 toast.textContent = msg;
                 toast.classList.add('show');
-                clearTimeout(toastTimer);
-                toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+                setTimeout(() => toast.classList.remove('show'), 2600);
             }
 
-            // ─── Update preview ───
+            // ─── Update Preview ─── 
             function updatePreview() {
-                const name = nameInput.value || 'Name';
-                const dates = datesInput.value || 'Dates';
-                const message = messageInput.value || 'Message';
-                const bio = bioInput.value || '';
+                const name = $('nameInput').value || 'Name';
+                const dates = $('datesInput').value || 'Dates';
+                const tribute = $('messageInput').value || '';
+                const bio = $('bioInput').value || '';
 
-                previewName.textContent = name;
-                previewDates.textContent = dates;
-                previewBody.innerHTML = `<p>${message}</p>`;
-                if (bio) {
-                    previewBio.innerHTML = bio;
-                    previewBio.style.display = 'block';
-                } else {
-                    previewBio.style.display = 'none';
-                }
+                $('previewName').textContent = name;
+                $('previewDates').textContent = dates;
+                $('previewTribute').textContent = tribute;
+                $('previewBio').textContent = bio;
 
-                // Update both pages
-                document.querySelectorAll('.pamphlet-card').forEach((card, idx) => {
-                    card.className = 'pamphlet-card';
-                    if (idx === 0) card.classList.add('active-page');
-                    card.classList.add(`template-${currentTemplate}`);
-                });
-
-                // Font
-                const fontMap = {
-                    inter: 'font-inter',
-                    playfair: 'font-serif',
-                    quicksand: 'font-quicksand',
-                    script: 'font-script',
-                    lora: 'font-lora',
-                    montserrat: 'font-montserrat'
-                };
+                // Update all cards with template and font
                 document.querySelectorAll('.pamphlet-card').forEach(card => {
-                    card.className = card.className.split(' ').filter(c => !c.startsWith('font-')).join(' ');
-                    if (fontMap[currentFont]) card.classList.add(fontMap[currentFont]);
+                    card.className = `pamphlet-card template-${currentTemplate} font-${currentFont}`;
+                    const page = parseInt(card.dataset.page);
+                    if (page === currentPage) card.classList.add('active-page');
                 });
 
-                // Color
-                pamphletHeader.style.borderBottomColor = currentColor;
-                pamphletFooter.style.borderTopColor = currentColor;
-                document.querySelectorAll('.pamphlet-card .pamphlet-header').forEach(el => el.style.borderBottomColor =
-                    currentColor);
-                document.querySelectorAll('.pamphlet-card .pamphlet-footer').forEach(el => el.style.borderTopColor =
-                    currentColor);
-                document.querySelectorAll('.pamphlet-emblem').forEach(el => el.style.borderColor = currentColor);
+                // Update colors
+                document.querySelectorAll('.pamphlet-header, .pamphlet-footer').forEach(el => {
+                    el.style.borderColor = currentColor;
+                });
 
-                // Emblem
-                if (uploadedImageData) {
-                    document.querySelectorAll('.pamphlet-emblem').forEach(el => {
-                        el.innerHTML = `<img src="${uploadedImageData}" alt="emblem" />`;
-                    });
-                } else {
-                    document.querySelectorAll('.pamphlet-emblem').forEach(el => {
-                        el.innerHTML = `<i class="fas fa-leaf"></i>`;
-                    });
-                }
-
-                // Gallery
+                // Update gallery
                 renderGallery();
 
-                // Background
-                if (bgImageData) {
-                    document.querySelectorAll('.pamphlet-card').forEach(card => {
-                        card.style.backgroundImage = `url(${bgImageData})`;
-                        card.style.backgroundSize = 'cover';
-                        card.style.backgroundPosition = 'center';
-                        card.style.backgroundOpacity = '0.08';
-                    });
-                } else {
-                    document.querySelectorAll('.pamphlet-card').forEach(card => {
-                        card.style.backgroundImage = 'none';
-                    });
-                }
+                // Update timeline preview
+                renderTimelinePreview();
 
-                // Audio
-                if (audioData) {
-                    audioPlayer.src = audioData;
-                    audioPlayerContainer.style.display = 'block';
-                    audioFileName.textContent = 'Audio loaded';
-                } else {
-                    audioPlayerContainer.style.display = 'none';
-                    audioFileName.textContent = 'No file';
-                }
-
-                // Page numbers
-                currentPageNum.textContent = currentPage + 1;
-                totalPages.textContent = totalPagesCount;
-
-                document.querySelectorAll('.page-nav button[data-page]').forEach(btn => {
-                    const p = parseInt(btn.dataset.page);
-                    btn.classList.toggle('active-page', p === currentPage);
-                });
-
-                document.querySelectorAll('.pamphlet-card').forEach(card => {
-                    const p = parseInt(card.dataset.page);
-                    card.classList.toggle('active-page', p === currentPage);
-                });
+                // Update media
+                renderMediaPreview();
             }
 
-            // ─── Gallery ───
             function renderGallery() {
-                previewGallery.innerHTML = '';
-                galleryImages.forEach(src => {
+                const container = $('previewGallery');
+                container.innerHTML = '';
+                galleryImages.slice(0, 4).forEach(src => {
                     const img = document.createElement('img');
                     img.src = src;
-                    previewGallery.appendChild(img);
+                    container.appendChild(img);
                 });
-                if (galleryImages.length === 0) {
-                    previewGallery.style.display = 'none';
+            }
+
+            function renderTimelinePreview() {
+                const container = $('previewTimeline');
+                container.innerHTML = timelineEvents.map(e => `
+                    <div class="timeline-entry">
+                        <span class="timeline-year-badge">${e.year}</span>
+                        <span class="timeline-entry-text">${e.event}</span>
+                    </div>
+                `).join('');
+            }
+
+            function renderMediaPreview() {
+                const mediaContainer = $('previewMediaContainer');
+                mediaContainer.innerHTML = '';
+                if (videoFile) {
+                    const video = document.createElement('video');
+                    video.src = videoFile;
+                    video.controls = true;
+                    video.style.width = '100%';
+                    video.style.borderRadius = '12px';
+                    video.style.maxHeight = '300px';
+                    mediaContainer.appendChild(video);
+                } else if (audioFile) {
+                    const audio = document.createElement('audio');
+                    audio.src = audioFile;
+                    audio.controls = true;
+                    audio.style.width = '100%';
+                    audio.style.marginTop = '1rem';
+                    mediaContainer.appendChild(audio);
                 } else {
-                    previewGallery.style.display = 'grid';
+                    mediaContainer.innerHTML = '<i class="fas fa-video" style="font-size:2rem; margin:1rem 0; display:block;"></i><p style="color:var(--text-light);">Video or audio eulogy will appear here</p>';
                 }
             }
 
-            // ─── Generate link ───
-            function generatePamphletLink() {
-                const data = {
-                    n: nameInput.value,
-                    d: datesInput.value,
-                    m: messageInput.value,
-                    b: bioInput.value,
-                    t: currentTemplate,
-                    c: currentColor,
-                    f: currentFont,
-                    img: uploadedImageData ? 'yes' : 'no'
-                };
-                const json = JSON.stringify(data);
-                const encoded = btoa(encodeURIComponent(json));
-                const short = encoded.substring(0, 32);
-                return `https://eternal-leaf.app/m/${short}`;
+            function renderTimelineList() {
+                const list = $('timelineList');
+                list.innerHTML = timelineEvents.map((e, idx) => `
+                    <div class="timeline-event">
+                        <div class="timeline-year">${e.year}</div>
+                        <div class="timeline-text">${e.event}</div>
+                        <button onclick="removeTimelineEvent(${idx})">×</button>
+                    </div>
+                `).join('');
             }
 
-            // ─── QR ───
-            function generateQR(link) {
-                qrContainer.innerHTML = '';
-                try {
-                    qrCodeInstance = new QRCode(qrContainer, {
-                        text: link,
-                        width: 72,
-                        height: 72,
-                        colorDark: '#1a2c2b',
-                        colorLight: '#ffffff',
-                        correctLevel: QRCode.CorrectLevel.H
-                    });
-                } catch (e) {
-                    qrContainer.innerHTML =
-                        `<div class="qr-placeholder"><i class="fas fa-qrcode"></i><span>QR</span></div>`;
-                }
-            }
-
-            // ─── Save ───
-            function savePamphlet() {
+            window.removeTimelineEvent = (idx) => {
+                timelineEvents.splice(idx, 1);
+                renderTimelineList();
                 updatePreview();
-                const link = generatePamphletLink();
-                currentPamphletLink = link;
-                shareLinkText.textContent = link;
-                generateQR(link);
-                // Update stats
-                const views = parseInt(statViews.textContent) + 1;
-                statViews.textContent = views;
-                showToast('✅ Digital pamphlet saved! Link & QR ready.');
-                return link;
-            }
+            };
 
-            // ─── Reset ───
-            function resetPamphlet() {
-                nameInput.value = 'Eleanor Rose';
-                datesInput.value = '1942 – 2026';
-                messageInput.value = 'A gentle soul, forever in our hearts. Her warmth and wisdom touched everyone she met.';
-                bioInput.value = 'Born in Cape Town, Eleanor dedicated her life to teaching and nurturing young minds.';
-                currentTemplate = 'classic';
-                currentColor = '#b8a79b';
-                currentFont = 'inter';
-                uploadedImageData = null;
-                galleryImages = [];
-                audioData = null;
-                bgImageData = null;
+            // ─── Event Listeners ─── 
+            $('nameInput').addEventListener('input', updatePreview);
+            $('datesInput').addEventListener('input', updatePreview);
+            $('messageInput').addEventListener('input', updatePreview);
+            $('bioInput').addEventListener('input', updatePreview);
 
-                document.querySelectorAll('.template-chip').forEach(c => c.classList.remove('active'));
-                document.querySelector('.template-chip[data-template="classic"]').classList.add('active');
-
-                document.querySelectorAll('.color-swatch').forEach(c => c.classList.remove('active'));
-                document.querySelector('.color-swatch[style*="#b8a79b"]').classList.add('active');
-
-                document.querySelectorAll('.font-chip').forEach(c => c.classList.remove('active'));
-                document.querySelector('.font-chip[data-font="inter"]').classList.add('active');
-
-                document.querySelectorAll('.pamphlet-emblem').forEach(el => {
-                    el.innerHTML = `<i class="fas fa-leaf"></i>`;
-                });
-                galleryPreview.innerHTML = '';
-                audioPlayerContainer.style.display = 'none';
-                audioFileName.textContent = 'No file';
-                document.querySelectorAll('.pamphlet-card').forEach(c => c.style.backgroundImage = 'none');
-
-                updatePreview();
-                showToast('↺ Reset to default');
-            }
-
-            // ─── Download PDF ───
-            function downloadPDF() {
-                const card = document.querySelector('.pamphlet-card.active-page');
-                if (!card) return;
-                showToast('📄 Generating PDF...');
-                html2canvas(card, {
-                    scale: 2,
-                    backgroundColor: '#fff',
-                    useCORS: true,
-                    logging: false
-                }).then(canvas => {
-                    const imgData = canvas.toDataURL('image/png');
-                    const { jsPDF } = window.jspdf;
-                    const pdf = new jsPDF('p', 'mm', 'a4');
-                    const pdfWidth = 210;
-                    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-                    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                    pdf.save('digital-memorial-pamphlet.pdf');
-                    showToast('✅ PDF downloaded!');
-                }).catch(() => {
-                    showToast('⚠️ Could not generate PDF. Please try again.');
-                });
-            }
-
-            // ─── Order / Photo Service ───
-            function orderPhotoService() {
-                showToast('📸 Photography service: Contact us at photo@eternal-leaf.co.za');
-            }
-
-            // ─── Guestbook ───
-            function addGuestMessage() {
-                const name = guestName.value.trim() || 'Anonymous';
-                const msg = guestMessage.value.trim();
-                if (!msg) { showToast('Please write a message.'); return; }
-                const entry = document.createElement('div');
-                entry.className = 'guestbook-entry';
-                const time = new Date().toLocaleString();
-                entry.innerHTML =
-                    `<div class="name">${name}</div><div class="msg">${msg}</div><div class="time">${time}</div>`;
-                guestbookMessages.prepend(entry);
-                guestName.value = '';
-                guestMessage.value = '';
-                const count = parseInt(statMessages.textContent) + 1;
-                statMessages.textContent = count;
-                showToast('💬 Message sent.');
-            }
-
-            // ─── Candle ───
-            function toggleCandle(el) {
-                const lit = el.dataset.lit === 'true';
-                el.dataset.lit = (!lit).toString();
-                el.classList.toggle('lit', !lit);
-                candleLit += lit ? -1 : 1;
-                candleCount.textContent = `🕯️ ${candleLit} candles lit`;
-                const count = parseInt(statCandles.textContent) + (lit ? 0 : 1);
-                statCandles.textContent = count;
-                if (!lit) showToast('🕯️ A candle has been lit.');
-            }
-
-            // ─── Share ───
-            function sharePamphlet() {
-                if (!currentPamphletLink) savePamphlet();
-                if (navigator.share) {
-                    navigator.share({
-                        title: 'Eternal Leaf – Digital Memorial',
-                        text: `View this digital memorial pamphlet: ${currentPamphletLink}`,
-                        url: currentPamphletLink
-                    }).catch(() => {});
-                } else {
-                    navigator.clipboard?.writeText(currentPamphletLink).then(() => {
-                        showToast('📋 Link copied!');
-                    }).catch(() => {
-                        showToast('📋 ' + currentPamphletLink);
-                    });
-                }
-                const shares = parseInt(statShares.textContent) + 1;
-                statShares.textContent = shares;
-            }
-
-            // ─── Tab switching ───
-            document.querySelectorAll('.main-tab').forEach(tab => {
-                tab.addEventListener('click', function() {
-                    document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    const target = this.dataset.tab;
-                    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-                    document.getElementById(`tab-${target}`).classList.add('active');
-                    // Update header link
-                    if (target === 'packages') {
-                        headerPackagesLink.classList.add('active');
-                    } else {
-                        headerPackagesLink.classList.remove('active');
-                    }
-                });
-            });
-
-            // ─── Header Packages link ───
-            headerPackagesLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-                document.querySelector('.main-tab[data-tab="packages"]').classList.add('active');
-                document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-                document.getElementById('tab-packages').classList.add('active');
-                headerPackagesLink.classList.add('active');
-                // Scroll to packages section
-                document.getElementById('tab-packages').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-
-            // ─── Page navigation ───
-            function goToPage(p) {
-                if (p < 0 || p >= totalPagesCount) return;
-                currentPage = p;
-                updatePreview();
-            }
-
-            prevPage.addEventListener('click', () => goToPage(currentPage - 1));
-            nextPage.addEventListener('click', () => goToPage(currentPage + 1));
-            document.querySelectorAll('.page-nav button[data-page]').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    goToPage(parseInt(this.dataset.page));
-                });
-            });
-
-            // ─── Event listeners ───
-            nameInput.addEventListener('input', updatePreview);
-            datesInput.addEventListener('input', updatePreview);
-            messageInput.addEventListener('input', updatePreview);
-            bioInput.addEventListener('input', updatePreview);
-
-            // Templates
+            // ─── Template ─── 
             document.querySelectorAll('.template-chip').forEach(chip => {
-                chip.addEventListener('click', function() {
+                chip.addEventListener('click', () => {
                     document.querySelectorAll('.template-chip').forEach(c => c.classList.remove('active'));
-                    this.classList.add('active');
-                    currentTemplate = this.dataset.template;
+                    chip.classList.add('active');
+                    currentTemplate = chip.dataset.template;
                     updatePreview();
                 });
             });
 
-            // Colors
-            document.querySelectorAll('.color-swatch').forEach(sw => {
-                sw.addEventListener('click', function() {
+            // ─── Color ─── 
+            document.querySelectorAll('.color-swatch').forEach(swatch => {
+                swatch.addEventListener('click', () => {
                     document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-                    this.classList.add('active');
-                    currentColor = this.dataset.color;
+                    swatch.classList.add('active');
+                    currentColor = swatch.dataset.color;
                     updatePreview();
                 });
             });
 
-            // Fonts
+            // ─── Font ─── 
             document.querySelectorAll('.font-chip').forEach(chip => {
-                chip.addEventListener('click', function() {
+                chip.addEventListener('click', () => {
                     document.querySelectorAll('.font-chip').forEach(c => c.classList.remove('active'));
-                    this.classList.add('active');
-                    currentFont = this.dataset.font;
+                    chip.classList.add('active');
+                    currentFont = chip.dataset.font;
                     updatePreview();
                 });
             });
 
-            // Emblem upload
-            uploadZone.addEventListener('click', () => imageUpload.click());
-            imageUpload.addEventListener('change', function(e) {
+            // ─── Image Upload ─── 
+            $('imageUpload').addEventListener('change', (e) => {
                 const file = e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(ev) {
-                    uploadedImageData = ev.target.result;
-                    updatePreview();
-                    showToast('🖼️ Emblem uploaded');
-                };
-                reader.readAsDataURL(file);
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        uploadedImage = ev.target.result;
+                        document.querySelectorAll('.pamphlet-emblem').forEach(el => {
+                            el.innerHTML = `<img src="${uploadedImage}" alt="emblem" />`;
+                        });
+                        showToast('✅ Photo uploaded');
+                    };
+                    reader.readAsDataURL(file);
+                }
             });
 
-            // Gallery upload
-            galleryUpload.addEventListener('change', function(e) {
-                const files = e.target.files;
-                if (!files.length) return;
-                Array.from(files).forEach(file => {
-                    if (galleryImages.length >= 4) {
-                        showToast('⚠️ Maximum 4 gallery images');
-                        return;
-                    }
+            // ─── Gallery Upload ─── 
+            $('galleryUpload').addEventListener('change', (e) => {
+                Array.from(e.target.files).slice(0, 4).forEach(file => {
                     const reader = new FileReader();
-                    reader.onload = function(ev) {
+                    reader.onload = (ev) => {
                         galleryImages.push(ev.target.result);
                         renderGallery();
-                        updatePreview();
                     };
                     reader.readAsDataURL(file);
                 });
-                showToast('🖼️ Gallery updated');
+                showToast('✅ Gallery updated');
             });
 
-            // Audio upload
-            audioUpload.addEventListener('change', function(e) {
+            // ─── Video Upload ─── 
+            $('videoUpload').addEventListener('change', (e) => {
                 const file = e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(ev) {
-                    audioData = ev.target.result;
-                    updatePreview();
-                    showToast('🎵 Audio uploaded');
-                };
-                reader.readAsDataURL(file);
-            });
-
-            // Background upload
-            bgUpload.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = function(ev) {
-                    bgImageData = ev.target.result;
-                    updatePreview();
-                    showToast('🌅 Background set');
-                };
-                reader.readAsDataURL(file);
-            });
-
-            // Save
-            saveBtn.addEventListener('click', savePamphlet);
-            fabSave.addEventListener('click', savePamphlet);
-
-            // Reset
-            resetBtn.addEventListener('click', resetPamphlet);
-
-            // Download PDF
-            downloadBtn.addEventListener('click', downloadPDF);
-
-            // Order / Photo
-            orderBtn.addEventListener('click', orderPhotoService);
-
-            // Copy link
-            copyLinkBtn.addEventListener('click', function() {
-                if (!currentPamphletLink) savePamphlet();
-                navigator.clipboard?.writeText(currentPamphletLink).then(() => {
-                    showToast('📋 Link copied!');
-                }).catch(() => {
-                    const temp = document.createElement('input');
-                    temp.value = currentPamphletLink;
-                    document.body.appendChild(temp);
-                    temp.select();
-                    document.execCommand('copy');
-                    temp.remove();
-                    showToast('📋 Link copied!');
-                });
-            });
-
-            // Share social
-            shareSocialBtn.addEventListener('click', sharePamphlet);
-
-            // Guestbook
-            guestSubmit.addEventListener('click', addGuestMessage);
-            guestMessage.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') addGuestMessage();
-            });
-
-            // Candle
-            document.querySelectorAll('.candle').forEach(c => {
-                c.addEventListener('click', function() {
-                    toggleCandle(this);
-                });
-            });
-
-            // Keyboard shortcuts
-            document.addEventListener('keydown', function(e) {
-                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                    e.preventDefault();
-                    savePamphlet();
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        videoFile = ev.target.result;
+                        updatePreview();
+                        showToast('✅ Video uploaded');
+                    };
+                    reader.readAsDataURL(file);
                 }
-                if (e.key === 'ArrowRight') goToPage(currentPage + 1);
-                if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
             });
 
-            // ─── Init ───
-            resetPamphlet();
-            setTimeout(() => {
-                savePamphlet();
-            }, 400);
+            // ─── Audio Upload ─── 
+            $('audioUpload').addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        audioFile = ev.target.result;
+                        updatePreview();
+                        showToast('✅ Audio uploaded');
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
 
-            // ─── Auto-save stats ───
-            setInterval(() => {
-                const views = parseInt(statViews.textContent);
-                if (Math.random() > 0.7) statViews.textContent = views + Math.floor(Math.random() * 2);
-                const qr = parseInt(statQR.textContent);
-                if (Math.random() > 0.85) statQR.textContent = qr + 1;
-            }, 8000);
+            // ─── Timeline ─── 
+            $('addTimelineBtn').addEventListener('click', () => {
+                const year = parseInt($('timelineYear').value);
+                const event = $('timelineEvent').value.trim();
+                if (year && event) {
+                    timelineEvents.push({ year, event });
+                    timelineEvents.sort((a, b) => a.year - b.year);
+                    renderTimelineList();
+                    updatePreview();
+                    $('timelineYear').value = '';
+                    $('timelineEvent').value = '';
+                    showToast('✅ Timeline event added');
+                }
+            });
 
+            // ─── Pagination ─── 
+            document.querySelectorAll('.page-nav button[data-page]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentPage = parseInt(btn.dataset.page);
+                    updatePreview();
+                });
+            });
+
+            $('prevPage').addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    updatePreview();
+                }
+            });
+
+            $('nextPage').addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    updatePreview();
+                }
+            });
+
+            // ─── Tab Navigation ─── 
+            document.querySelectorAll('.main-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabName = tab.dataset.tab;
+                    document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    $(`tab-${tabName}`).classList.add('active');
+                });
+            });
+
+            // ─── Privacy Toggles ─── 
+            $('passwordToggle').addEventListener('click', function() {
+                this.classList.toggle('active');
+                $('passwordInputContainer').style.display = this.classList.contains('active') ? 'block' : 'none';
+            });
+
+            // ─── Guestbook ─── 
+            $('guestSubmit').addEventListener('click', () => {
+                const name = $('guestName').value.trim() || 'Anonymous';
+                const msg = $('guestMessage').value.trim();
+                if (msg) {
+                    const entry = document.createElement('div');
+                    entry.className = 'guestbook-entry';
+                    entry.innerHTML = `
+                        <div class="name">${name}</div>
+                        <div class="msg">${msg}</div>
+                        <div style="font-size:0.65rem; color:var(--text-light);">just now</div>
+                    `;
+                    $('guestbookMessages').insertBefore(entry, $('guestbookMessages').firstChild);
+                    $('guestName').value = '';
+                    $('guestMessage').value = '';
+                    showToast('✅ Message posted');
+                }
+            });
+
+            // ─── Save ─── 
+            $('fabSave').addEventListener('click', () => {
+                updatePreview();
+                showToast('✅ Memorial saved! Link ready to share.');
+            });
+
+            // ─── Social Share ─── 
+            document.querySelectorAll('.social-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const platform = card.id.replace('share', '').toLowerCase();
+                    showToast(`📤 Sharing to ${platform}...`);
+                });
+            });
+
+            // Initialize
+            updatePreview();
+            renderTimelineList();
         })();
     </script>
 
