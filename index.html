@@ -1027,6 +1027,297 @@
             left: 22px;
         }
 
+        /* ─── Packages & Pricing ─── */
+        .packages-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .packages-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+            color: var(--text);
+        }
+
+        .packages-section .subtitle {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin: 2rem 0 1.2rem 0;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--gold);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .category-header i {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1.8rem 1.5rem;
+            border: 2px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--gold);
+            border-width: 3px;
+            background: linear-gradient(135deg, #fcfaf8 0%, #fff 100%);
+            transform: scale(1.02);
+        }
+
+        .pricing-card.popular:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(201, 168, 124, 0.2);
+        }
+
+        .pricing-card.popular::before {
+            content: '★ MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            right: 1.5rem;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card.business-featured {
+            border-color: var(--primary);
+            border-width: 3px;
+            background: linear-gradient(135deg, #f0f4f3 0%, #f8faf9 100%);
+        }
+
+        .pricing-card.business-featured::before {
+            content: '★ BEST VALUE';
+            position: absolute;
+            top: -12px;
+            right: 1.5rem;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            letter-spacing: 1px;
+        }
+
+        .plan-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.6rem;
+            height: 40px;
+        }
+
+        .plan-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .plan-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .plan-price {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 0.8rem 0 0.2rem 0;
+            line-height: 1;
+        }
+
+        .plan-price small {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-light);
+            display: block;
+            margin-top: 0.3rem;
+        }
+
+        .plan-billing {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0.8rem 0 1.5rem 0;
+            flex: 1;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            color: var(--text);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+        }
+
+        .plan-features li i {
+            color: var(--accent-dark);
+            font-size: 0.7rem;
+            width: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .plan-features li.disabled {
+            opacity: 0.45;
+            color: var(--text-light);
+        }
+
+        .plan-features li.disabled i {
+            color: #ccc;
+        }
+
+        .plan-cta {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .plan-cta.btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .plan-cta.btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .plan-cta.btn-gold {
+            background: var(--gold);
+            color: #fff;
+        }
+
+        .plan-cta.btn-gold:hover {
+            background: #b8956a;
+            transform: translateY(-2px);
+        }
+
+        .plan-cta.btn-outline {
+            background: transparent;
+            border: 2px solid var(--border);
+            color: var(--text);
+        }
+
+        .plan-cta.btn-outline:hover {
+            background: #f3ede8;
+            border-color: var(--accent-dark);
+        }
+
+        .plan-cta.btn-success {
+            background: #3d6b5a;
+            color: #fff;
+        }
+
+        .plan-cta.btn-success:hover {
+            background: #2f5547;
+        }
+
+        .add-ons-section {
+            background: #f9f6f2;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .add-ons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .add-on-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-on-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            border-color: var(--accent);
+        }
+
+        .add-on-card strong {
+            display: block;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .add-on-price {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: block;
+            margin: 0.4rem 0;
+        }
+
+        .add-on-desc {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-top: 0.3rem;
+        }
+
         /* ─── Analytics Enhanced ─── */
         .analytics-section {
             background: var(--card-bg);
@@ -1212,6 +1503,7 @@
         <!-- ─── MAIN TABS ─── -->
         <div class="main-tabs">
             <button class="main-tab active" data-tab="design"><i class="fas fa-pencil-alt"></i> Design</button>
+            <button class="main-tab" data-tab="packages"><i class="fas fa-crown"></i> Packages</button>
             <button class="main-tab" data-tab="pages"><i class="fas fa-file-alt"></i> Pages</button>
             <button class="main-tab" data-tab="timeline"><i class="fas fa-hourglass-half"></i> Timeline</button>
             <button class="main-tab" data-tab="media"><i class="fas fa-video"></i> Media</button>
@@ -1495,6 +1787,247 @@
                                 <i class="fas fa-envelope" style="color:#ea4335;"></i>
                                 <span>Email</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── TAB: PACKAGES ─── -->
+        <div class="tab-content" id="tab-packages">
+            <div class="packages-section">
+                <h2>Choose Your Memorial Package</h2>
+                <p class="subtitle">Professional digital memorial packages for individuals and organizations. All packages include mobile optimization and QR code sharing.</p>
+
+                <!-- INDIVIDUAL PACKAGES -->
+                <div class="category-header">
+                    <i class="fas fa-user-circle"></i> Individual Memorial Packages
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Individual: Basic -->
+                    <div class="pricing-card">
+                        <div class="plan-icon">🌿</div>
+                        <div class="plan-name">Basic Memorial</div>
+                        <div class="plan-subtitle">For simple tributes</div>
+                        <div class="plan-price">R0 <small>Free</small></div>
+                        <div class="plan-billing">One-time access</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Single-page memorial</li>
+                            <li><i class="fas fa-check"></i> 5 design templates</li>
+                            <li><i class="fas fa-check"></i> Photo emblem upload</li>
+                            <li><i class="fas fa-check"></i> Basic customization</li>
+                            <li><i class="fas fa-check"></i> QR code & link sharing</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Photo gallery</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Multi-page memorial</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Timeline feature</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Video/audio support</li>
+                        </ul>
+                        <button class="plan-cta btn-outline">Get Started</button>
+                    </div>
+
+                    <!-- Individual: Premium (Popular) -->
+                    <div class="pricing-card popular">
+                        <div class="plan-icon">⭐</div>
+                        <div class="plan-name">Premium Memorial</div>
+                        <div class="plan-subtitle">Most popular choice</div>
+                        <div class="plan-price">R499 <small>One-time</small></div>
+                        <div class="plan-billing">Lifetime access</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> 6-page memorial</li>
+                            <li><i class="fas fa-check"></i> 15 design templates</li>
+                            <li><i class="fas fa-check"></i> Photo gallery (up to 8)</li>
+                            <li><i class="fas fa-check"></i> Life timeline feature</li>
+                            <li><i class="fas fa-check"></i> Video/audio support</li>
+                            <li><i class="fas fa-check"></i> Guestbook & comments</li>
+                            <li><i class="fas fa-check"></i> Virtual candles</li>
+                            <li><i class="fas fa-check"></i> PDF export</li>
+                            <li><i class="fas fa-check"></i> Analytics dashboard</li>
+                        </ul>
+                        <button class="plan-cta btn-gold">Choose Premium</button>
+                    </div>
+
+                    <!-- Individual: Deluxe -->
+                    <div class="pricing-card">
+                        <div class="plan-icon">💎</div>
+                        <div class="plan-name">Deluxe Memorial</div>
+                        <div class="plan-subtitle">Complete experience</div>
+                        <div class="plan-price">R999 <small>One-time</small></div>
+                        <div class="plan-billing">Premium support</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Everything in Premium</li>
+                            <li><i class="fas fa-check"></i> Unlimited photo gallery</li>
+                            <li><i class="fas fa-check"></i> Multiple video uploads</li>
+                            <li><i class="fas fa-check"></i> Custom background images</li>
+                            <li><i class="fas fa-check"></i> Anniversary reminders</li>
+                            <li><i class="fas fa-check"></i> Digital memorial website</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Never auto-delete</li>
+                        </ul>
+                        <button class="plan-cta btn-primary">Choose Deluxe</button>
+                    </div>
+                </div>
+
+                <!-- BUSINESS PACKAGES -->
+                <div class="category-header">
+                    <i class="fas fa-building"></i> Funeral Home & Business Packages
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Business: Professional -->
+                    <div class="pricing-card">
+                        <div class="plan-icon">🏢</div>
+                        <div class="plan-name">Professional</div>
+                        <div class="plan-subtitle">Single memorial</div>
+                        <div class="plan-price">R1,999 <small>Per memorial</small></div>
+                        <div class="plan-billing">Annual subscription</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Everything in Deluxe</li>
+                            <li><i class="fas fa-check"></i> Your funeral home branding</li>
+                            <li><i class="fas fa-check"></i> Custom domain option</li>
+                            <li><i class="fas fa-check"></i> Professional copywriting</li>
+                            <li><i class="fas fa-check"></i> Photography coordination</li>
+                            <li><i class="fas fa-check"></i> White-label templates</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Multi-memorial management</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Bulk printing</li>
+                            <li class="disabled"><i class="fas fa-times"></i> API integration</li>
+                        </ul>
+                        <button class="plan-cta btn-outline">Learn More</button>
+                    </div>
+
+                    <!-- Business: Partner (Featured) -->
+                    <div class="pricing-card business-featured">
+                        <div class="plan-icon">🤝</div>
+                        <div class="plan-name">Partner Plan</div>
+                        <div class="plan-subtitle">Up to 5 memorials</div>
+                        <div class="plan-price">R6,999 <small>Per year</small></div>
+                        <div class="plan-billing">Includes 5 memorials</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Up to 5 active memorials</li>
+                            <li><i class="fas fa-check"></i> Funeral home branding</li>
+                            <li><i class="fas fa-check"></i> Custom domain included</li>
+                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                            <li><i class="fas fa-check"></i> Bulk print coordination</li>
+                            <li><i class="fas fa-check"></i> Staff training included</li>
+                            <li><i class="fas fa-check"></i> Basic analytics reports</li>
+                            <li><i class="fas fa-check"></i> Priority support 24/5</li>
+                            <li class="disabled"><i class="fas fa-times"></i> Unlimited memorials</li>
+                        </ul>
+                        <button class="plan-cta btn-primary">Contact Sales</button>
+                    </div>
+
+                    <!-- Business: Enterprise -->
+                    <div class="pricing-card">
+                        <div class="plan-icon">👑</div>
+                        <div class="plan-name">Enterprise</div>
+                        <div class="plan-subtitle">Unlimited memorials</div>
+                        <div class="plan-price">Custom <small>Contact us</small></div>
+                        <div class="plan-billing">Annual enterprise license</div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Unlimited memorials</li>
+                            <li><i class="fas fa-check"></i> Full white-label solution</li>
+                            <li><i class="fas fa-check"></i> Custom domain & SSL</li>
+                            <li><i class="fas fa-check"></i> API integration available</li>
+                            <li><i class="fas fa-check"></i> Priority photography service</li>
+                            <li><i class="fas fa-check"></i> Advanced CRM integration</li>
+                            <li><i class="fas fa-check"></i> Custom branding & design</li>
+                            <li><i class="fas fa-check"></i> 24/7 concierge support</li>
+                            <li><i class="fas fa-check"></i> Dedicated technical team</li>
+                        </ul>
+                        <button class="plan-cta btn-success">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- ADD-ONS & SERVICES -->
+                <div class="add-ons-section">
+                    <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:1rem; color:var(--primary);">
+                        <i class="fas fa-plus-circle"></i> Additional Services & Add-Ons
+                    </h3>
+                    <div class="add-ons-grid">
+                        <div class="add-on-card">
+                            <i class="fas fa-camera" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Professional Photography</strong>
+                            <span class="add-on-price">R500</span>
+                            <div class="add-on-desc">High-quality portrait session (10 edited photos)</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-images" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Photo Restoration</strong>
+                            <span class="add-on-price">R350</span>
+                            <div class="add-on-desc">Restore & enhance old or damaged photos</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-video" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Video Tribute</strong>
+                            <span class="add-on-price">R750</span>
+                            <div class="add-on-desc">Professional 3-5 min memorial video</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-book" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Printed Pamphlets</strong>
+                            <span class="add-on-price">R2.50 each</span>
+                            <div class="add-on-desc">50-500 copies, standard or premium paper</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-envelope" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Custom Envelopes</strong>
+                            <span class="add-on-price">R3.50 each</span>
+                            <div class="add-on-desc">Branded envelopes for pamphlets (50-500)</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-music" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Audio Eulogy Recording</strong>
+                            <span class="add-on-price">R400</span>
+                            <div class="add-on-desc">Professional recording & editing service</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-globe" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Custom Domain</strong>
+                            <span class="add-on-price">R150/year</span>
+                            <div class="add-on-desc">Personalized URL for memorial website</div>
+                        </div>
+                        <div class="add-on-card">
+                            <i class="fas fa-tasks" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
+                            <strong>Premium Design</strong>
+                            <span class="add-on-price">R600</span>
+                            <div class="add-on-desc">Custom template design by our team</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPARISON -->
+                <div style="margin-top:3rem; padding:2rem; background:#f9f6f2; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:1rem; color:var(--primary);">
+                        💡 How to Choose
+                    </h3>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+                        <div>
+                            <strong style="color:var(--primary); display:block; margin-bottom:0.5rem;">Choose Basic if:</strong>
+                            <ul style="font-size:0.9rem; color:var(--text-light); list-style:none; padding:0;">
+                                <li>✓ Simple tribute is enough</li>
+                                <li>✓ Limited budget</li>
+                                <li>✓ Short-term memorial</li>
+                                <li>✓ Single platform sharing</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="color:var(--primary); display:block; margin-bottom:0.5rem;">Choose Premium if:</strong>
+                            <ul style="font-size:0.9rem; color:var(--text-light); list-style:none; padding:0;">
+                                <li>✓ Rich multimedia content</li>
+                                <li>✓ Family involvement</li>
+                                <li>✓ Long-term memorial</li>
+                                <li>✓ Professional appearance</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="color:var(--primary); display:block; margin-bottom:0.5rem;">Choose Enterprise if:</strong>
+                            <ul style="font-size:0.9rem; color:var(--text-light); list-style:none; padding:0;">
+                                <li>✓ Funeral home or business</li>
+                                <li>✓ Multiple memorials</li>
+                                <li>✓ Custom branding needed</li>
+                                <li>✓ Professional integration</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
