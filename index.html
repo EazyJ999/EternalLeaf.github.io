@@ -1,22 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-    <title>Eternal Leaf – Semperfi · Digital Memorial Pamphlet</title>
 
-    <!-- Google Fonts & Font Awesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <!-- QRCode.js, html2canvas, jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-    <style>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Eternal Leaf — Complete Digital Memorial Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Quicksand:wght@300;400;500;600;700&amp;family=Mrs+Saint+Delafield&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+</script><style>
         /* ─── Reset & Base ─── */
         * {
             margin: 0;
@@ -75,12 +62,24 @@
         }
 
         /* ─── Typography ─── */
-        .font-serif { font-family: 'Playfair Display', serif; }
-        .font-script { font-family: 'Mrs Saint Delafield', cursive; }
-        .font-quicksand { font-family: 'Quicksand', sans-serif; }
-        .font-inter { font-family: 'Inter', sans-serif; }
-        .font-lora { font-family: 'Lora', serif; }
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-script {
+            font-family: 'Mrs Saint Delafield', cursive;
+        }
+        .font-quicksand {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
 
         /* ─── Buttons ─── */
         .btn {
@@ -113,8 +112,12 @@
             border-color: var(--primary);
             color: #fff;
         }
+        .btn-primary i {
+            color: #fff;
+        }
         .btn-primary:hover {
             background: #0f1f1e;
+            border-color: #0f1f1e;
         }
 
         .btn-secondary {
@@ -124,6 +127,7 @@
         }
         .btn-secondary:hover {
             background: var(--accent-dark);
+            border-color: var(--accent-dark);
         }
 
         .btn-outline {
@@ -141,6 +145,7 @@
         }
         .btn-success:hover {
             background: #2f5547;
+            border-color: #2f5547;
         }
 
         .btn-gold {
@@ -150,6 +155,7 @@
         }
         .btn-gold:hover {
             background: #b8956a;
+            border-color: #b8956a;
         }
 
         .btn-sm {
@@ -206,6 +212,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--text);
+            letter-spacing: -0.5px;
         }
 
         .logo i {
@@ -219,6 +226,7 @@
             font-size: 0.7rem;
             color: var(--text-light);
             letter-spacing: 0.5px;
+            margin-left: 0.2rem;
             text-transform: uppercase;
         }
 
@@ -229,6 +237,7 @@
         }
 
         .header-nav a {
+            font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-light);
@@ -247,6 +256,10 @@
         .header-nav a.active {
             color: var(--text);
             background: #e8dfd8;
+        }
+
+        .header-nav a i {
+            margin-right: 0.3rem;
         }
 
         /* ─── Main Tabs ─── */
@@ -341,6 +354,10 @@
             }
         }
 
+        .controls-panel::-webkit-scrollbar {
+            width: 4px;
+        }
+
         .controls-panel h3 {
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -392,11 +409,23 @@
             resize: vertical;
         }
 
-        /* ─── Template chips & colors ─── */
+        /* Template chips – expanded grid */
         .template-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             gap: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            .template-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .template-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         .template-chip {
@@ -412,6 +441,13 @@
             color: var(--primary-light);
         }
 
+        .template-chip i {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.1rem;
+            color: var(--accent-dark);
+        }
+
         .template-chip.active {
             border-color: var(--primary);
             background: #fff;
@@ -422,6 +458,7 @@
             background: #e8ddd4;
         }
 
+        /* Color swatches – expanded */
         .color-row {
             display: flex;
             gap: 0.4rem;
@@ -435,6 +472,7 @@
             border: 2px solid var(--border);
             cursor: pointer;
             transition: var(--transition);
+            flex-shrink: 0;
         }
 
         .color-swatch.active {
@@ -447,7 +485,7 @@
             transform: scale(1.08);
         }
 
-        /* ─── Font selector ─── */
+        /* Font selector – expanded */
         .font-options {
             display: flex;
             gap: 0.3rem;
@@ -471,7 +509,11 @@
             color: #fff;
         }
 
-        /* ─── Upload zone ─── */
+        .font-chip:hover {
+            border-color: var(--accent-dark);
+        }
+
+        /* Upload zone */
         .upload-zone {
             border: 2px dashed var(--border);
             border-radius: var(--radius-sm);
@@ -489,89 +531,13 @@
             border-color: var(--accent);
         }
 
+        .upload-zone i {
+            font-size: 1.1rem;
+            margin-right: 0.3rem;
+        }
+
         .upload-zone input {
             display: none;
-        }
-
-        /* ─── Video Player Preview ─── */
-        .media-preview {
-            width: 100%;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            margin-top: 0.5rem;
-            background: #f3ede8;
-            padding: 0.5rem;
-        }
-
-        .media-preview video,
-        .media-preview audio {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        /* ─── Timeline ─── */
-        .timeline-container {
-            background: #f9f6f2;
-            border-radius: var(--radius-sm);
-            padding: 1rem;
-            margin: 0.8rem 0;
-        }
-
-        .timeline-event {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 0.8rem;
-            background: #fff;
-            border-radius: 12px;
-            border-left: 3px solid var(--accent);
-            position: relative;
-        }
-
-        .timeline-event.remove-hover:hover {
-            background: #ffe8e8;
-            border-left-color: #ff6b6b;
-        }
-
-        .timeline-year {
-            font-weight: 700;
-            color: var(--primary);
-            min-width: 50px;
-            font-size: 0.9rem;
-        }
-
-        .timeline-text {
-            flex: 1;
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        .timeline-event button {
-            background: none;
-            border: none;
-            color: #ccc;
-            cursor: pointer;
-            font-size: 1rem;
-            padding: 0;
-            opacity: 0;
-            transition: 0.2s;
-        }
-
-        .timeline-event:hover button {
-            opacity: 1;
-            color: #ff6b6b;
-        }
-
-        /* ─── Privacy Badge ─── */
-        .privacy-badge {
-            display: inline-block;
-            background: #e3f2fd;
-            color: #1565c0;
-            padding: 0.3rem 0.8rem;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-top: 0.3rem;
         }
 
         /* ─── Right Panel ─── */
@@ -581,7 +547,7 @@
             gap: 1.5rem;
         }
 
-        /* ─── Pamphlet Viewer ─── */
+        /* Mobile-first Pamphlet Viewer */
         .pamphlet-wrapper {
             background: var(--card-bg);
             border-radius: var(--radius);
@@ -633,7 +599,7 @@
             border-color: var(--primary);
         }
 
-        /* ─── Pamphlet Card ─── */
+        /* Pamphlet Card – optimized for mobile */
         .pamphlet-card {
             background: #fff;
             border-radius: 20px;
@@ -654,13 +620,20 @@
             display: flex;
         }
 
-        /* ─── Template styles (15 templates: Classic + 10 existing + 4 cultural) ─── */
+        /* ─── Template styles (10 templates) ─── */
         .pamphlet-card.template-classic {
             font-family: 'Inter', sans-serif;
+        }
+        .pamphlet-card.template-classic .pamphlet-title {
+            font-family: 'Playfair Display', serif;
         }
 
         .pamphlet-card.template-floral {
             font-family: 'Inter', sans-serif;
+        }
+        .pamphlet-card.template-floral .pamphlet-title {
+            font-family: 'Mrs Saint Delafield', cursive;
+            font-size: 2.2rem;
         }
         .pamphlet-card.template-floral::before {
             content: '🌿';
@@ -671,83 +644,130 @@
             opacity: 0.08;
             transform: rotate(-12deg);
         }
+        .pamphlet-card.template-floral::after {
+            content: '🌾';
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 3.5rem;
+            opacity: 0.06;
+            transform: rotate(20deg);
+        }
 
         .pamphlet-card.template-minimal {
             font-family: 'Inter', sans-serif;
             border-color: #d6cbc2;
             box-shadow: none;
         }
-
-        .pamphlet-card.template-christian {
-            background: linear-gradient(135deg, #f9f6f2 0%, #faf7f4 100%);
-            border-color: #a67c52;
+        .pamphlet-card.template-minimal .pamphlet-title {
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
         }
-        .pamphlet-card.template-christian .pamphlet-title {
+
+        .pamphlet-card.template-vintage {
+            font-family: 'Inter', sans-serif;
+            background: #fdfaf7;
+            border-color: #dacfc4;
+        }
+        .pamphlet-card.template-vintage .pamphlet-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #5a4a3c;
+        }
+        .pamphlet-card.template-vintage .pamphlet-body {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 300;
+        }
+
+        .pamphlet-card.template-modern {
+            font-family: 'Inter', sans-serif;
+            border-color: #c4b8ae;
+            border-width: 2px;
+        }
+        .pamphlet-card.template-modern .pamphlet-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.4rem;
+        }
+
+        .pamphlet-card.template-garden {
+            font-family: 'Inter', sans-serif;
+            background: #f8f5f0;
+            border-color: #b8a79b;
+        }
+        .pamphlet-card.template-garden .pamphlet-title {
             font-family: 'Playfair Display', serif;
             color: #4a3d35;
         }
-        .pamphlet-card.template-christian::before {
-            content: '✝️';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            opacity: 0.1;
+        .pamphlet-card.template-garden .pamphlet-body {
+            font-family: 'Quicksand', sans-serif;
         }
 
-        .pamphlet-card.template-islamic {
-            background: linear-gradient(135deg, #f0f4f8 0%, #e8f0f6 100%);
-            border-color: #2c5f2d;
+        .pamphlet-card.template-military {
+            font-family: 'Inter', sans-serif;
+            border-color: #5a4a3c;
+            background: #f7f4f0;
         }
-        .pamphlet-card.template-islamic .pamphlet-title {
+        .pamphlet-card.template-military .pamphlet-title {
             font-family: 'Playfair Display', serif;
-            color: #1a3d1b;
-            text-align: center;
-        }
-        .pamphlet-card.template-islamic::before {
-            content: '☪️';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            opacity: 0.1;
+            text-transform: uppercase;
+            letter-spacing: 4px;
         }
 
-        .pamphlet-card.template-jewish {
-            background: linear-gradient(135deg, #faf8f3 0%, #f5f1eb 100%);
-            border-color: #8b6914;
+        .pamphlet-card.template-rustic {
+            font-family: 'Inter', sans-serif;
+            background: #f7f2eb;
+            border-color: #b8956a;
+            border-width: 2px;
         }
-        .pamphlet-card.template-jewish .pamphlet-title {
-            font-family: 'Playfair Display', serif;
+        .pamphlet-card.template-rustic .pamphlet-title {
+            font-family: 'Lora', serif;
             color: #5a4a3c;
         }
-        .pamphlet-card.template-jewish::before {
-            content: '✡️';
+        .pamphlet-card.template-rustic::before {
+            content: '🌲';
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            opacity: 0.1;
+            right: 0;
+            bottom: 0;
+            font-size: 4rem;
+            opacity: 0.06;
         }
 
-        .pamphlet-card.template-hindu {
-            background: linear-gradient(135deg, #fdf8f0 0%, #faf5eb 100%);
-            border-color: #c9721f;
+        .pamphlet-card.template-elegant {
+            font-family: 'Inter', sans-serif;
+            background: #fcf9f6;
+            border-color: var(--gold);
         }
-        .pamphlet-card.template-hindu .pamphlet-title {
+        .pamphlet-card.template-elegant .pamphlet-title {
             font-family: 'Playfair Display', serif;
-            color: #8b5a1e;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #2a2a2a;
         }
-        .pamphlet-card.template-hindu::before {
-            content: '🕉️';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: 2rem;
-            opacity: 0.1;
+        .pamphlet-card.template-elegant .pamphlet-body {
+            font-family: 'Lora', serif;
         }
 
-        /* ─── Pamphlet inner ─── */
+        .pamphlet-card.template-simple {
+            font-family: 'Inter', sans-serif;
+            border-color: #ddd6cf;
+            background: #faf8f6;
+        }
+        .pamphlet-card.template-simple .pamphlet-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+        .pamphlet-card.template-simple .pamphlet-body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+        }
+
+        /* Pamphlet inner */
         .pamphlet-header {
             display: flex;
             justify-content: space-between;
@@ -755,6 +775,7 @@
             margin-bottom: 1rem;
             padding-bottom: 0.6rem;
             border-bottom: 2px solid var(--border);
+            transition: border-color 0.2s;
         }
 
         .pamphlet-title {
@@ -784,6 +805,7 @@
             overflow: hidden;
             border: 2px solid var(--border);
             flex-shrink: 0;
+            transition: border-color 0.2s;
         }
 
         .pamphlet-emblem img {
@@ -791,16 +813,29 @@
             height: 100%;
             object-fit: cover;
         }
+        .pamphlet-emblem i {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
 
         .pamphlet-body {
             flex: 1;
             font-size: 0.9rem;
             line-height: 1.6;
             color: #3d3530;
+            padding: 0.2rem 0;
         }
 
         .pamphlet-body p {
             margin-bottom: 0.4rem;
+        }
+
+        .pamphlet-body .biography {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            border-left: 3px solid var(--accent);
+            padding-left: 0.8rem;
+            margin: 0.5rem 0;
         }
 
         .pamphlet-gallery {
@@ -815,46 +850,7 @@
             aspect-ratio: 1;
             object-fit: cover;
             border-radius: 8px;
-        }
-
-        /* ─── Timeline in Pamphlet ─── */
-        .pamphlet-timeline {
-            margin: 0.8rem 0;
-            padding: 0.8rem;
-            background: #f9f6f2;
-            border-radius: 8px;
-            border-left: 3px solid var(--accent);
-        }
-
-        .timeline-entry {
-            display: flex;
-            gap: 0.8rem;
-            margin-bottom: 0.6rem;
-            font-size: 0.8rem;
-        }
-
-        .timeline-year-badge {
-            background: var(--primary);
-            color: #fff;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-weight: 600;
-            min-width: 45px;
-            text-align: center;
-            font-size: 0.7rem;
-        }
-
-        .timeline-entry-text {
-            color: var(--text-light);
-            flex: 1;
-        }
-
-        /* ─── Video in Pamphlet ─── */
-        .pamphlet-video {
-            width: 100%;
-            max-height: 300px;
-            border-radius: 12px;
-            margin: 0.8rem 0;
+            border: 1px solid var(--border);
         }
 
         .pamphlet-footer {
@@ -865,6 +861,8 @@
             color: var(--text-light);
             display: flex;
             justify-content: space-between;
+            transition: border-color 0.2s;
+            letter-spacing: 0.3px;
         }
 
         /* ─── Share Section ─── */
@@ -897,6 +895,34 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .qr-container #qrcode {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-container #qrcode canvas {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 12px;
+        }
+
+        .qr-placeholder {
+            color: var(--text-light);
+            font-size: 0.6rem;
+            text-align: center;
+        }
+
+        .qr-placeholder i {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.1rem;
+            color: var(--accent);
         }
 
         .link-box {
@@ -908,6 +934,7 @@
             border-radius: 60px;
             max-width: 300px;
             flex: 1;
+            min-width: 140px;
         }
 
         .link-box span {
@@ -931,399 +958,290 @@
             color: var(--text);
             transition: var(--transition);
             font-size: 0.8rem;
+            flex-shrink: 0;
         }
 
-        /* ─── Social Share Templates ─── */
-        .social-templates {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            margin-top: 1.5rem;
+        .link-box .btn-copy:hover {
+            background: var(--border);
         }
 
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 0.8rem;
-            margin-top: 0.8rem;
-        }
-
-        .social-card {
-            background: #fff;
-            padding: 1rem;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .social-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .social-card i {
-            font-size: 1.8rem;
-            margin-bottom: 0.4rem;
-            display: block;
-        }
-
-        .social-card span {
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        /* ─── Privacy Controls ─── */
-        .privacy-section {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            margin-top: 1.5rem;
-        }
-
-        .privacy-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.8rem;
-            background: #fff;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            margin-bottom: 0.8rem;
-        }
-
-        .toggle-switch {
-            width: 44px;
-            height: 24px;
-            background: #ccc;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.3s;
-            position: relative;
-            border: none;
-            padding: 0;
-        }
-
-        .toggle-switch.active {
-            background: #3d6b5a;
-        }
-
-        .toggle-switch::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #fff;
-            border-radius: 50%;
-            top: 2px;
-            left: 2px;
-            transition: 0.3s;
-        }
-
-        .toggle-switch.active::after {
-            left: 22px;
-        }
-
-        /* ─── Packages & Pricing ─── */
+        /* ─── Packages / Pricing ─── */
         .packages-section {
             background: var(--card-bg);
             border-radius: var(--radius);
             padding: 2rem 1.5rem;
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
+            margin-top: 1.5rem;
         }
 
         .packages-section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 0.3rem;
-            color: var(--text);
         }
 
         .packages-section .subtitle {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-        }
-
-        .category-header {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin: 2rem 0 1.2rem 0;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid var(--gold);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .category-header i {
-            color: var(--gold);
-            font-size: 1.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.8rem;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
         }
 
         .pricing-card {
             background: #fff;
             border-radius: 20px;
-            padding: 1.8rem 1.5rem;
-            border: 2px solid var(--border);
+            padding: 1.5rem 1.2rem;
+            border: 1px solid var(--border);
             transition: var(--transition);
             position: relative;
-            display: flex;
-            flex-direction: column;
         }
 
         .pricing-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
-            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
         }
 
         .pricing-card.popular {
             border-color: var(--gold);
-            border-width: 3px;
-            background: linear-gradient(135deg, #fcfaf8 0%, #fff 100%);
-            transform: scale(1.02);
+            background: #fcfaf8;
         }
 
-        .pricing-card.popular:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 60px rgba(201, 168, 124, 0.2);
-        }
-
-        .pricing-card.popular::before {
-            content: '★ MOST POPULAR';
+        .pricing-card.popular::after {
+            content: 'Most Popular';
             position: absolute;
-            top: -12px;
-            right: 1.5rem;
+            top: -10px;
+            right: 1rem;
             background: var(--gold);
             color: #fff;
-            font-size: 0.65rem;
-            font-weight: 700;
-            padding: 0.3rem 0.8rem;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.2rem 1rem;
             border-radius: 40px;
-            letter-spacing: 1px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .pricing-card.business-featured {
-            border-color: var(--primary);
-            border-width: 3px;
-            background: linear-gradient(135deg, #f0f4f3 0%, #f8faf9 100%);
-        }
-
-        .pricing-card.business-featured::before {
-            content: '★ BEST VALUE';
-            position: absolute;
-            top: -12px;
-            right: 1.5rem;
-            background: var(--primary);
-            color: #fff;
-            font-size: 0.65rem;
-            font-weight: 700;
-            padding: 0.3rem 0.8rem;
-            border-radius: 40px;
-            letter-spacing: 1px;
-        }
-
-        .plan-icon {
-            font-size: 2.2rem;
-            margin-bottom: 0.6rem;
-            height: 40px;
-        }
-
-        .plan-name {
+        .pricing-card .plan-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .pricing-card .plan-price {
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 0.3rem;
+            margin: 0.3rem 0 0.6rem;
         }
 
-        .plan-subtitle {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .plan-price {
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin: 0.8rem 0 0.2rem 0;
-            line-height: 1;
-        }
-
-        .plan-price small {
-            font-size: 0.75rem;
+        .pricing-card .plan-price small {
+            font-size: 0.9rem;
             font-weight: 400;
             color: var(--text-light);
-            display: block;
-            margin-top: 0.3rem;
         }
 
-        .plan-billing {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .plan-features {
+        .pricing-card .plan-features {
             list-style: none;
             padding: 0;
-            margin: 0.8rem 0 1.5rem 0;
-            flex: 1;
+            margin: 0.6rem 0 1rem;
         }
 
-        .plan-features li {
-            padding: 0.5rem 0;
-            font-size: 0.85rem;
-            color: var(--text);
-            display: flex;
-            align-items: flex-start;
-            gap: 0.7rem;
-        }
-
-        .plan-features li i {
-            color: var(--accent-dark);
-            font-size: 0.7rem;
-            width: 1rem;
-            margin-top: 0.2rem;
-        }
-
-        .plan-features li.disabled {
-            opacity: 0.45;
+        .pricing-card .plan-features li {
+            padding: 0.25rem 0;
+            font-size: 0.8rem;
             color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .plan-features li.disabled i {
+        .pricing-card .plan-features li i {
+            color: var(--accent-dark);
+            font-size: 0.75rem;
+            width: 1.2rem;
+        }
+
+        .pricing-card .plan-features li.disabled {
+            opacity: 0.4;
+        }
+        .pricing-card .plan-features li.disabled i {
             color: #ccc;
         }
 
-        .plan-cta {
-            width: 100%;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            text-decoration: none;
+        .pricing-card .badge-photo {
             display: inline-block;
-        }
-
-        .plan-cta.btn-primary {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        .plan-cta.btn-primary:hover {
-            background: var(--primary-light);
-            transform: translateY(-2px);
-        }
-
-        .plan-cta.btn-gold {
             background: var(--gold);
             color: #fff;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 0.15rem 0.6rem;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-top: 0.2rem;
         }
 
-        .plan-cta.btn-gold:hover {
-            background: #b8956a;
-            transform: translateY(-2px);
+        /* ─── Guestbook ─── */
+        .guestbook-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            margin-top: 1.5rem;
         }
 
-        .plan-cta.btn-outline {
-            background: transparent;
-            border: 2px solid var(--border);
-            color: var(--text);
+        .guestbook-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
         }
 
-        .plan-cta.btn-outline:hover {
-            background: #f3ede8;
+        .guestbook-messages {
+            max-height: 180px;
+            overflow-y: auto;
+            margin: 0.8rem 0;
+            padding-right: 0.5rem;
+        }
+
+        .guestbook-entry {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .guestbook-entry .name {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .guestbook-entry .msg {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        .guestbook-entry .time {
+            font-size: 0.6rem;
+            color: var(--text-light);
+            opacity: 0.6;
+        }
+
+        .guestbook-form {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .guestbook-form input {
+            flex: 1;
+            min-width: 100px;
+            padding: 0.5rem 0.8rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+        }
+
+        .guestbook-form input:focus {
+            outline: none;
             border-color: var(--accent-dark);
         }
 
-        .plan-cta.btn-success {
-            background: #3d6b5a;
-            color: #fff;
-        }
-
-        .plan-cta.btn-success:hover {
-            background: #2f5547;
-        }
-
-        .add-ons-section {
-            background: #f9f6f2;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
+        /* ─── Virtual Candle ─── */
+        .candle-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
             padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .add-ons-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .add-on-card {
-            background: #fff;
-            padding: 1rem;
-            border-radius: var(--radius-sm);
             border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            margin-top: 1.5rem;
             text-align: center;
+        }
+
+        .candle-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .candle-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .candle {
+            width: 36px;
+            height: 72px;
+            background: #f5e6d3;
+            border-radius: 20px 20px 8px 8px;
+            position: relative;
             cursor: pointer;
             transition: var(--transition);
+            border: 1px solid #e0d0c0;
+            display: inline-block;
         }
 
-        .add-on-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            border-color: var(--accent);
+        .candle::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 10px;
+            background: #333;
+            border-radius: 3px;
         }
 
-        .add-on-card strong {
-            display: block;
-            color: var(--primary);
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
+        .candle.lit {
+            background: #fce8d0;
+            box-shadow: 0 0 30px rgba(255, 200, 100, 0.4);
         }
 
-        .add-on-price {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: block;
-            margin: 0.4rem 0;
+        .candle.lit::after {
+            content: '🔥';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            animation: flicker 0.8s infinite alternate;
         }
 
-        .add-on-desc {
-            font-size: 0.7rem;
+        @keyframes flicker {
+            0% {
+                transform: translateX(-50%) scale(1) rotate(-2deg);
+            }
+            100% {
+                transform: translateX(-50%) scale(1.1) rotate(2deg);
+            }
+        }
+
+        .candle-label {
+            font-size: 0.65rem;
+            color: var(--text-light);
+            margin-top: 0.2rem;
+        }
+
+        .candle-count {
+            font-size: 0.85rem;
             color: var(--text-light);
             margin-top: 0.3rem;
         }
 
-        /* ─── Analytics Enhanced ─── */
+        /* ─── Analytics ─── */
         .analytics-section {
             background: var(--card-bg);
             border-radius: var(--radius);
             padding: 1.5rem;
             border: 1px solid var(--border);
+            box-shadow: var(--shadow);
             margin-top: 1.5rem;
         }
 
@@ -1352,89 +1270,38 @@
             font-size: 0.6rem;
             color: var(--text-light);
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* ─── Guestbook ─── */
-        .guestbook-section {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            margin-top: 1.5rem;
-        }
-
-        .guestbook-messages {
-            max-height: 180px;
-            overflow-y: auto;
-            margin: 0.8rem 0;
-        }
-
-        .guestbook-entry {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .guestbook-entry .name {
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-
-        .guestbook-entry .msg {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-
-        /* ─── Candle ─── */
-        .candle-section {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-
-        .candle-container {
+        /* ─── Audio ─── */
+        .audio-upload {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
+            align-items: center;
+            gap: 0.5rem;
             flex-wrap: wrap;
-            margin: 1rem 0;
         }
 
-        .candle {
-            width: 36px;
-            height: 72px;
-            background: #f5e6d3;
-            border-radius: 20px 20px 8px 8px;
-            position: relative;
+        .audio-upload input[type="file"] {
+            display: none;
+        }
+
+        .audio-upload .file-label {
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: #fff;
             cursor: pointer;
+            font-size: 0.7rem;
             transition: var(--transition);
-            border: 1px solid #e0d0c0;
         }
 
-        .candle.lit {
-            background: #fce8d0;
-            box-shadow: 0 0 30px rgba(255, 200, 100, 0.4);
+        .audio-upload .file-label:hover {
+            background: #f3ede8;
         }
 
-        .candle.lit::after {
-            content: '🔥';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.2rem;
-            animation: flicker 0.8s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% {
-                transform: translateX(-50%) scale(1) rotate(-2deg);
-            }
-            100% {
-                transform: translateX(-50%) scale(1.1) rotate(2deg);
-            }
+        .audio-player {
+            width: 100%;
+            margin-top: 0.3rem;
         }
 
         /* ─── Responsive ─── */
@@ -1442,19 +1309,153 @@
             .app {
                 padding: 0.8rem;
             }
+            .app-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            .logo {
+                font-size: 1.4rem;
+                justify-content: center;
+            }
+            .logo i {
+                font-size: 1.6rem;
+            }
+            .header-nav {
+                justify-content: center;
+                gap: 0.8rem;
+            }
+            .header-nav a {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.6rem;
+            }
+            .controls-panel {
+                padding: 1rem;
+            }
+            .pamphlet-wrapper {
+                padding: 1rem 0.8rem;
+            }
             .pamphlet-card {
                 padding: 1.2rem 1rem;
                 min-height: 240px;
             }
-            .social-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .pamphlet-title {
+                font-size: 1.4rem;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .link-box {
+                max-width: 100%;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .main-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding: 0.2rem;
+                border-radius: 40px;
+            }
+            .main-tab {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.7rem;
+                white-space: nowrap;
+            }
+            .builder-grid {
+                gap: 1rem;
+            }
+            .packages-section {
+                padding: 1rem;
             }
             .template-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .qr-container {
+                width: 56px;
+                height: 56px;
+            }
+            .analytics-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .candle-container {
+                gap: 1rem;
+            }
+            .candle {
+                width: 30px;
+                height: 60px;
+            }
+            .color-row {
+                gap: 0.3rem;
+            }
+            .color-swatch {
+                width: 26px;
+                height: 26px;
             }
         }
 
-        /* ─── FAB ─── */
+        @media (max-width: 480px) {
+            .pamphlet-title {
+                font-size: 1.2rem;
+            }
+            .pamphlet-sub {
+                font-size: 0.65rem;
+            }
+            .pamphlet-emblem {
+                width: 36px;
+                height: 36px;
+            }
+            .pamphlet-body {
+                font-size: 0.8rem;
+            }
+            .pamphlet-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            }
+            .template-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .header-nav a {
+                font-size: 0.7rem;
+            }
+            .header-nav a i {
+                display: none;
+            }
+        }
+
+        /* ─── Print Styles ─── */
+        @media print {
+            .controls-panel,
+            .app-header .header-nav,
+            .share-section,
+            .packages-section,
+            .guestbook-section,
+            .candle-section,
+            .analytics-section,
+            .main-tabs,
+            .pamphlet-toolbar,
+            .fab-save {
+                display: none !important;
+            }
+            .builder-grid {
+                display: block !important;
+            }
+            .pamphlet-wrapper {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+                padding: 0.5rem !important;
+            }
+            .pamphlet-card {
+                border: 1px solid #ccc !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .pamphlet-card.active-page {
+                display: flex !important;
+            }
+        }
+
+        /* ─── Floating Action ─── */
         .fab-save {
             position: fixed;
             bottom: 1.5rem;
@@ -1464,6 +1465,7 @@
             border: none;
             border-radius: 60px;
             padding: 0.7rem 1.6rem;
+            font-family: 'Inter', sans-serif;
             font-weight: 600;
             font-size: 0.85rem;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -1479,1130 +1481,1311 @@
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
         }
-    </style>
-</head>
-<body>
 
-    <div class="app" id="app">
+        @media (max-width: 768px) {
+            .fab-save {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.5rem 1.2rem;
+                font-size: 0.75rem;
+            }
+        }
 
-        <!-- Toast -->
-        <div class="toast" id="toast"></div>
+        /* ─── Mobile swipe hint ─── */
+        .swipe-hint {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            opacity: 0.7;
+            display: none;
+        }
 
-        <!-- ─── HEADER ─── -->
-        <header class="app-header">
-            <div class="logo">
-                <i class="fas fa-leaf"></i>
+        @media (max-width: 768px) {
+            .swipe-hint {
+                display: block;
+            }
+        }
+
+        /* ─── Removed .semperfi-tag and .photo-badge styles ─── */
+    </style><style>
+    :root{--ink:#183331;--muted:#63716d;--paper:#f8f6f1;--white:#fff;--leaf:#387261;--leaf-dark:#204b40;--gold:#bd9669;--line:#dfdfd7;--lav:#eee9f6;--radius:18px}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}.wrap{max-width:1180px;margin:auto;padding:0 24px}.top{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-family:'Playfair Display',serif;font-size:25px;letter-spacing:-.5px}.brand span{color:var(--gold);font-size:29px;margin-right:7px}.nav{display:flex;gap:8px;align-items:center}.nav button,.button{border:0;border-radius:999px;padding:11px 18px;font:600 14px inherit;cursor:pointer;background:transparent;color:var(--ink)}.nav button:hover{background:#edeae2}.button{background:var(--leaf);color:#fff}.button:hover{background:var(--leaf-dark)}.button.light{background:#fff;color:var(--leaf-dark);border:1px solid var(--line)}.button.gold{background:var(--gold)}.screen{display:none}.screen.active{display:block}.hero{padding:82px 0 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}.eyebrow{color:var(--leaf);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font:500 clamp(42px,6vw,72px)/1.06 'Playfair Display',serif;letter-spacing:-2px;margin:15px 0 22px}.hero h1 em{color:var(--leaf);font-style:italic}.hero p{color:var(--muted);font-size:18px;line-height:1.6;max-width:580px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero-card{background:#e4eee9;border-radius:28px;padding:19px;transform:rotate(2deg)}.memorial-preview{min-height:420px;padding:36px 29px;border-radius:19px;color:#fff;background:linear-gradient(150deg,rgba(18,45,40,.2),rgba(18,45,40,.7)),url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=900&q=80') center/cover;display:flex;flex-direction:column;justify-content:end;box-shadow:0 16px 35px #29463a33}.memorial-preview small{letter-spacing:2px;text-transform:uppercase}.memorial-preview h2{font:500 43px/1.08 'Playfair Display',serif;margin:10px 0}.memorial-preview p{color:#fff;margin:0}.trust{padding:27px 0 48px;display:flex;gap:34px;color:var(--muted);font-size:14px}.trust b{color:var(--ink)}.section{padding:72px 0}.section.tint{background:#ede9e1}.section h2{font:500 42px/1.15 'Playfair Display',serif;margin:0 0 11px}.section>p{color:var(--muted);font-size:17px;max-width:620px}.features,.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}.feature,.plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}.feature .icon{font-size:25px;color:var(--leaf)}.feature h3,.plan h3{margin:13px 0 7px;font-size:18px}.feature p,.plan p{color:var(--muted);line-height:1.55;font-size:14px}.plan.featured{background:var(--ink);color:#fff;border-color:var(--ink)}.plan.featured p,.plan.featured li{color:#e3ece7}.price{font:500 33px 'Playfair Display',serif;margin:19px 0}.plan ul{padding-left:18px;line-height:1.9;color:var(--muted);font-size:14px}.footer{padding:32px 0;color:var(--muted);font-size:14px}.app-layout{display:grid;grid-template-columns:235px 1fr;min-height:calc(100vh - 79px)}.side{padding:27px 16px 0 0;border-right:1px solid var(--line)}.side button{display:block;width:100%;text-align:left;border:0;background:transparent;color:var(--muted);padding:12px 14px;border-radius:10px;font:500 14px inherit;cursor:pointer}.side button.active,.side button:hover{background:#e3ece7;color:var(--leaf-dark)}.workspace{padding:42px 0 60px 40px}.workspace h1{font:500 37px 'Playfair Display',serif;margin:0 0 7px}.sub{color:var(--muted);margin:0 0 27px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric,.workspace-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.metric small{color:var(--muted)}.metric strong{display:block;font:500 31px 'Playfair Display',serif;margin-top:7px}.workspace-card{margin-top:20px}.workspace-card h2{font-size:19px;margin:0 0 13px}.memorial-row{display:flex;gap:16px;align-items:center;padding:15px 0;border-top:1px solid var(--line)}.avatar{height:44px;width:44px;border-radius:50%;background:#d6e1da;display:grid;place-items:center;color:var(--leaf);font:500 20px 'Playfair Display',serif}.row-main{flex:1}.row-main b{display:block}.row-main span{display:block;font-size:13px;color:var(--muted);margin-top:3px}.badge{font-size:12px;border-radius:999px;padding:5px 9px;background:#e1eee9;color:var(--leaf-dark);font-weight:700}.badge.due{background:#fff0d8;color:#97631e}.builder{display:grid;grid-template-columns:330px 1fr;gap:18px}.form-card,.preview{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:23px}.form-card label{display:block;font-size:12px;font-weight:700;margin:15px 0 6px;color:var(--muted)}.form-card input,.form-card textarea,.form-card select{width:100%;border:1px solid var(--line);background:#fbfaf7;border-radius:9px;padding:10px;font:14px inherit;color:var(--ink)}.form-card textarea{height:92px;resize:vertical}.preview{min-height:520px;background:#edf0ea;display:grid;place-items:center}.public-card{width:min(100%,500px);min-height:440px;background:#fff;padding:47px 34px;border-radius:12px;text-align:center;border-top:7px solid var(--leaf);box-shadow:0 12px 35px #19352d1c}.public-card .avatar{margin:auto;height:96px;width:96px;font-size:38px}.public-card h2{font:500 41px/1.08 'Playfair Display',serif;margin:19px 0 8px}.public-card .dates{color:var(--gold);font-weight:700}.public-card .tribute{line-height:1.7;color:var(--muted);margin:26px 0}.public-card hr{border:0;border-top:1px solid var(--line);margin:25px 0}.portal-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.notice{border-left:4px solid var(--gold);background:#fff7ed;padding:13px 15px;border-radius:7px;color:#72532d;font-size:14px;margin:16px 0}.empty{padding:40px;text-align:center;color:var(--muted)}.hidden{display:none!important}@media(max-width:800px){.nav button:not(.button){display:none}.hero,.app-layout,.builder{grid-template-columns:1fr}.hero{padding-top:48px}.hero-card{display:none}.features,.plans,.cards{grid-template-columns:1fr}.trust{display:block;line-height:2}.side{border-right:0;border-bottom:1px solid var(--line);padding:13px 0;display:flex;overflow:auto}.side button{white-space:nowrap;width:auto}.workspace{padding:31px 0}.section h2{font-size:34px}}
+  </style><style>
+#howworks .card,#parlourInfo .card,#signin .card{background:var(--card,#fff);border:1px solid var(--border,#ddd);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+#howworks .step-num{font-size:1.8rem;font-weight:800;color:var(--primary,#1f6f78);margin-bottom:.5rem}
+#signin label{font-weight:600;display:block}
+#signin input,#signin select{box-sizing:border-box;border:1px solid var(--border,#ddd);border-radius:8px;background:#fff;color:inherit}
+#signin .hidden{display:none!important}
+</style></head><body>
+<header class="wrap top"><div class="brand"><span>⌁</span>Eternal Leaf</div><nav class="nav"><button onclick="go('howworks')">How it works</button><button onclick="go('parlourInfo')">For funeral parlours</button><button onclick="go('pricing')">Pricing</button><button onclick="go('studio')">Test memorial studio</button><button onclick="go('signin')">Sign in</button><button class="button" onclick="go('studio')">Create a memorial</button></nav></header>
+<main class="screen active" id="home"><section class="wrap hero"><div><div class="eyebrow">A place for remembrance</div><h1>Keep a life story <em>close.</em></h1><p>Create a beautiful, private digital memorial that family and friends can visit from anywhere—shared through a simple link or QR code.</p><div class="actions"><button class="button" onclick="go('studio')">Create a memorial</button><button class="button light" onclick="go('parlour')">I represent a funeral parlour</button></div></div><div class="hero-card"><div class="memorial-preview"><small>In loving memory</small><h2>Amara<br/>Daniels</h2><p>1954 – 2026</p></div></div></section><section class="wrap trust"><span><b>Private by default</b> · Share only with those you choose</span><span><b>Always accessible</b> · Link &amp; QR code included</span><span><b>Renewed yearly</b> · Your memories remain protected</span></section>
+<section class="section tint"><div class="wrap"><div class="eyebrow">More than a programme</div><h2>A meaningful space, made simple.</h2><p>Everything a family needs to tell a story, gather tributes, and keep memories together.</p><div class="features"><article class="feature"><div class="icon">◇</div><h3>Beautiful memorials</h3><p>Choose a design, add a life story and create a page that reflects the person being remembered.</p></article><article class="feature"><div class="icon">⌁</div><h3>Share with a scan</h3><p>A lasting link and printable QR code connect every programme, service and loved one.</p></article><article class="feature"><div class="icon">♡</div><h3>Tributes that gather</h3><p>Friends can leave condolences and light a virtual candle, with family approval.</p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="eyebrow">For every way you serve</div><h2>For families and funeral professionals.</h2><div class="plans"><article class="plan"><h3>Individual memorial</h3><p>For a family creating one meaningful place of remembrance.</p><div class="price">Annual renewal</div><ul><li>Private memorial page</li><li>QR code and share link</li><li>Photos, story and service details</li><li>Guestbook moderation</li></ul><button class="button" onclick="go('studio')">Start creating</button></article><article class="plan featured"><h3>Funeral parlour portal</h3><p>Give every family a premium digital experience under your own care.</p><div class="price">Built for teams</div><ul><li>Multi-client memorial workspace</li><li>Staff and family collaboration</li><li>Branded memorial experience</li><li>Renewal management</li></ul><button class="button gold" onclick="go('parlour')">Open parlour portal</button></article><article class="plan"><h3>Every renewal matters</h3><p>Memorials are active for 12 months and renew annually.</p><div class="price">Respectfully archived</div><ul><li>30-day renewal reminders</li><li>Public page pauses on expiry</li><li>Memories are never reused</li><li>Private owner access remains</li></ul></article></div></div></section></main>
+<section class="screen" id="howworks">
+<div class="container" style="padding:3rem 1rem 5rem;">
+<div class="section-head">
+<div>
+<div class="eyebrow">How it works</div>
+<h2>A simple way to create and share a lasting memorial</h2>
+<p>Build a digital memorial, personalize it with photographs and tributes, then share it with family and friends.</p>
+</div>
+</div>
+<div class="feature-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem;">
+<article class="card"><div class="step-num">01</div><h3>Create an account</h3><p>Sign up as an individual or use a funeral parlour account to manage memorials for families.</p></article>
+<article class="card"><div class="step-num">02</div><h3>Create the memorial</h3><p>Add the person's name, dates, tribute, biography, photographs, audio and other meaningful memories.</p></article>
+<article class="card"><div class="step-num">03</div><h3>Personalize it</h3><p>Choose a memorial template, colours and fonts, add a gallery, background and emblem, and preview the result.</p></article>
+<article class="card"><div class="step-num">04</div><h3>Share &amp; remember</h3><p>Publish the memorial, generate a QR code and share the memorial link with loved ones.</p></article>
+</div>
+<div class="card" style="margin-top:1.5rem;padding:1.5rem;">
+<h3>For families</h3><p>Create one memorial at a time and keep the memories, guestbook messages and virtual candles together in one place.</p>
+<button class="btn btn-primary" onclick="go('studio')">Start creating</button>
+</div>
+<div class="card" style="margin-top:1rem;padding:1.5rem;">
+<h3>For funeral professionals</h3><p>Use the funeral parlour portal to manage families, memorials, branding and account billing from one platform.</p>
+<button class="btn btn-outline" onclick="go('parlourInfo')">Explore the parlour portal</button>
+</div>
+</div>
+</section><section class="screen" id="parlourInfo">
+<div class="container" style="padding:3rem 1rem 5rem;">
+<div class="section-head">
+<div>
+<div class="eyebrow">For funeral parlours</div>
+<h2>A memorial platform for funeral professionals</h2>
+<p>Give families a professional digital memorial while keeping your client memorials organized in one place.</p>
+</div>
+<button class="btn btn-primary" onclick="go('parlour')">Open funeral parlour portal</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:2rem;">
+<article class="card"><h3>Manage families</h3><p>Create and manage memorials for the families you serve, with a dedicated client view.</p></article>
+<article class="card"><h3>Your branding</h3><p>Use the parlour portal's branding area to manage your funeral home identity across your workflow.</p></article>
+<article class="card"><h3>Memorial tools</h3><p>Access the full memorial builder with templates, photographs, audio, QR codes, guestbook, candles and PDF export.</p></article>
+<article class="card"><h3>Billing</h3><p>Keep package and account information together in the funeral parlour portal.</p></article>
+</div>
+<div class="card" style="margin-top:1.5rem;padding:1.5rem;">
+<h3>Built for a professional workflow</h3>
+<ul style="line-height:1.9;">
+<li>Create a memorial for a new family.</li>
+<li>Personalize and preview the memorial.</li>
+<li>Publish and share the memorial link and QR code.</li>
+<li>Keep client memorials accessible from the parlour portal.</li>
+</ul>
+<button class="btn btn-primary" onclick="go('signin')">Sign in / create an account</button>
+</div>
+</div>
+</section><section class="screen" id="pricing">
+<div class="container" style="padding:3rem 1rem 5rem;">
+<div class="packages-section">
+<h2>Pricing</h2>
+<p class="subtitle">Choose a package for an individual memorial, or a partnership package for your funeral company. Prices are in South African Rand (ZAR).</p>
+
+<div class="pricing-tabs" style="display:flex;justify-content:center;gap:.75rem;margin:2rem 0 1.5rem;flex-wrap:wrap;">
+<button class="btn btn-primary" id="individualPricingTab" onclick="showPricing('individual')">Individual Memorials</button>
+<button class="btn btn-outline" id="companyPricingTab" onclick="showPricing('company')">Funeral Companies</button>
+</div>
+
+<div id="individualPricing" class="pricing-panel">
+<div style="text-align:center;margin-bottom:1.5rem;">
+<h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;">Individual Memorial Packages</h3>
+<p class="subtitle">For families creating a memorial for a loved one.</p>
+</div>
+<div class="pricing-grid">
+<div class="pricing-card">
+<div class="plan-name">Basic</div>
+<div class="plan-price">R0 <small>/ free</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> Digital pamphlet (1 page)</li>
+<li><i class="fas fa-check"></i> 5 templates</li>
+<li><i class="fas fa-check"></i> QR code &amp; shareable link</li>
+<li><i class="fas fa-check"></i> Basic customization</li>
+<li><i class="fas fa-check"></i> <strong>📸 Photo service (1 image)</strong></li>
+<li class="disabled"><i class="fas fa-times"></i> Photo gallery</li>
+<li class="disabled"><i class="fas fa-times"></i> Audio tribute</li>
+<li class="disabled"><i class="fas fa-times"></i> PDF export</li>
+<li class="disabled"><i class="fas fa-times"></i> Guestbook</li>
+</ul>
+<button class="btn btn-outline" onclick="simulateCheckout('Basic')" style="width:100%;">Select Basic</button>
+</div>
+
+<div class="pricing-card popular">
+<div class="plan-name">Premium</div>
+<div class="plan-price">R499 <small>/ once</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> 2-page digital pamphlet</li>
+<li><i class="fas fa-check"></i> 10 templates</li>
+<li><i class="fas fa-check"></i> Photo gallery (up to 4)</li>
+<li><i class="fas fa-check"></i> Audio / eulogy upload</li>
+<li><i class="fas fa-check"></i> Guestbook &amp; tributes</li>
+<li><i class="fas fa-check"></i> PDF export (high-res)</li>
+<li><i class="fas fa-check"></i> Virtual candle</li>
+<li><i class="fas fa-check"></i> Custom fonts &amp; colours</li>
+<li><i class="fas fa-check"></i> <strong>📸 Professional photo service (5 images)</strong></li>
+<li class="disabled"><i class="fas fa-times"></i> Print delivery</li>
+<li class="disabled"><i class="fas fa-times"></i> Memorial website</li>
+</ul>
+<button class="btn btn-primary" onclick="simulateCheckout('Premium')" style="width:100%;">Choose Premium</button>
+</div>
+
+<div class="pricing-card">
+<div class="plan-name">Deluxe</div>
+<div class="plan-price">R999 <small>/ once</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> Everything in Premium</li>
+<li><i class="fas fa-check"></i> 3-page digital pamphlet</li>
+<li><i class="fas fa-check"></i> Full memorial website</li>
+<li><i class="fas fa-check"></i> Print delivery (50 copies)</li>
+<li><i class="fas fa-check"></i> Custom envelopes</li>
+<li><i class="fas fa-check"></i> Thank you cards (25)</li>
+<li><i class="fas fa-check"></i> Professional copywriting</li>
+<li><i class="fas fa-check"></i> Analytics dashboard</li>
+<li><i class="fas fa-check"></i> <strong>📸 Photography package (15 images + digital album)</strong></li>
+<li><i class="fas fa-check"></i> Priority support</li>
+</ul>
+<button class="btn btn-gold" onclick="simulateCheckout('Deluxe')" style="width:100%;">Choose Deluxe</button>
+</div>
+</div>
+
+<div style="margin-top:2rem;padding:1.5rem;border:1px solid var(--border);border-radius:var(--radius);background:#fff;">
+<h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;">Additional Photography Services</h4>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin-top:1rem;">
+<div style="background:#fff;padding:.8rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border);"><strong>Photo Album</strong><span style="float:right;font-weight:600;">R250</span><div style="font-size:.7rem;color:var(--text-light);">Digital album with 20 images</div></div>
+<div style="background:#fff;padding:.8rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border);"><strong>Portrait Session</strong><span style="float:right;font-weight:600;">R450</span><div style="font-size:.7rem;color:var(--text-light);">Professional studio or location</div></div>
+<div style="background:#fff;padding:.8rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border);"><strong>Video Tribute</strong><span style="float:right;font-weight:600;">R650</span><div style="font-size:.7rem;color:var(--text-light);">2-3 min memorial video</div></div>
+<div style="background:#fff;padding:.8rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border);"><strong>Photo Restoration</strong><span style="float:right;font-weight:600;">R350</span><div style="font-size:.7rem;color:var(--text-light);">Restore old or damaged photos</div></div>
+</div>
+</div>
+</div>
+
+<div id="companyPricing" class="pricing-panel" style="display:none;">
+<div style="text-align:center;margin-bottom:1.5rem;">
+<h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;">Funeral Company Packages</h3>
+<p class="subtitle">Tools and services for funeral parlours managing memorials for multiple families.</p>
+</div>
+<div class="pricing-grid" style="grid-template-columns:minmax(280px,620px);justify-content:center;">
+<div class="pricing-card popular">
+<div class="plan-name">Enterprise Funeral Partnership</div>
+<div class="plan-price">R2,499 <small>/ once</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> Everything in Deluxe</li>
+<li><i class="fas fa-check"></i> Funeral home partnership</li>
+<li><i class="fas fa-check"></i> White-label branding</li>
+<li><i class="fas fa-check"></i> Bulk print discounts</li>
+<li><i class="fas fa-check"></i> Dedicated account manager</li>
+<li><i class="fas fa-check"></i> Digital time capsule</li>
+<li><i class="fas fa-check"></i> Annual remembrance emails</li>
+<li><i class="fas fa-check"></i> <strong>📸 Full photography suite (unlimited images + videography)</strong></li>
+<li><i class="fas fa-check"></i> 24/7 concierge support</li>
+</ul>
+<button class="btn btn-primary" onclick="go('signin'); setTimeout(()=>{ if(typeof showSignup==='function') showSignup(); },50);" style="width:100%;">Create Funeral Company Account</button>
+</div>
+</div>
+<div class="card" style="margin-top:1.5rem;padding:1.5rem;text-align:center;">
+<h4>Need to discuss a funeral parlour partnership?</h4>
+<p>Sign up as a funeral company to access the parlour portal, manage client memorials and use your partnership features.</p>
+<button class="btn btn-outline" onclick="go('parlour')">View Funeral Parlour Portal</button>
+</div>
+</div>
+
+</div>
+</div>
+</section><section class="screen" id="signin">
+<div class="container" style="padding:3rem 1rem 5rem;max-width:760px;">
+<div class="section-head">
+<div>
+<div class="eyebrow">Account</div>
+<h2 id="authTitle">Sign in</h2>
+<p id="authIntro">Access your memorials and platform dashboard.</p>
+</div>
+</div>
+<div class="card" style="padding:2rem;margin-top:1.5rem;">
+<form id="signinForm" onsubmit="handleAuth(event,'signin')">
+<label>Email address</label>
+<input id="authEmail" placeholder="you@example.com" required="" style="width:100%;margin:.4rem 0 1rem;padding:.8rem;" type="email"/>
+<label>Password</label>
+<input id="authPassword" placeholder="Your password" required="" style="width:100%;margin:.4rem 0 1rem;padding:.8rem;" type="password"/>
+<button class="btn btn-primary" style="width:100%;" type="submit">Sign in</button>
+</form>
+<div class="hidden" id="signupFormWrap">
+<form id="signupForm" onsubmit="handleAuth(event,'signup')">
+<label>Full name</label>
+<input id="signupName" placeholder="Your full name" required="" style="width:100%;margin:.4rem 0 1rem;padding:.8rem;" type="text"/>
+<label>Email address</label>
+<input id="signupEmail" placeholder="you@example.com" required="" style="width:100%;margin:.4rem 0 1rem;padding:.8rem;" type="email"/>
+<label>Account type</label>
+<select id="signupType" style="width:100%;margin:.4rem 0 1rem;padding:.8rem;">
+<option>Individual</option>
+<option>Funeral parlour</option>
+</select>
+<label>Password</label>
+<input id="signupPassword" minlength="6" placeholder="At least 6 characters" required="" style="width:100%;margin:.4rem 0 1rem;padding:.8rem;" type="password"/>
+<button class="btn btn-primary" style="width:100%;" type="submit">Create new account</button>
+</form>
+</div>
+<div style="text-align:center;margin-top:1.25rem;">
+<span id="authSwitchText">New member?</span>
+<button class="btn btn-outline" id="authSwitchBtn" onclick="toggleAuthMode()" type="button">Sign up</button>
+</div>
+</div>
+</div>
+</section><main class="screen" id="individual"><div class="wrap app-layout"><aside class="side"><button class="active" data-ind="overview" onclick="individualTab('overview',this)">Overview</button><button data-ind="create" onclick="individualTab('create',this)">Create memorial</button><button data-ind="renewals" onclick="individualTab('renewals',this)">Renewals</button><button onclick="go('home')">← Back to site</button></aside><section class="workspace"><div id="ind-overview"><div class="portal-head"><div><h1>Welcome back, Jordan</h1><p class="sub">Your memorials, all in one thoughtful place.</p></div><button class="button" onclick="individualTab('create',document.querySelector('[data-ind=create]'))">+ New memorial</button></div><div class="cards"><div class="metric"><small>Active memorials</small><strong id="activeCount">1</strong></div><div class="metric"><small>New tributes</small><strong>8</strong></div><div class="metric"><small>Next renewal</small><strong>312d</strong></div></div><div class="workspace-card"><h2>Your memorials</h2><div id="individualRows"></div></div></div><div class="hidden" id="ind-create"><div class="portal-head"><div><h1>Create a memorial</h1><p class="sub">You can edit everything before publishing.</p></div><button class="button light" onclick="individualTab('overview',document.querySelector('[data-ind=overview]'))">Cancel</button></div><div class="builder"><form class="form-card" onsubmit="createMemorial(event)"><h2>Memorial details</h2><label>Full name</label><input id="name" placeholder="e.g. Amara Daniels" required=""/><label>Dates</label><input id="dates" placeholder="1954 – 2026"/><label>Tribute</label><textarea id="tribute" placeholder="A few words to remember them by"></textarea><label>Theme</label><select id="theme"><option>Classic</option><option>Botanical</option><option>Minimal</option></select><div class="actions"><button class="button" type="submit">Save draft</button><button class="button light" onclick="publishPreview()" type="button">Preview</button></div></form><div class="preview"><article class="public-card"><div class="avatar" id="previewInitial">A</div><div class="eyebrow">In loving memory</div><h2 id="previewName">Amara Daniels</h2><div class="dates" id="previewDates">1954 – 2026</div><p class="tribute" id="previewTribute">A life of warmth, courage and a generosity that stays with us.</p><hr/><small>eternal leaf · private memorial</small></article></div></div></div><div class="hidden" id="ind-renewals"><h1>Renewals</h1><p class="sub">We’ll email you 30, 14, 7 and 1 day before a memorial expires.</p><div class="notice">Memorials remain live for 12 months after successful payment. After the grace period, the public page is respectfully archived until renewed.</div><div class="workspace-card"><div class="memorial-row"><div class="avatar">E</div><div class="row-main"><b>Eleanor Rose</b><span>Renewal due 26 August 2027</span></div><span class="badge">Active</span><button class="button light">Manage renewal</button></div></div></div></section></div></main>
+<main class="screen" id="parlour"><div class="wrap app-layout"><aside class="side"><button class="active" data-par="dashboard" onclick="parlourTab('dashboard',this)">Dashboard</button><button data-par="families" onclick="parlourTab('families',this)">Client memorials</button><button data-par="brand" onclick="parlourTab('brand',this)">Branding</button><button data-par="billing" onclick="parlourTab('billing',this)">Billing &amp; renewals</button><button onclick="go('home')">← Back to site</button></aside><section class="workspace"><div id="par-dashboard"><div class="portal-head"><div><div class="eyebrow">Parlour portal</div><h1>Semperfi Funeral Care</h1><p class="sub">A calm, organised view of every family you’re supporting.</p></div><button class="button" onclick="parlourTab('families',document.querySelector('[data-par=families]'))">+ Create client memorial</button></div><div class="cards"><div class="metric"><small>Active memorials</small><strong>24</strong></div><div class="metric"><small>Pending family approvals</small><strong>3</strong></div><div class="metric"><small>Renewals this month</small><strong>5</strong></div></div><div class="workspace-card"><h2>Recent client memorials</h2><div id="parlourRows"></div></div></div><div class="hidden" id="par-families"><div class="portal-head"><div><h1>Client memorials</h1><p class="sub">Invite the family to add to a memorial while your team stays in control.</p></div><button class="button" onclick="newClient()">+ New client</button></div><div class="workspace-card"><h2>All memorials</h2><div id="clientRows"></div></div></div><div class="hidden" id="par-brand"><h1>Your branding</h1><p class="sub">Your logo, colours and contact details are carried into every family experience.</p><div class="form-card" style="max-width:570px"><label>Parlour display name</label><input value="Semperfi Funeral Care"/><label>Primary colour</label><input value="#387261"/><label>Family support email</label><input value="care@semperfifuneral.co.za"/><div class="actions"><button class="button" onclick="toast('Branding saved')">Save branding</button></div></div></div><div class="hidden" id="par-billing"><h1>Billing &amp; renewals</h1><p class="sub">Keep each family’s memorial protected and active.</p><div class="notice">Five memorials renew in the next 30 days. Send family reminders or renew on their behalf.</div><div class="workspace-card"><div class="memorial-row"><div class="avatar">M</div><div class="row-main"><b>Michael Dube</b><span>Family contact: Nandi Dube · renewal due in 12 days</span></div><span class="badge due">Due soon</span><button class="button light" onclick="toast('Renewal reminder prepared')">Send reminder</button></div></div></div></section></div></main>
+<main class="screen" id="studio"><div class="app" id="studioApp">
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+<!-- ─── HEADER ─── -->
+<header class="app-header">
+<div class="logo">
+<i class="fas fa-leaf"></i>
                 Eternal Leaf
                 <small>Semperfi</small>
-            </div>
-            <nav class="header-nav">
-                <a href="#" id="headerPackagesLink">Packages</a>
-            </nav>
-        </header>
-
-        <!-- ─── MAIN TABS ─── -->
-        <div class="main-tabs">
-            <button class="main-tab active" data-tab="design"><i class="fas fa-pencil-alt"></i> Design</button>
-            <button class="main-tab" data-tab="packages"><i class="fas fa-crown"></i> Packages</button>
-            <button class="main-tab" data-tab="pages"><i class="fas fa-file-alt"></i> Pages</button>
-            <button class="main-tab" data-tab="timeline"><i class="fas fa-hourglass-half"></i> Timeline</button>
-            <button class="main-tab" data-tab="media"><i class="fas fa-video"></i> Media</button>
-            <button class="main-tab" data-tab="privacy"><i class="fas fa-lock"></i> Privacy</button>
-            <button class="main-tab" data-tab="analytics"><i class="fas fa-chart-bar"></i> Analytics</button>
-            <button class="main-tab" data-tab="guestbook"><i class="fas fa-book"></i> Guestbook</button>
-        </div>
-
-        <!-- ─── TAB: DESIGN ─── -->
-        <div class="tab-content active" id="tab-design">
-            <div class="builder-grid">
-
-                <!-- LEFT: Controls -->
-                <aside class="controls-panel" id="controlsPanel">
-                    <h3><i class="fas fa-sliders-h"></i> Customize Your Memorial</h3>
-
-                    <!-- Name -->
-                    <div class="control-group">
-                        <label><i class="fas fa-user"></i> Full Name</label>
-                        <input type="text" id="nameInput" value="Eleanor Rose" />
+</div>
+<nav class="header-nav"><a href="#" id="backToPlatform"><i class="fas fa-arrow-left"></i> Platform</a>
+<a class="active" href="#" id="headerPackagesLink" onclick="document.querySelector('[data-tab=packages]').click(); return false;"><i class="fas fa-crown"></i> Packages</a>
+</nav>
+</header>
+<!-- ─── MAIN TABS ─── -->
+<div class="main-tabs">
+<button class="main-tab active" data-tab="design"><i class="fas fa-pencil-alt"></i> Design</button>
+<button class="main-tab" data-tab="packages"><i class="fas fa-crown"></i> Packages</button>
+<button class="main-tab" data-tab="guestbook"><i class="fas fa-book"></i> Guestbook</button>
+<button class="main-tab" data-tab="candle"><i class="fas fa-fire"></i> Tribute</button>
+<button class="main-tab" data-tab="analytics"><i class="fas fa-chart-bar"></i> Analytics</button>
+</div>
+<!-- ─── TAB: DESIGN ─── -->
+<div class="tab-content active" id="tab-design">
+<div class="builder-grid">
+<!-- LEFT: Controls -->
+<aside class="controls-panel" id="controlsPanel">
+<h3><i class="fas fa-sliders-h"></i> Customize Your Digital Pamphlet</h3>
+<p style="font-size:0.75rem; color:var(--text-light); margin-bottom:1rem;">
+<i class="fas fa-mobile-alt"></i> Optimized for mobile – viewable on any device via link or QR.
+                        <span style="display:block; margin-top:0.2rem;"><i class="fas fa-camera"></i> Photography included with every package.</span>
+</p>
+<!-- Name -->
+<div class="control-group">
+<label><i class="fas fa-user"></i> Full Name</label>
+<input id="nameInput" placeholder="e.g. Eleanor Rose" type="text" value="Eleanor Rose"/>
+</div>
+<!-- Dates -->
+<div class="control-group">
+<label><i class="fas fa-calendar-alt"></i> Dates</label>
+<input id="datesInput" placeholder="1942 – 2026" type="text" value="1942 – 2026"/>
+</div>
+<!-- Message -->
+<div class="control-group">
+<label><i class="fas fa-feather-alt"></i> Tribute</label>
+<textarea id="messageInput" placeholder="Write a tribute..." rows="2">A gentle soul, forever in our hearts. Her warmth and wisdom touched everyone she met.</textarea>
+</div>
+<!-- Biography -->
+<div class="control-group">
+<label><i class="fas fa-book-open"></i> Biography / Life Story</label>
+<textarea id="bioInput" placeholder="A short biography..." rows="2">Born in Cape Town, Eleanor dedicated her life to teaching and nurturing young minds. She was a loving mother, grandmother, and friend to all.</textarea>
+</div>
+<!-- Template – expanded to 10 -->
+<div class="control-group">
+<label><i class="fas fa-layer-group"></i> Template Theme <span style="font-weight:400; font-size:0.65rem; color:var(--text-light);">(10 options)</span></label>
+<div class="template-grid" id="templateGrid">
+<div class="template-chip active" data-template="classic"><i class="fas fa-book-open"></i> Classic</div>
+<div class="template-chip" data-template="floral"><i class="fas fa-seedling"></i> Floral</div>
+<div class="template-chip" data-template="minimal"><i class="fas fa-minus-circle"></i> Minimal</div>
+<div class="template-chip" data-template="vintage"><i class="fas fa-hourglass-half"></i> Vintage</div>
+<div class="template-chip" data-template="modern"><i class="fas fa-border-all"></i> Modern</div>
+<div class="template-chip" data-template="garden"><i class="fas fa-tree"></i> Garden</div>
+<div class="template-chip" data-template="military"><i class="fas fa-shield-alt"></i> Military</div>
+<div class="template-chip" data-template="rustic"><i class="fas fa-mountain"></i> Rustic</div>
+<div class="template-chip" data-template="elegant"><i class="fas fa-gem"></i> Elegant</div>
+<div class="template-chip" data-template="simple"><i class="fas fa-circle"></i> Simple</div>
+</div>
+</div>
+<!-- Accent Color – expanded to 12 -->
+<div class="control-group">
+<label><i class="fas fa-palette"></i> Accent Color <span style="font-weight:400; font-size:0.65rem; color:var(--text-light);">(12 colours)</span></label>
+<div class="color-row" id="colorRow">
+<span class="color-swatch active" data-color="#b8a79b" style="background:#b8a79b;"></span>
+<span class="color-swatch" data-color="#7b5f4b" style="background:#7b5f4b;"></span>
+<span class="color-swatch" data-color="#a4816e" style="background:#a4816e;"></span>
+<span class="color-swatch" data-color="#436b5c" style="background:#436b5c;"></span>
+<span class="color-swatch" data-color="#8b6f5c" style="background:#8b6f5c;"></span>
+<span class="color-swatch" data-color="#5a4a3c" style="background:#5a4a3c;"></span>
+<span class="color-swatch" data-color="#8f7a6b" style="background:#8f7a6b;"></span>
+<span class="color-swatch" data-color="#c9a87c" style="background:#c9a87c;"></span>
+<span class="color-swatch" data-color="#6b8f7a" style="background:#6b8f7a;"></span>
+<span class="color-swatch" data-color="#9b7b6b" style="background:#9b7b6b;"></span>
+<span class="color-swatch" data-color="#4a6b6b" style="background:#4a6b6b;"></span>
+<span class="color-swatch" data-color="#b8956a" style="background:#b8956a;"></span>
+</div>
+</div>
+<!-- Font – expanded to 6 -->
+<div class="control-group">
+<label><i class="fas fa-font"></i> Font Style <span style="font-weight:400; font-size:0.65rem; color:var(--text-light);">(6 options)</span></label>
+<div class="font-options" id="fontOptions">
+<span class="font-chip active" data-font="inter">Inter</span>
+<span class="font-chip" data-font="playfair">Playfair</span>
+<span class="font-chip" data-font="quicksand">Quicksand</span>
+<span class="font-chip" data-font="script">Script</span>
+<span class="font-chip" data-font="lora">Lora</span>
+<span class="font-chip" data-font="montserrat">Montserrat</span>
+</div>
+</div>
+<!-- Emblem -->
+<div class="control-group">
+<label><i class="fas fa-image"></i> Emblem / Photo</label>
+<div class="upload-zone" id="uploadZone">
+<i class="fas fa-cloud-upload-alt"></i> tap to upload
+                            <input accept="image/*" id="imageUpload" type="file"/>
+</div>
+</div>
+<!-- Gallery Photos -->
+<div class="control-group">
+<label><i class="fas fa-images"></i> Photo Gallery (max 4)</label>
+<div class="upload-zone" id="galleryZone" style="margin-bottom:0.3rem;">
+<i class="fas fa-plus-circle"></i> Add photos
+                            <input accept="image/*" id="galleryUpload" multiple="" type="file"/>
+</div>
+<div id="galleryPreview" style="display:flex; gap:0.3rem; flex-wrap:wrap; margin-top:0.3rem;"></div>
+</div>
+<!-- Audio -->
+<div class="control-group">
+<label><i class="fas fa-music"></i> Audio / Eulogy</label>
+<div class="audio-upload">
+<label class="file-label" for="audioUpload"><i class="fas fa-upload"></i> Upload audio</label>
+<input accept="audio/*" id="audioUpload" type="file"/>
+<span id="audioFileName" style="font-size:0.7rem; color:var(--text-light);">No file</span>
+</div>
+<div id="audioPlayerContainer" style="margin-top:0.3rem; display:none;">
+<audio class="audio-player" controls="" id="audioPlayer"></audio>
+</div>
+</div>
+<!-- Background -->
+<div class="control-group">
+<label><i class="fas fa-image"></i> Background Image (watermark)</label>
+<div class="upload-zone" id="bgZone">
+<i class="fas fa-cloud-upload-alt"></i> upload background
+                            <input accept="image/*" id="bgUpload" type="file"/>
+</div>
+</div>
+<div style="margin-top:0.5rem; font-size:0.65rem; color:var(--text-light);">
+<i class="fas fa-info-circle"></i> All changes auto-save locally
                     </div>
-
-                    <!-- Dates -->
-                    <div class="control-group">
-                        <label><i class="fas fa-calendar-alt"></i> Dates</label>
-                        <input type="text" id="datesInput" value="1942 – 2026" />
+<div style="margin-top:0.2rem; font-size:0.65rem; color:var(--text-light);">
+<i class="fas fa-camera"></i> Photography service included with every package
                     </div>
-
-                    <!-- Tribute -->
-                    <div class="control-group">
-                        <label><i class="fas fa-feather-alt"></i> Tribute</label>
-                        <textarea id="messageInput" rows="2">A gentle soul, forever in our hearts.</textarea>
-                    </div>
-
-                    <!-- Biography -->
-                    <div class="control-group">
-                        <label><i class="fas fa-book-open"></i> Biography</label>
-                        <textarea id="bioInput" rows="2">Born in Cape Town, Eleanor dedicated her life to teaching.</textarea>
-                    </div>
-
-                    <!-- Templates: Classic + 10 existing + 4 Cultural -->
-                    <div class="control-group">
-                        <label><i class="fas fa-layer-group"></i> Template <span style="font-weight:400; font-size:0.65rem;">(15 themes)</span></label>
-                        <div class="template-grid" id="templateGrid">
-                            <div class="template-chip active" data-template="classic"><i class="fas fa-book-open"></i> Classic</div>
-                            <div class="template-chip" data-template="floral"><i class="fas fa-seedling"></i> Floral</div>
-                            <div class="template-chip" data-template="minimal"><i class="fas fa-minus-circle"></i> Minimal</div>
-                            <div class="template-chip" data-template="christian"><i class="fas fa-cross"></i> Christian</div>
-                            <div class="template-chip" data-template="islamic"><i class="fas fa-star-and-crescent"></i> Islamic</div>
-                            <div class="template-chip" data-template="jewish"><i class="fas fa-star-of-david"></i> Jewish</div>
-                            <div class="template-chip" data-template="hindu"><i class="fas fa-om"></i> Hindu</div>
-                            <div class="template-chip" data-template="vintage"><i class="fas fa-hourglass-half"></i> Vintage</div>
-                            <div class="template-chip" data-template="modern"><i class="fas fa-border-all"></i> Modern</div>
-                            <div class="template-chip" data-template="garden"><i class="fas fa-tree"></i> Garden</div>
-                            <div class="template-chip" data-template="military"><i class="fas fa-shield-alt"></i> Military</div>
-                            <div class="template-chip" data-template="rustic"><i class="fas fa-mountain"></i> Rustic</div>
-                            <div class="template-chip" data-template="elegant"><i class="fas fa-gem"></i> Elegant</div>
-                            <div class="template-chip" data-template="simple"><i class="fas fa-circle"></i> Simple</div>
-                            <div class="template-chip" data-template="modern-minimal"><i class="fas fa-square"></i> Minimalist</div>
+</aside>
+<!-- RIGHT: Preview -->
+<div class="preview-panel">
+<!-- Pamphlet -->
+<div class="pamphlet-wrapper">
+<div class="pamphlet-toolbar">
+<div class="page-indicator">
+<i class="fas fa-book"></i> Page <span id="currentPageNum">1</span> / <span id="totalPages">2</span>
+</div>
+<div class="page-nav" id="pageNav">
+<button id="prevPage" title="Previous"><i class="fas fa-chevron-left"></i></button>
+<button class="active-page" data-page="0">1</button>
+<button data-page="1">2</button>
+<button id="nextPage" title="Next"><i class="fas fa-chevron-right"></i></button>
+</div>
+</div>
+<div class="pamphlet-card template-classic active-page" data-page="0" id="pamphletCard1">
+<div class="pamphlet-header" id="pamphletHeader">
+<div>
+<div class="pamphlet-title" id="previewName">Eleanor Rose</div>
+<div class="pamphlet-sub" id="previewDates">1942 – 2026</div>
+</div>
+<div class="pamphlet-emblem" id="emblemContainer">
+<i class="fas fa-leaf"></i>
+</div>
+</div>
+<div class="pamphlet-body" id="previewBody">
+<p>A gentle soul, forever in our hearts. Her warmth and wisdom touched everyone she met.</p>
+<div class="biography" id="previewBio">Born in Cape Town, Eleanor dedicated her life to teaching and nurturing young minds.</div>
+<div class="pamphlet-gallery" id="previewGallery"></div>
+</div>
+<div class="pamphlet-footer" id="pamphletFooter">
+<span>In loving memory</span>
+<span>🕊️ eternal leaf · semperfi</span>
+</div>
+</div>
+<div class="pamphlet-card template-classic" data-page="1" id="pamphletCard2">
+<div class="pamphlet-header" style="border-bottom-color:var(--accent);">
+<div>
+<div class="pamphlet-title" style="font-size:1.2rem;">Memorial Service</div>
+<div class="pamphlet-sub">In loving memory of Eleanor Rose</div>
+</div>
+<div class="pamphlet-emblem" style="border-color:var(--accent);">
+<i class="fas fa-cross" style="color:var(--accent-dark);"></i>
+</div>
+</div>
+<div class="pamphlet-body">
+<p><strong>Service Details</strong></p>
+<p>📅 Saturday, 15 May 2026 at 10:00 AM</p>
+<p>📍 St. Mary's Cathedral, Cape Town</p>
+<p style="margin-top:0.8rem;"><strong>Reception</strong><br/>Following the service at the Garden Hall, 12:00 PM</p>
+<p style="margin-top:0.8rem; font-style:italic; color:var(--text-light);">"Those we love don't go away, they walk beside us every day."</p>
+</div>
+<div class="pamphlet-footer">
+<span>Refreshments will be served</span>
+<span>🙏 eternal leaf · semperfi</span>
+</div>
+</div>
+<div class="swipe-hint">
+<i class="fas fa-arrows-alt-h"></i> Swipe or use arrows to flip pages
                         </div>
-                    </div>
-
-                    <!-- Color -->
-                    <div class="control-group">
-                        <label><i class="fas fa-palette"></i> Accent Color</label>
-                        <div class="color-row" id="colorRow">
-                            <span class="color-swatch active" style="background:#b8a79b;" data-color="#b8a79b"></span>
-                            <span class="color-swatch" style="background:#7b5f4b;" data-color="#7b5f4b"></span>
-                            <span class="color-swatch" style="background:#a4816e;" data-color="#a4816e"></span>
-                            <span class="color-swatch" style="background:#436b5c;" data-color="#436b5c"></span>
-                            <span class="color-swatch" style="background:#8b6f5c;" data-color="#8b6f5c"></span>
-                            <span class="color-swatch" style="background:#5a4a3c;" data-color="#5a4a3c"></span>
-                            <span class="color-swatch" style="background:#c9a87c;" data-color="#c9a87c"></span>
-                        </div>
-                    </div>
-
-                    <!-- Font -->
-                    <div class="control-group">
-                        <label><i class="fas fa-font"></i> Font</label>
-                        <div class="font-options" id="fontOptions">
-                            <span class="font-chip active" data-font="inter">Inter</span>
-                            <span class="font-chip" data-font="playfair">Playfair</span>
-                            <span class="font-chip" data-font="quicksand">Quicksand</span>
-                            <span class="font-chip" data-font="lora">Lora</span>
-                        </div>
-                    </div>
-
-                    <!-- Photo -->
-                    <div class="control-group">
-                        <label><i class="fas fa-image"></i> Emblem / Photo</label>
-                        <div class="upload-zone" id="uploadZone">
-                            <i class="fas fa-cloud-upload-alt"></i> tap to upload
-                            <input type="file" id="imageUpload" accept="image/*" />
-                        </div>
-                    </div>
-
-                    <!-- Gallery -->
-                    <div class="control-group">
-                        <label><i class="fas fa-images"></i> Photo Gallery (max 4)</label>
-                        <div class="upload-zone" id="galleryZone">
-                            <i class="fas fa-plus-circle"></i> Add photos
-                            <input type="file" id="galleryUpload" accept="image/*" multiple />
-                        </div>
-                        <div id="galleryPreview" style="display:flex; gap:0.3rem; flex-wrap:wrap; margin-top:0.3rem;"></div>
-                    </div>
-                </aside>
-
-                <!-- RIGHT: Preview -->
-                <div class="preview-panel">
-
-                    <!-- Pamphlet -->
-                    <div class="pamphlet-wrapper">
-                        <div class="pamphlet-toolbar">
-                            <div class="page-indicator">
-                                <i class="fas fa-book"></i> Page <span id="currentPageNum">1</span> / <span id="totalPages">6</span>
-                            </div>
-                            <div class="page-nav" id="pageNav">
-                                <button id="prevPage"><i class="fas fa-chevron-left"></i></button>
-                                <button class="active-page" data-page="0">1</button>
-                                <button data-page="1">2</button>
-                                <button data-page="2">3</button>
-                                <button data-page="3">4</button>
-                                <button data-page="4">5</button>
-                                <button data-page="5">6</button>
-                                <button id="nextPage"><i class="fas fa-chevron-right"></i></button>
-                            </div>
-                        </div>
-
-                        <!-- Page 1: Cover -->
-                        <div class="pamphlet-card template-classic active-page" id="pamphletCard1" data-page="0">
-                            <div class="pamphlet-header">
-                                <div>
-                                    <div class="pamphlet-title" id="previewName">Eleanor Rose</div>
-                                    <div class="pamphlet-sub" id="previewDates">1942 – 2026</div>
-                                </div>
-                                <div class="pamphlet-emblem"><i class="fas fa-leaf"></i></div>
-                            </div>
-                            <div class="pamphlet-body" id="previewBody">
-                                <p id="previewTribute">A gentle soul, forever in our hearts.</p>
-                            </div>
-                            <div class="pamphlet-footer">
-                                <span>In loving memory</span>
-                                <span>🕊️ eternal leaf</span>
-                            </div>
-                        </div>
-
-                        <!-- Page 2: Biography -->
-                        <div class="pamphlet-card template-classic" id="pamphletCard2" data-page="1">
-                            <div class="pamphlet-header">
-                                <div>
-                                    <div class="pamphlet-title">Biography</div>
-                                </div>
-                            </div>
-                            <div class="pamphlet-body">
-                                <p id="previewBio">Born in Cape Town, Eleanor dedicated her life to teaching.</p>
-                            </div>
-                            <div class="pamphlet-footer">
-                                <span>Life & Legacy</span>
-                            </div>
-                        </div>
-
-                        <!-- Page 3: Photo Gallery -->
-                        <div class="pamphlet-card template-classic" id="pamphletCard3" data-page="2">
-                            <div class="pamphlet-header">
-                                <div>
-                                    <div class="pamphlet-title">Memories</div>
-                                </div>
-                            </div>
-                            <div class="pamphlet-body">
-                                <div class="pamphlet-gallery" id="previewGallery"></div>
-                            </div>
-                            <div class="pamphlet-footer">
-                                <span>Cherished moments</span>
-                            </div>
-                        </div>
-
-                        <!-- Page 4: Timeline -->
-                        <div class="pamphlet-card template-classic" id="pamphletCard4" data-page="3">
-                            <div class="pamphlet-header">
-                                <div>
-                                    <div class="pamphlet-title">Life Timeline</div>
-                                </div>
-                            </div>
-                            <div class="pamphlet-body">
-                                <div class="pamphlet-timeline" id="previewTimeline">
-                                    <div class="timeline-entry">
-                                        <span class="timeline-year-badge">1942</span>
-                                        <span class="timeline-entry-text">Born in Cape Town</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pamphlet-footer">
-                                <span>1942 – 2026</span>
-                            </div>
-                        </div>
-
-                        <!-- Page 5: Media (Video/Audio) -->
-                        <div class="pamphlet-card template-classic" id="pamphletCard5" data-page="4">
-                            <div class="pamphlet-header">
-                                <div>
-                                    <div class="pamphlet-title">Tribute Media</div>
-                                </div>
-                            </div>
-                            <div class="pamphlet-body">
-                                <div id="previewMediaContainer" style="text-align:center; color:var(--text-light);">
-                                    <i class="fas fa-video" style="font-size:2rem; margin:1rem 0;"></i>
-                                    <p>Video or audio eulogy will appear here</p>
-                                </div>
-                            </div>
-                            <div class="pamphlet-footer">
-                                <span>Listen or watch</span>
-                            </div>
-                        </div>
-
-                        <!-- Page 6: Service Details -->
-                        <div class="pamphlet-card template-classic" id="pamphletCard6" data-page="5">
-                            <div class="pamphlet-header">
-                                <div>
-                                    <div class="pamphlet-title">Service Details</div>
-                                </div>
-                            </div>
-                            <div class="pamphlet-body">
-                                <p><strong>Memorial Service</strong></p>
-                                <p>📅 Saturday, 15 May 2026 at 10:00 AM</p>
-                                <p>📍 St. Mary's Cathedral, Cape Town</p>
-                                <p style="margin-top:0.8rem;"><strong>Reception</strong><br />Following the service at the Garden Hall, 12:00 PM</p>
-                            </div>
-                            <div class="pamphlet-footer">
-                                <span>Celebrations of Life</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Share -->
-                    <div class="share-section">
-                        <div class="qr-box">
-                            <div class="qr-container" id="qrcode">
-                                <div style="color:var(--text-light); font-size:0.6rem; text-align:center;">
-                                    <i class="fas fa-qrcode" style="font-size:1.8rem;"></i>
-                                    <span>QR</span>
-                                </div>
-                            </div>
-                            <div>
-                                <div style="font-weight:600; font-size:0.85rem;">QR Code</div>
-                                <div style="font-size:0.65rem; color:var(--text-light);">Scan to view</div>
-                            </div>
-                        </div>
-                        <div class="link-box">
-                            <span id="shareLinkText">pamphlet link</span>
-                            <button class="btn-copy" id="copyLinkBtn"><i class="fas fa-copy"></i></button>
-                        </div>
-                        <button class="btn btn-primary btn-sm" id="fabSave"><i class="fas fa-save"></i> Save</button>
-                    </div>
-
-                    <!-- Social Share Templates -->
-                    <div class="social-templates">
-                        <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.5rem;">Share Templates</h3>
-                        <div class="social-grid">
-                            <div class="social-card" id="shareInsta">
-                                <i class="fab fa-instagram" style="color:#e4405f;"></i>
-                                <span>Instagram</span>
-                            </div>
-                            <div class="social-card" id="shareFb">
-                                <i class="fab fa-facebook" style="color:#1877f2;"></i>
-                                <span>Facebook</span>
-                            </div>
-                            <div class="social-card" id="shareTwitter">
-                                <i class="fab fa-twitter" style="color:#1da1f2;"></i>
-                                <span>Twitter</span>
-                            </div>
-                            <div class="social-card" id="shareLinkedin">
-                                <i class="fab fa-linkedin" style="color:#0077b5;"></i>
-                                <span>LinkedIn</span>
-                            </div>
-                            <div class="social-card" id="shareWhatsapp">
-                                <i class="fab fa-whatsapp" style="color:#25d366;"></i>
-                                <span>WhatsApp</span>
-                            </div>
-                            <div class="social-card" id="shareEmail">
-                                <i class="fas fa-envelope" style="color:#ea4335;"></i>
-                                <span>Email</span>
-                            </div>
-                        </div>
-                    </div>
+</div>
+<!-- Share -->
+<div class="share-section">
+<div class="qr-box">
+<div class="qr-container" id="qrContainer">
+<div class="qr-placeholder" id="qrcode">
+<i class="fas fa-qrcode"></i>
+<span>QR</span>
+</div>
+</div>
+<div>
+<div style="font-weight:600; font-size:0.85rem;">QR Code</div>
+<div style="font-size:0.65rem; color:var(--text-light);">Scan to view digital pamphlet</div>
+</div>
+</div>
+<div class="link-box" id="linkBox">
+<span id="shareLinkText">pamphlet link</span>
+<button class="btn-copy" id="copyLinkBtn" title="Copy link"><i class="fas fa-copy"></i></button>
+</div>
+<div style="display:flex; gap:0.4rem;">
+<button class="btn btn-outline btn-sm" id="shareSocialBtn"><i class="fas fa-share-alt"></i> Share</button>
+<span class="memorial-badge" style="background:var(--gold);"><i class="fas fa-leaf"></i> Live</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ─── TAB: PACKAGES ─── -->
+<div class="tab-content" id="tab-packages">
+<div class="packages-section">
+<h2>Choose Your Memorial Package</h2>
+<p class="subtitle">Pricing in South African Rand (ZAR) — <strong>all packages include professional photography service</strong> and a mobile-optimized digital pamphlet.</p>
+<div class="pricing-grid">
+<!-- Free -->
+<div class="pricing-card">
+<div class="plan-name">Basic</div>
+<div class="plan-price">R0 <small>/ free</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> Digital pamphlet (1 page)</li>
+<li><i class="fas fa-check"></i> 5 templates</li>
+<li><i class="fas fa-check"></i> QR code &amp; shareable link</li>
+<li><i class="fas fa-check"></i> Basic customization</li>
+<li><i class="fas fa-check"></i> <strong>📸 Photo service (1 image)</strong></li>
+<li class="disabled"><i class="fas fa-times"></i> Photo gallery</li>
+<li class="disabled"><i class="fas fa-times"></i> Audio tribute</li>
+<li class="disabled"><i class="fas fa-times"></i> PDF export</li>
+<li class="disabled"><i class="fas fa-times"></i> Guestbook</li>
+</ul>
+<button class="btn btn-outline" onclick="simulateCheckout('Basic')" style="width:100%;">Select test package</button>
+</div>
+<!-- Premium -->
+<div class="pricing-card popular">
+<div class="plan-name">Premium</div>
+<div class="plan-price">R499 <small>/ once</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> 2-page digital pamphlet</li>
+<li><i class="fas fa-check"></i> 10 templates</li>
+<li><i class="fas fa-check"></i> Photo gallery (up to 4)</li>
+<li><i class="fas fa-check"></i> Audio / eulogy upload</li>
+<li><i class="fas fa-check"></i> Guestbook &amp; tributes</li>
+<li><i class="fas fa-check"></i> PDF export (high-res)</li>
+<li><i class="fas fa-check"></i> Virtual candle</li>
+<li><i class="fas fa-check"></i> Custom fonts &amp; colours</li>
+<li><i class="fas fa-check"></i> <strong>📸 Professional photo service (5 images)</strong></li>
+<li class="disabled"><i class="fas fa-times"></i> Print delivery</li>
+<li class="disabled"><i class="fas fa-times"></i> Memorial website</li>
+</ul>
+<button class="btn btn-primary" onclick="simulateCheckout('Premium')" style="width:100%;">Choose Premium (test)</button>
+</div>
+<!-- Deluxe -->
+<div class="pricing-card">
+<div class="plan-name">Deluxe</div>
+<div class="plan-price">R999 <small>/ once</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> Everything in Premium</li>
+<li><i class="fas fa-check"></i> 3-page digital pamphlet</li>
+<li><i class="fas fa-check"></i> Full memorial website</li>
+<li><i class="fas fa-check"></i> Print delivery (50 copies)</li>
+<li><i class="fas fa-check"></i> Custom envelopes</li>
+<li><i class="fas fa-check"></i> Thank you cards (25)</li>
+<li><i class="fas fa-check"></i> Professional copywriting</li>
+<li><i class="fas fa-check"></i> Analytics dashboard</li>
+<li><i class="fas fa-check"></i> <strong>📸 Photography package (15 images + digital album)</strong></li>
+<li><i class="fas fa-check"></i> Priority support</li>
+</ul>
+<button class="btn btn-gold" onclick="simulateCheckout('Deluxe')" style="width:100%;">Choose Deluxe (test)</button>
+</div>
+<!-- Enterprise -->
+<div class="pricing-card">
+<div class="plan-name">Enterprise</div>
+<div class="plan-price">R2,499 <small>/ once</small></div>
+<ul class="plan-features">
+<li><i class="fas fa-check"></i> Everything in Deluxe</li>
+<li><i class="fas fa-check"></i> Funeral home partnership</li>
+<li><i class="fas fa-check"></i> White-label branding</li>
+<li><i class="fas fa-check"></i> Bulk print discounts</li>
+<li><i class="fas fa-check"></i> Dedicated account manager</li>
+<li><i class="fas fa-check"></i> Digital time capsule</li>
+<li><i class="fas fa-check"></i> Annual remembrance emails</li>
+<li><i class="fas fa-check"></i> <strong>📸 Full photography suite (unlimited images + videography)</strong></li>
+<li><i class="fas fa-check"></i> 24/7 concierge support</li>
+</ul>
+<button class="btn btn-primary" onclick="simulateCheckout('Enterprise')" style="width:100%;">Contact Sales (test)</button>
+</div>
+</div>
+<!-- Add-ons with photo focus -->
+<div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+<h4 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.5rem;">Additional Photography Services</h4>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:0.8rem;">
+<div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+<strong>Photo Album</strong> <span style="float:right; font-weight:600;">R250</span>
+<div style="font-size:0.7rem; color:var(--text-light);">Digital album with 20 images</div>
+</div>
+<div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+<strong>Portrait Session</strong> <span style="float:right; font-weight:600;">R450</span>
+<div style="font-size:0.7rem; color:var(--text-light);">Professional studio or location</div>
+</div>
+<div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+<strong>Video Tribute</strong> <span style="float:right; font-weight:600;">R650</span>
+<div style="font-size:0.7rem; color:var(--text-light);">2-3 min memorial video</div>
+</div>
+<div style="background:#fff; padding:0.8rem 1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+<strong>Photo Restoration</strong> <span style="float:right; font-weight:600;">R350</span>
+<div style="font-size:0.7rem; color:var(--text-light);">Restore old or damaged photos</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ─── TAB: GUESTBOOK ─── -->
+<div class="tab-content" id="tab-guestbook">
+<div class="guestbook-section">
+<h3><i class="fas fa-book" style="color:var(--accent-dark);"></i> Guestbook &amp; Condolences</h3>
+<p style="color:var(--text-light); font-size:0.85rem; margin-bottom:0.5rem;">Leave a message of comfort for the family.</p>
+<div class="guestbook-messages" id="guestbookMessages">
+<div class="guestbook-entry">
+<div class="name">Marie Jacobs</div>
+<div class="msg">Deepest condolences. Eleanor was a pillar of our community.</div>
+<div class="time">2 hours ago</div>
+</div>
+<div class="guestbook-entry">
+<div class="name">David Smith</div>
+<div class="msg">A beautiful soul. She will be deeply missed.</div>
+<div class="time">5 hours ago</div>
+</div>
+<div class="guestbook-entry">
+<div class="name">Thandi Nkosi</div>
+<div class="msg">Rest in peace, dear friend. Your legacy lives on.</div>
+<div class="time">1 day ago</div>
+</div>
+</div>
+<div class="guestbook-form">
+<input id="guestName" placeholder="Your name" type="text"/>
+<input id="guestMessage" placeholder="Your message..." type="text"/>
+<button class="btn btn-primary btn-sm" id="guestSubmit"><i class="fas fa-paper-plane"></i> Send</button>
+</div>
+</div>
+</div>
+<!-- ─── TAB: CANDLE ─── -->
+<div class="tab-content" id="tab-candle">
+<div class="candle-section">
+<h3><i class="fas fa-fire" style="color:#c9a87c;"></i> Light a Virtual Candle</h3>
+<p style="color:var(--text-light); font-size:0.85rem;">Click a candle to light it in memory of Eleanor.</p>
+<div class="candle-container" id="candleContainer">
+<div>
+<div class="candle" data-lit="false"></div>
+<div class="candle-label">Family</div>
+</div>
+<div>
+<div class="candle" data-lit="false"></div>
+<div class="candle-label">Friends</div>
+</div>
+<div>
+<div class="candle" data-lit="false"></div>
+<div class="candle-label">Community</div>
+</div>
+<div>
+<div class="candle" data-lit="false"></div>
+<div class="candle-label">All</div>
+</div>
+</div>
+<div class="candle-count" id="candleCount">🕯️ 0 candles lit</div>
+</div>
+</div>
+<!-- ─── TAB: ANALYTICS ─── -->
+<div class="tab-content" id="tab-analytics">
+<div class="analytics-section">
+<h3><i class="fas fa-chart-bar" style="color:var(--accent-dark);"></i> Memorial Analytics</h3>
+<p style="color:var(--text-light); font-size:0.85rem; margin-bottom:0.5rem;">Real-time engagement for this digital memorial.</p>
+<div class="analytics-grid">
+<div class="stat-card">
+<div class="number" id="statViews">247</div>
+<div class="label">Views</div>
+</div>
+<div class="stat-card">
+<div class="number" id="statCandles">12</div>
+<div class="label">Candles Lit</div>
+</div>
+<div class="stat-card">
+<div class="number" id="statMessages">8</div>
+<div class="label">Messages</div>
+</div>
+<div class="stat-card">
+<div class="number" id="statShares">23</div>
+<div class="label">Shares</div>
+</div>
+<div class="stat-card">
+<div class="number" id="statQR">56</div>
+<div class="label">QR Scans</div>
+</div>
+<div class="stat-card">
+<div class="number" id="statTime">4m</div>
+<div class="label">Avg. Time</div>
+</div>
+</div>
+<div style="font-size:0.65rem; color:var(--text-light); text-align:center; margin-top:0.5rem;">
+<i class="fas fa-sync-alt"></i> Updated in real-time · Premium &amp; Deluxe include full analytics.
                 </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: PACKAGES ─── -->
-        <div class="tab-content" id="tab-packages">
-            <div class="packages-section">
-                <h2>Choose Your Memorial Package</h2>
-                <p class="subtitle">Professional digital memorial packages for individuals and organizations. All packages include mobile optimization and QR code sharing.</p>
-
-                <!-- INDIVIDUAL PACKAGES -->
-                <div class="category-header">
-                    <i class="fas fa-user-circle"></i> Individual Memorial Packages
-                </div>
-
-                <div class="pricing-grid">
-                    <!-- Individual: Basic -->
-                    <div class="pricing-card">
-                        <div class="plan-icon">🌿</div>
-                        <div class="plan-name">Basic Memorial</div>
-                        <div class="plan-subtitle">For simple tributes</div>
-                        <div class="plan-price">R0 <small>Free</small></div>
-                        <div class="plan-billing">One-time access</div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Single-page memorial</li>
-                            <li><i class="fas fa-check"></i> 5 design templates</li>
-                            <li><i class="fas fa-check"></i> Photo emblem upload</li>
-                            <li><i class="fas fa-check"></i> Basic customization</li>
-                            <li><i class="fas fa-check"></i> QR code & link sharing</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Photo gallery</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Multi-page memorial</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Timeline feature</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Video/audio support</li>
-                        </ul>
-                        <button class="plan-cta btn-outline">Get Started</button>
-                    </div>
-
-                    <!-- Individual: Premium (Popular) -->
-                    <div class="pricing-card popular">
-                        <div class="plan-icon">⭐</div>
-                        <div class="plan-name">Premium Memorial</div>
-                        <div class="plan-subtitle">Most popular choice</div>
-                        <div class="plan-price">R499 <small>One-time</small></div>
-                        <div class="plan-billing">Lifetime access</div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> 6-page memorial</li>
-                            <li><i class="fas fa-check"></i> 15 design templates</li>
-                            <li><i class="fas fa-check"></i> Photo gallery (up to 8)</li>
-                            <li><i class="fas fa-check"></i> Life timeline feature</li>
-                            <li><i class="fas fa-check"></i> Video/audio support</li>
-                            <li><i class="fas fa-check"></i> Guestbook & comments</li>
-                            <li><i class="fas fa-check"></i> Virtual candles</li>
-                            <li><i class="fas fa-check"></i> PDF export</li>
-                            <li><i class="fas fa-check"></i> Analytics dashboard</li>
-                        </ul>
-                        <button class="plan-cta btn-gold">Choose Premium</button>
-                    </div>
-
-                    <!-- Individual: Deluxe -->
-                    <div class="pricing-card">
-                        <div class="plan-icon">💎</div>
-                        <div class="plan-name">Deluxe Memorial</div>
-                        <div class="plan-subtitle">Complete experience</div>
-                        <div class="plan-price">R999 <small>One-time</small></div>
-                        <div class="plan-billing">Premium support</div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Everything in Premium</li>
-                            <li><i class="fas fa-check"></i> Unlimited photo gallery</li>
-                            <li><i class="fas fa-check"></i> Multiple video uploads</li>
-                            <li><i class="fas fa-check"></i> Custom background images</li>
-                            <li><i class="fas fa-check"></i> Anniversary reminders</li>
-                            <li><i class="fas fa-check"></i> Digital memorial website</li>
-                            <li><i class="fas fa-check"></i> Advanced analytics</li>
-                            <li><i class="fas fa-check"></i> Priority support</li>
-                            <li><i class="fas fa-check"></i> Never auto-delete</li>
-                        </ul>
-                        <button class="plan-cta btn-primary">Choose Deluxe</button>
-                    </div>
-                </div>
-
-                <!-- BUSINESS PACKAGES -->
-                <div class="category-header">
-                    <i class="fas fa-building"></i> Funeral Home & Business Packages
-                </div>
-
-                <div class="pricing-grid">
-                    <!-- Business: Professional -->
-                    <div class="pricing-card">
-                        <div class="plan-icon">🏢</div>
-                        <div class="plan-name">Professional</div>
-                        <div class="plan-subtitle">Single memorial</div>
-                        <div class="plan-price">R1,999 <small>Per memorial</small></div>
-                        <div class="plan-billing">Annual subscription</div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Everything in Deluxe</li>
-                            <li><i class="fas fa-check"></i> Your funeral home branding</li>
-                            <li><i class="fas fa-check"></i> Custom domain option</li>
-                            <li><i class="fas fa-check"></i> Professional copywriting</li>
-                            <li><i class="fas fa-check"></i> Photography coordination</li>
-                            <li><i class="fas fa-check"></i> White-label templates</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Multi-memorial management</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Bulk printing</li>
-                            <li class="disabled"><i class="fas fa-times"></i> API integration</li>
-                        </ul>
-                        <button class="plan-cta btn-outline">Learn More</button>
-                    </div>
-
-                    <!-- Business: Partner (Featured) -->
-                    <div class="pricing-card business-featured">
-                        <div class="plan-icon">🤝</div>
-                        <div class="plan-name">Partner Plan</div>
-                        <div class="plan-subtitle">Up to 5 memorials</div>
-                        <div class="plan-price">R6,999 <small>Per year</small></div>
-                        <div class="plan-billing">Includes 5 memorials</div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Up to 5 active memorials</li>
-                            <li><i class="fas fa-check"></i> Funeral home branding</li>
-                            <li><i class="fas fa-check"></i> Custom domain included</li>
-                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
-                            <li><i class="fas fa-check"></i> Bulk print coordination</li>
-                            <li><i class="fas fa-check"></i> Staff training included</li>
-                            <li><i class="fas fa-check"></i> Basic analytics reports</li>
-                            <li><i class="fas fa-check"></i> Priority support 24/5</li>
-                            <li class="disabled"><i class="fas fa-times"></i> Unlimited memorials</li>
-                        </ul>
-                        <button class="plan-cta btn-primary">Contact Sales</button>
-                    </div>
-
-                    <!-- Business: Enterprise -->
-                    <div class="pricing-card">
-                        <div class="plan-icon">👑</div>
-                        <div class="plan-name">Enterprise</div>
-                        <div class="plan-subtitle">Unlimited memorials</div>
-                        <div class="plan-price">Custom <small>Contact us</small></div>
-                        <div class="plan-billing">Annual enterprise license</div>
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check"></i> Unlimited memorials</li>
-                            <li><i class="fas fa-check"></i> Full white-label solution</li>
-                            <li><i class="fas fa-check"></i> Custom domain & SSL</li>
-                            <li><i class="fas fa-check"></i> API integration available</li>
-                            <li><i class="fas fa-check"></i> Priority photography service</li>
-                            <li><i class="fas fa-check"></i> Advanced CRM integration</li>
-                            <li><i class="fas fa-check"></i> Custom branding & design</li>
-                            <li><i class="fas fa-check"></i> 24/7 concierge support</li>
-                            <li><i class="fas fa-check"></i> Dedicated technical team</li>
-                        </ul>
-                        <button class="plan-cta btn-success">Get Quote</button>
-                    </div>
-                </div>
-
-                <!-- ADD-ONS & SERVICES -->
-                <div class="add-ons-section">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:1rem; color:var(--primary);">
-                        <i class="fas fa-plus-circle"></i> Additional Services & Add-Ons
-                    </h3>
-                    <div class="add-ons-grid">
-                        <div class="add-on-card">
-                            <i class="fas fa-camera" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Professional Photography</strong>
-                            <span class="add-on-price">R500</span>
-                            <div class="add-on-desc">High-quality portrait session (10 edited photos)</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-images" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Photo Restoration</strong>
-                            <span class="add-on-price">R350</span>
-                            <div class="add-on-desc">Restore & enhance old or damaged photos</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-video" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Video Tribute</strong>
-                            <span class="add-on-price">R750</span>
-                            <div class="add-on-desc">Professional 3-5 min memorial video</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-book" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Printed Pamphlets</strong>
-                            <span class="add-on-price">R2.50 each</span>
-                            <div class="add-on-desc">50-500 copies, standard or premium paper</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-envelope" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Custom Envelopes</strong>
-                            <span class="add-on-price">R3.50 each</span>
-                            <div class="add-on-desc">Branded envelopes for pamphlets (50-500)</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-music" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Audio Eulogy Recording</strong>
-                            <span class="add-on-price">R400</span>
-                            <div class="add-on-desc">Professional recording & editing service</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-globe" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Custom Domain</strong>
-                            <span class="add-on-price">R150/year</span>
-                            <div class="add-on-desc">Personalized URL for memorial website</div>
-                        </div>
-                        <div class="add-on-card">
-                            <i class="fas fa-tasks" style="font-size:1.8rem; color:var(--gold); margin-bottom:0.5rem;"></i>
-                            <strong>Premium Design</strong>
-                            <span class="add-on-price">R600</span>
-                            <div class="add-on-desc">Custom template design by our team</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- COMPARISON -->
-                <div style="margin-top:3rem; padding:2rem; background:#f9f6f2; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                    <h3 style="font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:1rem; color:var(--primary);">
-                        💡 How to Choose
-                    </h3>
-                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
-                        <div>
-                            <strong style="color:var(--primary); display:block; margin-bottom:0.5rem;">Choose Basic if:</strong>
-                            <ul style="font-size:0.9rem; color:var(--text-light); list-style:none; padding:0;">
-                                <li>✓ Simple tribute is enough</li>
-                                <li>✓ Limited budget</li>
-                                <li>✓ Short-term memorial</li>
-                                <li>✓ Single platform sharing</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <strong style="color:var(--primary); display:block; margin-bottom:0.5rem;">Choose Premium if:</strong>
-                            <ul style="font-size:0.9rem; color:var(--text-light); list-style:none; padding:0;">
-                                <li>✓ Rich multimedia content</li>
-                                <li>✓ Family involvement</li>
-                                <li>✓ Long-term memorial</li>
-                                <li>✓ Professional appearance</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <strong style="color:var(--primary); display:block; margin-bottom:0.5rem;">Choose Enterprise if:</strong>
-                            <ul style="font-size:0.9rem; color:var(--text-light); list-style:none; padding:0;">
-                                <li>✓ Funeral home or business</li>
-                                <li>✓ Multiple memorials</li>
-                                <li>✓ Custom branding needed</li>
-                                <li>✓ Professional integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: PAGES ─── -->
-        <div class="tab-content" id="tab-pages">
-            <div style="background:var(--card-bg); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--border);">
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Customize Pages</h2>
-                <p style="color:var(--text-light); margin-bottom:1.5rem;">Reorder, rename, or hide pages in your memorial.</p>
-
-                <div id="pagesManager" style="display:grid; gap:0.8rem;">
-                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
-                        <span style="flex:1;">Cover Page</span>
-                        <input type="checkbox" checked style="width:18px; height:18px;">
-                    </div>
-                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
-                        <span style="flex:1;">Biography</span>
-                        <input type="checkbox" checked style="width:18px; height:18px;">
-                    </div>
-                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
-                        <span style="flex:1;">Photo Gallery</span>
-                        <input type="checkbox" checked style="width:18px; height:18px;">
-                    </div>
-                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
-                        <span style="flex:1;">Timeline</span>
-                        <input type="checkbox" checked style="width:18px; height:18px;">
-                    </div>
-                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
-                        <span style="flex:1;">Tribute Media</span>
-                        <input type="checkbox" checked style="width:18px; height:18px;">
-                    </div>
-                    <div style="display:flex; align-items:center; gap:0.8rem; background:#fff; padding:0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
-                        <i class="fas fa-grip-vertical" style="color:var(--text-light);"></i>
-                        <span style="flex:1;">Service Details</span>
-                        <input type="checkbox" checked style="width:18px; height:18px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: TIMELINE ─── -->
-        <div class="tab-content" id="tab-timeline">
-            <div style="background:var(--card-bg); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--border);">
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Life Timeline</h2>
-                <p style="color:var(--text-light); margin-bottom:1rem;">Add key life events and milestones.</p>
-
-                <div style="display:grid; gap:0.8rem; margin-bottom:1.5rem;" id="timelineList">
-                    <div class="timeline-event">
-                        <div class="timeline-year">1942</div>
-                        <div class="timeline-text">Born in Cape Town</div>
-                        <button>×</button>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="timeline-year">1960</div>
-                        <div class="timeline-text">Started teaching career</div>
-                        <button>×</button>
-                    </div>
-                    <div class="timeline-event">
-                        <div class="timeline-year">1965</div>
-                        <div class="timeline-text">Married John Smith</div>
-                        <button>×</button>
-                    </div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:0.5rem;">
-                    <input type="number" id="timelineYear" placeholder="Year" style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);" min="1900" max="2100">
-                    <input type="text" id="timelineEvent" placeholder="Life event or milestone" style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
-                    <button class="btn btn-primary btn-sm" id="addTimelineBtn"><i class="fas fa-plus"></i> Add</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: MEDIA ─── -->
-        <div class="tab-content" id="tab-media">
-            <div style="background:var(--card-bg); border-radius:var(--radius); padding:1.5rem; border:1px solid var(--border);">
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Multimedia</h2>
-                
-                <!-- Video Upload -->
-                <div style="margin-bottom:2rem;">
-                    <label style="display:block; font-weight:600; margin-bottom:0.5rem;">
-                        <i class="fas fa-video"></i> Eulogy Video
-                    </label>
-                    <div class="upload-zone" id="videoZone" style="margin-bottom:0.5rem;">
-                        <i class="fas fa-cloud-upload-alt"></i> Upload video (MP4, WebM)
-                        <input type="file" id="videoUpload" accept="video/*" />
-                    </div>
-                    <div id="videoPreviewContainer"></div>
-                </div>
-
-                <!-- Audio Upload -->
-                <div style="margin-bottom:2rem;">
-                    <label style="display:block; font-weight:600; margin-bottom:0.5rem;">
-                        <i class="fas fa-music"></i> Audio Eulogy / Music
-                    </label>
-                    <div class="upload-zone" id="audioZone">
-                        <i class="fas fa-cloud-upload-alt"></i> Upload audio (MP3, WAV)
-                        <input type="file" id="audioUpload" accept="audio/*" />
-                    </div>
-                    <div id="audioPreviewContainer"></div>
-                </div>
-
-                <!-- Background Image -->
-                <div>
-                    <label style="display:block; font-weight:600; margin-bottom:0.5rem;">
-                        <i class="fas fa-image"></i> Background Watermark
-                    </label>
-                    <div class="upload-zone" id="bgZone">
-                        <i class="fas fa-cloud-upload-alt"></i> Upload background
-                        <input type="file" id="bgUpload" accept="image/*" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: PRIVACY ─── -->
-        <div class="tab-content" id="tab-privacy">
-            <div class="privacy-section">
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1.5rem;">Privacy & Access Control</h2>
-
-                <div class="privacy-toggle">
-                    <div>
-                        <strong style="display:block; margin-bottom:0.2rem;">Public Memorial</strong>
-                        <span style="font-size:0.8rem; color:var(--text-light);">Anyone with the link can view</span>
-                    </div>
-                    <button class="toggle-switch active" id="publicToggle"></button>
-                </div>
-
-                <div class="privacy-toggle">
-                    <div>
-                        <strong style="display:block; margin-bottom:0.2rem;">Password Protected</strong>
-                        <span style="font-size:0.8rem; color:var(--text-light);">Require password to access</span>
-                    </div>
-                    <button class="toggle-switch" id="passwordToggle"></button>
-                </div>
-
-                <div id="passwordInputContainer" style="display:none; margin-bottom:1rem;">
-                    <input type="password" id="memorialPassword" placeholder="Set memorial password" style="width:100%; padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
-                </div>
-
-                <div class="privacy-toggle">
-                    <div>
-                        <strong style="display:block; margin-bottom:0.2rem;">Guest List Only</strong>
-                        <span style="font-size:0.8rem; color:var(--text-light);">Only send links to approved people</span>
-                    </div>
-                    <button class="toggle-switch" id="guestListToggle"></button>
-                </div>
-
-                <div class="privacy-toggle">
-                    <div>
-                        <strong style="display:block; margin-bottom:0.2rem;">Auto-delete After</strong>
-                        <span style="font-size:0.8rem; color:var(--text-light);">Automatically remove memorial after</span>
-                    </div>
-                    <select style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
-                        <option>Never</option>
-                        <option>1 Year</option>
-                        <option>5 Years</option>
-                        <option>10 Years</option>
-                    </select>
-                </div>
-
-                <div style="background:#e3f2fd; border:1px solid #90caf9; border-radius:var(--radius-sm); padding:1rem; margin-top:1rem;">
-                    <i class="fas fa-info-circle" style="color:#1565c0;"></i>
-                    <strong style="color:#1565c0; display:block; margin-bottom:0.3rem;">Privacy Protection</strong>
-                    <span style="font-size:0.8rem; color:#1565c0;">Your memorial data is encrypted and never shared with third parties.</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: ANALYTICS ─── -->
-        <div class="tab-content" id="tab-analytics">
-            <div class="analytics-section">
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">Memorial Analytics</h2>
-                <p style="color:var(--text-light); margin-bottom:1.5rem;">Real-time engagement metrics for this digital memorial.</p>
-
-                <div class="analytics-grid">
-                    <div class="stat-card">
-                        <div class="number">247</div>
-                        <div class="label">Total Views</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">42</div>
-                        <div class="label">Unique Visitors</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">18</div>
-                        <div class="label">Candles Lit</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">12</div>
-                        <div class="label">Guestbook Entries</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">34</div>
-                        <div class="label">Shares</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">4m 32s</div>
-                        <div class="label">Avg. Time</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">89%</div>
-                        <div class="label">Mobile Views</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="number">156</div>
-                        <div class="label">QR Scans</div>
-                    </div>
-                </div>
-
-                <div style="background:#f9f6f2; border:1px solid var(--border); border-radius:var(--radius-sm); padding:1rem; margin-top:1.5rem;">
-                    <h4 style="margin-bottom:0.8rem;">Engagement by Platform</h4>
-                    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.8rem;">
-                        <div style="text-align:center;">
-                            <div style="font-size:1.4rem; font-weight:700; color:var(--primary);">45%</div>
-                            <div style="font-size:0.75rem; color:var(--text-light); margin-top:0.3rem;">Direct Link</div>
-                        </div>
-                        <div style="text-align:center;">
-                            <div style="font-size:1.4rem; font-weight:700; color:#1877f2;">32%</div>
-                            <div style="font-size:0.75rem; color:var(--text-light); margin-top:0.3rem;">Facebook</div>
-                        </div>
-                        <div style="text-align:center;">
-                            <div style="font-size:1.4rem; font-weight:700; color:#25d366;">23%</div>
-                            <div style="font-size:0.75rem; color:var(--text-light); margin-top:0.3rem;">WhatsApp</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ─── TAB: GUESTBOOK ─── -->
-        <div class="tab-content" id="tab-guestbook">
-            <div class="guestbook-section">
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.6rem; margin-bottom:1rem;">
-                    <i class="fas fa-book"></i> Guestbook & Tributes
-                </h2>
-
-                <div class="guestbook-messages" id="guestbookMessages">
-                    <div class="guestbook-entry">
-                        <div class="name">Marie Jacobs</div>
-                        <div class="msg">Deepest condolences. Eleanor was a pillar of our community.</div>
-                        <div style="font-size:0.65rem; color:var(--text-light);">2 hours ago</div>
-                    </div>
-                    <div class="guestbook-entry">
-                        <div class="name">David Smith</div>
-                        <div class="msg">A beautiful soul. She will be deeply missed.</div>
-                        <div style="font-size:0.65rem; color:var(--text-light);">5 hours ago</div>
-                    </div>
-                </div>
-
-                <div style="display:grid; grid-template-columns:1fr 2fr auto; gap:0.5rem; margin-top:1rem;">
-                    <input type="text" id="guestName" placeholder="Your name" style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
-                    <input type="text" id="guestMessage" placeholder="Your message..." style="padding:0.6rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm);">
-                    <button class="btn btn-primary btn-sm" id="guestSubmit"><i class="fas fa-paper-plane"></i> Send</button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
+</div>
+</div>
+<!-- ─── FAB ─── -->
+<button class="fab-save" id="fabSave"><i class="fas fa-save"></i> Save &amp; Share</button>
+</div></main><footer class="wrap footer">© 2026 Eternal Leaf · Digital memorials made with care.</footer>
+<script>
+const state=JSON.parse(localStorage.getItem('eternalLeaf')||'{"memorials":[{"name":"Eleanor Rose","dates":"1942 – 2026","status":"Active"}]}');
+function save(){localStorage.setItem('eternalLeaf',JSON.stringify(state))}function go(id){document.querySelectorAll('.screen').forEach(e=>e.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);render()}
+function individualTab(tab,button){['overview','create','renewals'].forEach(x=>document.getElementById('ind-'+x).classList.toggle('hidden',x!==tab));document.querySelectorAll('[data-ind]').forEach(x=>x.classList.remove('active'));button.classList.add('active')}
+function parlourTab(tab,button){['dashboard','families','brand','billing'].forEach(x=>document.getElementById('par-'+x).classList.toggle('hidden',x!==tab));document.querySelectorAll('[data-par]').forEach(x=>x.classList.remove('active'));button.classList.add('active')}
+function render(){document.getElementById('activeCount').textContent=state.memorials.length;const rows=state.memorials.map(m=>`<div class="memorial-row"><div class="avatar">${m.name[0]}</div><div class="row-main"><b>${m.name}</b><span>${m.dates||'Dates to be added'} · Renewal due in 312 days</span></div><span class="badge">${m.status}</span><button class="button light" onclick="individualTab('create',document.querySelector('[data-ind=create]'))">Edit</button></div>`).join('');document.getElementById('individualRows').innerHTML=rows;document.getElementById('parlourRows').innerHTML=rows;document.getElementById('clientRows').innerHTML=rows}
+function preview(){const n=document.getElementById('name').value||'Amara Daniels';document.getElementById('previewName').textContent=n;document.getElementById('previewInitial').textContent=n[0];document.getElementById('previewDates').textContent=document.getElementById('dates').value||'1954 – 2026';document.getElementById('previewTribute').textContent=document.getElementById('tribute').value||'A life of warmth, courage and a generosity that stays with us.'}['name','dates','tribute'].forEach(x=>document.getElementById(x).addEventListener('input',preview));
+function createMemorial(e){e.preventDefault();state.memorials.unshift({name:document.getElementById('name').value,dates:document.getElementById('dates').value,status:'Draft'});save();individualTab('overview',document.querySelector('[data-ind=overview]'));toast('Memorial draft saved');render();e.target.reset();preview()}
+function publishPreview(){preview();toast('Preview updated — publish will be connected to your live account')};function newClient(){go('individual');individualTab('create',document.querySelector('[data-ind=create]'));toast('Create the client memorial, then invite the family')};function toast(message){let e=document.getElementById('toast');if(!e){e=document.createElement('div');e.id='toast';e.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#183331;color:white;padding:12px 18px;border-radius:999px;z-index:5;font-size:14px';document.body.append(e)}e.textContent=message;e.style.display='block';setTimeout(()=>e.style.display='none',2600)}render();
+</script><script>
         (function() {
             'use strict';
 
+            // ─── DOM refs ───
             const $ = id => document.getElementById(id);
-            
-            // ─── State ─── 
+            const nameInput = $('nameInput');
+            const datesInput = $('datesInput');
+            const messageInput = $('messageInput');
+            const bioInput = $('bioInput');
+            const previewName = $('previewName');
+            const previewDates = $('previewDates');
+            const previewBody = $('previewBody');
+            const previewBio = $('previewBio');
+            const previewGallery = $('previewGallery');
+            const pamphletHeader = $('pamphletHeader');
+            const pamphletFooter = $('pamphletFooter');
+            const emblemContainer = $('emblemContainer');
+            const uploadZone = $('uploadZone');
+            const imageUpload = $('imageUpload');
+            const galleryUpload = $('galleryUpload');
+            const galleryPreview = $('galleryPreview');
+            const audioUpload = $('audioUpload');
+            const audioFileName = $('audioFileName');
+            const audioPlayerContainer = $('audioPlayerContainer');
+            const audioPlayer = $('audioPlayer');
+            const bgUpload = $('bgUpload');
+            const qrContainer = $('qrcode');
+            const shareLinkText = $('shareLinkText');
+            const copyLinkBtn = $('copyLinkBtn');
+            const saveBtn = $('saveBtn');
+            const resetBtn = $('resetBtn');
+            const downloadBtn = $('downloadBtn');
+            const orderBtn = $('orderBtn');
+            const fabSave = $('fabSave');
+            const toast = $('toast');
+            const currentPageNum = $('currentPageNum');
+            const totalPages = $('totalPages');
+            const pageNav = $('pageNav');
+            const prevPage = $('prevPage');
+            const nextPage = $('nextPage');
+            const guestName = $('guestName');
+            const guestMessage = $('guestMessage');
+            const guestSubmit = $('guestSubmit');
+            const guestbookMessages = $('guestbookMessages');
+            const candleContainer = $('candleContainer');
+            const candleCount = $('candleCount');
+            const statViews = $('statViews');
+            const statCandles = $('statCandles');
+            const statMessages = $('statMessages');
+            const statShares = $('statShares');
+            const statQR = $('statQR');
+            const statTime = $('statTime');
+            const shareSocialBtn = $('shareSocialBtn');
+            const headerPackagesLink = $('headerPackagesLink');
+
+            // ─── State ───
             let currentTemplate = 'classic';
             let currentColor = '#b8a79b';
             let currentFont = 'inter';
-            let currentPage = 0;
-            const totalPages = 6;
-            let timelineEvents = [
-                { year: 1942, event: 'Born in Cape Town' },
-                { year: 1960, event: 'Started teaching career' },
-                { year: 1965, event: 'Married John Smith' }
-            ];
-            let uploadedImage = null;
+            let uploadedImageData = null;
             let galleryImages = [];
-            let videoFile = null;
-            let audioFile = null;
+            let audioData = null;
+            let bgImageData = null;
+            let currentPamphletLink = '';
+            let qrCodeInstance = null;
+            let currentPage = 0;
+            const totalPagesCount = 2;
+            let candleLit = 0;
 
-            // ─── Toast ─── 
+            // ─── Toast ───
+            let toastTimer = null;
+
             function showToast(msg) {
-                const toast = $('toast');
                 toast.textContent = msg;
                 toast.classList.add('show');
-                setTimeout(() => toast.classList.remove('show'), 2600);
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
             }
 
-            // ─── Update Preview ─── 
+            // ─── Update preview ───
             function updatePreview() {
-                const name = $('nameInput').value || 'Name';
-                const dates = $('datesInput').value || 'Dates';
-                const tribute = $('messageInput').value || '';
-                const bio = $('bioInput').value || '';
+                const name = nameInput.value || 'Name';
+                const dates = datesInput.value || 'Dates';
+                const message = messageInput.value || 'Message';
+                const bio = bioInput.value || '';
 
-                $('previewName').textContent = name;
-                $('previewDates').textContent = dates;
-                $('previewTribute').textContent = tribute;
-                $('previewBio').textContent = bio;
+                previewName.textContent = name;
+                previewDates.textContent = dates;
+                previewBody.innerHTML = `<p>${message}</p>`;
+                if (bio) {
+                    previewBio.innerHTML = bio;
+                    previewBio.style.display = 'block';
+                } else {
+                    previewBio.style.display = 'none';
+                }
 
-                // Update all cards with template and font
+                // Update both pages
+                document.querySelectorAll('.pamphlet-card').forEach((card, idx) => {
+                    card.className = 'pamphlet-card';
+                    if (idx === 0) card.classList.add('active-page');
+                    card.classList.add(`template-${currentTemplate}`);
+                });
+
+                // Font
+                const fontMap = {
+                    inter: 'font-inter',
+                    playfair: 'font-serif',
+                    quicksand: 'font-quicksand',
+                    script: 'font-script',
+                    lora: 'font-lora',
+                    montserrat: 'font-montserrat'
+                };
                 document.querySelectorAll('.pamphlet-card').forEach(card => {
-                    card.className = `pamphlet-card template-${currentTemplate} font-${currentFont}`;
-                    const page = parseInt(card.dataset.page);
-                    if (page === currentPage) card.classList.add('active-page');
+                    card.className = card.className.split(' ').filter(c => !c.startsWith('font-')).join(' ');
+                    if (fontMap[currentFont]) card.classList.add(fontMap[currentFont]);
                 });
 
-                // Update colors
-                document.querySelectorAll('.pamphlet-header, .pamphlet-footer').forEach(el => {
-                    el.style.borderColor = currentColor;
-                });
+                // Color
+                pamphletHeader.style.borderBottomColor = currentColor;
+                pamphletFooter.style.borderTopColor = currentColor;
+                document.querySelectorAll('.pamphlet-card .pamphlet-header').forEach(el => el.style.borderBottomColor =
+                    currentColor);
+                document.querySelectorAll('.pamphlet-card .pamphlet-footer').forEach(el => el.style.borderTopColor =
+                    currentColor);
+                document.querySelectorAll('.pamphlet-emblem').forEach(el => el.style.borderColor = currentColor);
 
-                // Update gallery
+                // Emblem
+                if (uploadedImageData) {
+                    document.querySelectorAll('.pamphlet-emblem').forEach(el => {
+                        el.innerHTML = `<img src="${uploadedImageData}" alt="emblem" />`;
+                    });
+                } else {
+                    document.querySelectorAll('.pamphlet-emblem').forEach(el => {
+                        el.innerHTML = `<i class="fas fa-leaf"></i>`;
+                    });
+                }
+
+                // Gallery
                 renderGallery();
 
-                // Update timeline preview
-                renderTimelinePreview();
+                // Background
+                if (bgImageData) {
+                    document.querySelectorAll('.pamphlet-card').forEach(card => {
+                        card.style.backgroundImage = `url(${bgImageData})`;
+                        card.style.backgroundSize = 'cover';
+                        card.style.backgroundPosition = 'center';
+                        card.style.backgroundOpacity = '0.08';
+                    });
+                } else {
+                    document.querySelectorAll('.pamphlet-card').forEach(card => {
+                        card.style.backgroundImage = 'none';
+                    });
+                }
 
-                // Update media
-                renderMediaPreview();
+                // Audio
+                if (audioData) {
+                    audioPlayer.src = audioData;
+                    audioPlayerContainer.style.display = 'block';
+                    audioFileName.textContent = 'Audio loaded';
+                } else {
+                    audioPlayerContainer.style.display = 'none';
+                    audioFileName.textContent = 'No file';
+                }
+
+                // Page numbers
+                currentPageNum.textContent = currentPage + 1;
+                totalPages.textContent = totalPagesCount;
+
+                document.querySelectorAll('.page-nav button[data-page]').forEach(btn => {
+                    const p = parseInt(btn.dataset.page);
+                    btn.classList.toggle('active-page', p === currentPage);
+                });
+
+                document.querySelectorAll('.pamphlet-card').forEach(card => {
+                    const p = parseInt(card.dataset.page);
+                    card.classList.toggle('active-page', p === currentPage);
+                });
             }
 
+            // ─── Gallery ───
             function renderGallery() {
-                const container = $('previewGallery');
-                container.innerHTML = '';
-                galleryImages.slice(0, 4).forEach(src => {
+                previewGallery.innerHTML = '';
+                galleryImages.forEach(src => {
                     const img = document.createElement('img');
                     img.src = src;
-                    container.appendChild(img);
+                    previewGallery.appendChild(img);
                 });
-            }
-
-            function renderTimelinePreview() {
-                const container = $('previewTimeline');
-                container.innerHTML = timelineEvents.map(e => `
-                    <div class="timeline-entry">
-                        <span class="timeline-year-badge">${e.year}</span>
-                        <span class="timeline-entry-text">${e.event}</span>
-                    </div>
-                `).join('');
-            }
-
-            function renderMediaPreview() {
-                const mediaContainer = $('previewMediaContainer');
-                mediaContainer.innerHTML = '';
-                if (videoFile) {
-                    const video = document.createElement('video');
-                    video.src = videoFile;
-                    video.controls = true;
-                    video.style.width = '100%';
-                    video.style.borderRadius = '12px';
-                    video.style.maxHeight = '300px';
-                    mediaContainer.appendChild(video);
-                } else if (audioFile) {
-                    const audio = document.createElement('audio');
-                    audio.src = audioFile;
-                    audio.controls = true;
-                    audio.style.width = '100%';
-                    audio.style.marginTop = '1rem';
-                    mediaContainer.appendChild(audio);
+                if (galleryImages.length === 0) {
+                    previewGallery.style.display = 'none';
                 } else {
-                    mediaContainer.innerHTML = '<i class="fas fa-video" style="font-size:2rem; margin:1rem 0; display:block;"></i><p style="color:var(--text-light);">Video or audio eulogy will appear here</p>';
+                    previewGallery.style.display = 'grid';
                 }
             }
 
-            function renderTimelineList() {
-                const list = $('timelineList');
-                list.innerHTML = timelineEvents.map((e, idx) => `
-                    <div class="timeline-event">
-                        <div class="timeline-year">${e.year}</div>
-                        <div class="timeline-text">${e.event}</div>
-                        <button onclick="removeTimelineEvent(${idx})">×</button>
-                    </div>
-                `).join('');
+            // ─── Generate link ───
+            function generatePamphletLink() {
+                const data = {
+                    n: nameInput.value,
+                    d: datesInput.value,
+                    m: messageInput.value,
+                    b: bioInput.value,
+                    t: currentTemplate,
+                    c: currentColor,
+                    f: currentFont,
+                    img: uploadedImageData ? 'yes' : 'no'
+                };
+                const json = JSON.stringify(data);
+                const encoded = btoa(encodeURIComponent(json));
+                const short = encoded.substring(0, 32);
+                return `https://eternal-leaf.app/m/${short}`;
             }
 
-            window.removeTimelineEvent = (idx) => {
-                timelineEvents.splice(idx, 1);
-                renderTimelineList();
+            // ─── QR ───
+            function generateQR(link) {
+                qrContainer.innerHTML = '';
+                try {
+                    qrCodeInstance = new QRCode(qrContainer, {
+                        text: link,
+                        width: 72,
+                        height: 72,
+                        colorDark: '#1a2c2b',
+                        colorLight: '#ffffff',
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+                } catch (e) {
+                    qrContainer.innerHTML =
+                        `<div class="qr-placeholder"><i class="fas fa-qrcode"></i><span>QR</span></div>`;
+                }
+            }
+
+            // ─── Save ───
+            function savePamphlet() {
                 updatePreview();
-            };
+                const link = generatePamphletLink();
+                currentPamphletLink = link;
+                shareLinkText.textContent = link;
+                generateQR(link);
+                // Update stats
+                const views = parseInt(statViews.textContent) + 1;
+                statViews.textContent = views;
+                showToast('✅ Digital pamphlet saved! Link & QR ready.');
+                return link;
+            }
 
-            // ─── Event Listeners ─── 
-            $('nameInput').addEventListener('input', updatePreview);
-            $('datesInput').addEventListener('input', updatePreview);
-            $('messageInput').addEventListener('input', updatePreview);
-            $('bioInput').addEventListener('input', updatePreview);
+            // ─── Reset ───
+            function resetPamphlet() {
+                nameInput.value = 'Eleanor Rose';
+                datesInput.value = '1942 – 2026';
+                messageInput.value = 'A gentle soul, forever in our hearts. Her warmth and wisdom touched everyone she met.';
+                bioInput.value = 'Born in Cape Town, Eleanor dedicated her life to teaching and nurturing young minds.';
+                currentTemplate = 'classic';
+                currentColor = '#b8a79b';
+                currentFont = 'inter';
+                uploadedImageData = null;
+                galleryImages = [];
+                audioData = null;
+                bgImageData = null;
 
-            // ─── Template ─── 
-            document.querySelectorAll('.template-chip').forEach(chip => {
-                chip.addEventListener('click', () => {
-                    document.querySelectorAll('.template-chip').forEach(c => c.classList.remove('active'));
-                    chip.classList.add('active');
-                    currentTemplate = chip.dataset.template;
-                    updatePreview();
+                document.querySelectorAll('.template-chip').forEach(c => c.classList.remove('active'));
+                document.querySelector('.template-chip[data-template="classic"]').classList.add('active');
+
+                document.querySelectorAll('.color-swatch').forEach(c => c.classList.remove('active'));
+                document.querySelector('.color-swatch[style*="#b8a79b"]').classList.add('active');
+
+                document.querySelectorAll('.font-chip').forEach(c => c.classList.remove('active'));
+                document.querySelector('.font-chip[data-font="inter"]').classList.add('active');
+
+                document.querySelectorAll('.pamphlet-emblem').forEach(el => {
+                    el.innerHTML = `<i class="fas fa-leaf"></i>`;
                 });
-            });
+                galleryPreview.innerHTML = '';
+                audioPlayerContainer.style.display = 'none';
+                audioFileName.textContent = 'No file';
+                document.querySelectorAll('.pamphlet-card').forEach(c => c.style.backgroundImage = 'none');
 
-            // ─── Color ─── 
-            document.querySelectorAll('.color-swatch').forEach(swatch => {
-                swatch.addEventListener('click', () => {
-                    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-                    swatch.classList.add('active');
-                    currentColor = swatch.dataset.color;
-                    updatePreview();
+                updatePreview();
+                showToast('↺ Reset to default');
+            }
+
+            // ─── Download PDF ───
+            function downloadPDF() {
+                const card = document.querySelector('.pamphlet-card.active-page');
+                if (!card) return;
+                showToast('📄 Generating PDF...');
+                html2canvas(card, {
+                    scale: 2,
+                    backgroundColor: '#fff',
+                    useCORS: true,
+                    logging: false
+                }).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF('p', 'mm', 'a4');
+                    const pdfWidth = 210;
+                    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+                    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                    pdf.save('digital-memorial-pamphlet.pdf');
+                    showToast('✅ PDF downloaded!');
+                }).catch(() => {
+                    showToast('⚠️ Could not generate PDF. Please try again.');
                 });
-            });
+            }
 
-            // ─── Font ─── 
-            document.querySelectorAll('.font-chip').forEach(chip => {
-                chip.addEventListener('click', () => {
-                    document.querySelectorAll('.font-chip').forEach(c => c.classList.remove('active'));
-                    chip.classList.add('active');
-                    currentFont = chip.dataset.font;
-                    updatePreview();
-                });
-            });
+            // ─── Order / Photo Service ───
+            function orderPhotoService() {
+                showToast('📸 Photography service: Contact us at photo@eternal-leaf.co.za');
+            }
 
-            // ─── Image Upload ─── 
-            $('imageUpload').addEventListener('change', (e) => {
-                const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = (ev) => {
-                        uploadedImage = ev.target.result;
-                        document.querySelectorAll('.pamphlet-emblem').forEach(el => {
-                            el.innerHTML = `<img src="${uploadedImage}" alt="emblem" />`;
-                        });
-                        showToast('✅ Photo uploaded');
-                    };
-                    reader.readAsDataURL(file);
+            // Allows end-to-end package testing without contacting a payment provider.
+            // Production renewals must only activate after a server-verified webhook.
+            function simulateCheckout(packageName) {
+                const accepted = confirm(`Test checkout for the ${packageName} package?\n\nNo card will be charged. Select OK to simulate an authorised payment.`);
+                if (!accepted) {
+                    showToast('Test checkout cancelled.');
+                    return;
                 }
+                localStorage.setItem('eternalLeafSelectedPackage', packageName);
+                showToast(`✓ ${packageName} selected in test mode. Live activation must wait for a verified Yoco webhook.`);
+            }
+            window.simulateCheckout = simulateCheckout;
+
+            // ─── Guestbook ───
+            function addGuestMessage() {
+                const name = guestName.value.trim() || 'Anonymous';
+                const msg = guestMessage.value.trim();
+                if (!msg) { showToast('Please write a message.'); return; }
+                const entry = document.createElement('div');
+                entry.className = 'guestbook-entry';
+                const time = new Date().toLocaleString();
+                entry.innerHTML =
+                    `<div class="name">${name}</div><div class="msg">${msg}</div><div class="time">${time}</div>`;
+                guestbookMessages.prepend(entry);
+                guestName.value = '';
+                guestMessage.value = '';
+                const count = parseInt(statMessages.textContent) + 1;
+                statMessages.textContent = count;
+                showToast('💬 Message sent.');
+            }
+
+            // ─── Candle ───
+            function toggleCandle(el) {
+                const lit = el.dataset.lit === 'true';
+                el.dataset.lit = (!lit).toString();
+                el.classList.toggle('lit', !lit);
+                candleLit += lit ? -1 : 1;
+                candleCount.textContent = `🕯️ ${candleLit} candles lit`;
+                const count = parseInt(statCandles.textContent) + (lit ? 0 : 1);
+                statCandles.textContent = count;
+                if (!lit) showToast('🕯️ A candle has been lit.');
+            }
+
+            // ─── Share ───
+            function sharePamphlet() {
+                if (!currentPamphletLink) savePamphlet();
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Eternal Leaf – Digital Memorial',
+                        text: `View this digital memorial pamphlet: ${currentPamphletLink}`,
+                        url: currentPamphletLink
+                    }).catch(() => {});
+                } else {
+                    navigator.clipboard?.writeText(currentPamphletLink).then(() => {
+                        showToast('📋 Link copied!');
+                    }).catch(() => {
+                        showToast('📋 ' + currentPamphletLink);
+                    });
+                }
+                const shares = parseInt(statShares.textContent) + 1;
+                statShares.textContent = shares;
+            }
+
+            // ─── Tab switching ───
+            document.querySelectorAll('.main-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    const target = this.dataset.tab;
+                    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+                    document.getElementById(`tab-${target}`).classList.add('active');
+                    // Update header link
+                    if (target === 'packages') {
+                        headerPackagesLink.classList.add('active');
+                    } else {
+                        headerPackagesLink.classList.remove('active');
+                    }
+                });
             });
 
-            // ─── Gallery Upload ─── 
-            $('galleryUpload').addEventListener('change', (e) => {
-                Array.from(e.target.files).slice(0, 4).forEach(file => {
+            // ─── Header Packages link ───
+            headerPackagesLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+                document.querySelector('.main-tab[data-tab="packages"]').classList.add('active');
+                document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+                document.getElementById('tab-packages').classList.add('active');
+                headerPackagesLink.classList.add('active');
+                // Scroll to packages section
+                document.getElementById('tab-packages').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // ─── Page navigation ───
+            function goToPage(p) {
+                if (p < 0 || p >= totalPagesCount) return;
+                currentPage = p;
+                updatePreview();
+            }
+
+            prevPage.addEventListener('click', () => goToPage(currentPage - 1));
+            nextPage.addEventListener('click', () => goToPage(currentPage + 1));
+            document.querySelectorAll('.page-nav button[data-page]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    goToPage(parseInt(this.dataset.page));
+                });
+            });
+
+            // ─── Event listeners ───
+            nameInput.addEventListener('input', updatePreview);
+            datesInput.addEventListener('input', updatePreview);
+            messageInput.addEventListener('input', updatePreview);
+            bioInput.addEventListener('input', updatePreview);
+
+            // Templates
+            document.querySelectorAll('.template-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    document.querySelectorAll('.template-chip').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    currentTemplate = this.dataset.template;
+                    updatePreview();
+                });
+            });
+
+            // Colors
+            document.querySelectorAll('.color-swatch').forEach(sw => {
+                sw.addEventListener('click', function() {
+                    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+                    this.classList.add('active');
+                    currentColor = this.dataset.color;
+                    updatePreview();
+                });
+            });
+
+            // Fonts
+            document.querySelectorAll('.font-chip').forEach(chip => {
+                chip.addEventListener('click', function() {
+                    document.querySelectorAll('.font-chip').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFont = this.dataset.font;
+                    updatePreview();
+                });
+            });
+
+            // Emblem upload
+            uploadZone.addEventListener('click', () => imageUpload.click());
+            imageUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    uploadedImageData = ev.target.result;
+                    updatePreview();
+                    showToast('🖼️ Emblem uploaded');
+                };
+                reader.readAsDataURL(file);
+            });
+
+            // Gallery upload
+            galleryUpload.addEventListener('change', function(e) {
+                const files = e.target.files;
+                if (!files.length) return;
+                Array.from(files).forEach(file => {
+                    if (galleryImages.length >= 4) {
+                        showToast('⚠️ Maximum 4 gallery images');
+                        return;
+                    }
                     const reader = new FileReader();
-                    reader.onload = (ev) => {
+                    reader.onload = function(ev) {
                         galleryImages.push(ev.target.result);
                         renderGallery();
-                    };
-                    reader.readAsDataURL(file);
-                });
-                showToast('✅ Gallery updated');
-            });
-
-            // ─── Video Upload ─── 
-            $('videoUpload').addEventListener('change', (e) => {
-                const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = (ev) => {
-                        videoFile = ev.target.result;
                         updatePreview();
-                        showToast('✅ Video uploaded');
                     };
                     reader.readAsDataURL(file);
-                }
+                });
+                showToast('🖼️ Gallery updated');
             });
 
-            // ─── Audio Upload ─── 
-            $('audioUpload').addEventListener('change', (e) => {
+            // Audio upload
+            audioUpload.addEventListener('change', function(e) {
                 const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = (ev) => {
-                        audioFile = ev.target.result;
-                        updatePreview();
-                        showToast('✅ Audio uploaded');
-                    };
-                    reader.readAsDataURL(file);
-                }
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    audioData = ev.target.result;
+                    updatePreview();
+                    showToast('🎵 Audio uploaded');
+                };
+                reader.readAsDataURL(file);
             });
 
-            // ─── Timeline ─── 
-            $('addTimelineBtn').addEventListener('click', () => {
-                const year = parseInt($('timelineYear').value);
-                const event = $('timelineEvent').value.trim();
-                if (year && event) {
-                    timelineEvents.push({ year, event });
-                    timelineEvents.sort((a, b) => a.year - b.year);
-                    renderTimelineList();
+            // Background upload
+            bgUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = function(ev) {
+                    bgImageData = ev.target.result;
                     updatePreview();
-                    $('timelineYear').value = '';
-                    $('timelineEvent').value = '';
-                    showToast('✅ Timeline event added');
-                }
+                    showToast('🌅 Background set');
+                };
+                reader.readAsDataURL(file);
             });
 
-            // ─── Pagination ─── 
-            document.querySelectorAll('.page-nav button[data-page]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    currentPage = parseInt(btn.dataset.page);
-                    updatePreview();
+            // Save
+            saveBtn?.addEventListener('click', savePamphlet);
+            fabSave?.addEventListener('click', savePamphlet);
+
+            // Reset
+            resetBtn?.addEventListener('click', resetPamphlet);
+
+            // Download PDF
+            downloadBtn?.addEventListener('click', downloadPDF);
+
+            // Order / Photo
+            orderBtn?.addEventListener('click', orderPhotoService);
+
+            // Copy link
+            copyLinkBtn?.addEventListener('click', function() {
+                if (!currentPamphletLink) savePamphlet();
+                navigator.clipboard?.writeText(currentPamphletLink).then(() => {
+                    showToast('📋 Link copied!');
+                }).catch(() => {
+                    const temp = document.createElement('input');
+                    temp.value = currentPamphletLink;
+                    document.body.appendChild(temp);
+                    temp.select();
+                    document.execCommand('copy');
+                    temp.remove();
+                    showToast('📋 Link copied!');
                 });
             });
 
-            $('prevPage').addEventListener('click', () => {
-                if (currentPage > 0) {
-                    currentPage--;
-                    updatePreview();
-                }
+            // Share social
+            shareSocialBtn?.addEventListener('click', sharePamphlet);
+
+            // Guestbook
+            guestSubmit?.addEventListener('click', addGuestMessage);
+            guestMessage?.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') addGuestMessage();
             });
 
-            $('nextPage').addEventListener('click', () => {
-                if (currentPage < totalPages - 1) {
-                    currentPage++;
-                    updatePreview();
-                }
-            });
-
-            // ─── Tab Navigation ─── 
-            document.querySelectorAll('.main-tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const tabName = tab.dataset.tab;
-                    document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    $(`tab-${tabName}`).classList.add('active');
+            // Candle
+            document.querySelectorAll('.candle').forEach(c => {
+                c.addEventListener('click', function() {
+                    toggleCandle(this);
                 });
             });
 
-            // ─── Privacy Toggles ─── 
-            $('passwordToggle').addEventListener('click', function() {
-                this.classList.toggle('active');
-                $('passwordInputContainer').style.display = this.classList.contains('active') ? 'block' : 'none';
-            });
-
-            // ─── Guestbook ─── 
-            $('guestSubmit').addEventListener('click', () => {
-                const name = $('guestName').value.trim() || 'Anonymous';
-                const msg = $('guestMessage').value.trim();
-                if (msg) {
-                    const entry = document.createElement('div');
-                    entry.className = 'guestbook-entry';
-                    entry.innerHTML = `
-                        <div class="name">${name}</div>
-                        <div class="msg">${msg}</div>
-                        <div style="font-size:0.65rem; color:var(--text-light);">just now</div>
-                    `;
-                    $('guestbookMessages').insertBefore(entry, $('guestbookMessages').firstChild);
-                    $('guestName').value = '';
-                    $('guestMessage').value = '';
-                    showToast('✅ Message posted');
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    savePamphlet();
                 }
+                if (e.key === 'ArrowRight') goToPage(currentPage + 1);
+                if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
             });
 
-            // ─── Save ─── 
-            $('fabSave').addEventListener('click', () => {
-                updatePreview();
-                showToast('✅ Memorial saved! Link ready to share.');
-            });
+            // ─── Init ───
+            resetPamphlet();
+            setTimeout(() => {
+                savePamphlet();
+            }, 400);
 
-            // ─── Social Share ─── 
-            document.querySelectorAll('.social-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const platform = card.id.replace('share', '').toLowerCase();
-                    showToast(`📤 Sharing to ${platform}...`);
-                });
-            });
+            // ─── Auto-save stats ───
+            setInterval(() => {
+                const views = parseInt(statViews.textContent);
+                if (Math.random() > 0.7) statViews.textContent = views + Math.floor(Math.random() * 2);
+                const qr = parseInt(statQR.textContent);
+                if (Math.random() > 0.85) statQR.textContent = qr + 1;
+            }, 8000);
 
-            // Initialize
-            updatePreview();
-            renderTimelineList();
         })();
-    </script>
-
-</body>
-</html>
+    </script><script>
+document.addEventListener('DOMContentLoaded', function(){
+  const back=document.getElementById('backToPlatform');
+  if(back) back.addEventListener('click', function(e){ e.preventDefault(); if(typeof go==='function') go('home'); });
+});
+function goStudio(){ if(typeof go==='function') go('studio'); }
+</script><script>
+function toggleAuthMode(){
+  const signIn=document.getElementById('signinForm');
+  const signUp=document.getElementById('signupFormWrap');
+  const title=document.getElementById('authTitle');
+  const intro=document.getElementById('authIntro');
+  const switchText=document.getElementById('authSwitchText');
+  const btn=document.getElementById('authSwitchBtn');
+  const signup=signUp.classList.contains('hidden');
+  signUp.classList.toggle('hidden',!signup);
+  signIn.classList.toggle('hidden',signup);
+  title.textContent=signup?'Create your account':'Sign in';
+  intro.textContent=signup?'Join Eternal Leaf as an individual or funeral parlour.':'Access your memorials and platform dashboard.';
+  switchText.textContent=signup?'Already a member?':'New member?';
+  btn.textContent=signup?'Sign in':'Sign up';
+}
+function handleAuth(event,mode){
+  event.preventDefault();
+  if(typeof showToast==='function'){
+    showToast(mode==='signup'?'Account created successfully. You can now sign in.':'Sign-in details accepted for this demo.');
+  } else {
+    alert(mode==='signup'?'Account created successfully.':'Sign-in details accepted for this demo.');
+  }
+  if(mode==='signup') toggleAuthMode();
+}
+</script><script>
+function showPricing(type){
+  const individual=document.getElementById('individualPricing');
+  const company=document.getElementById('companyPricing');
+  const it=document.getElementById('individualPricingTab');
+  const ct=document.getElementById('companyPricingTab');
+  if(!individual||!company) return;
+  const isCompany=type==='company';
+  individual.style.display=isCompany?'none':'block';
+  company.style.display=isCompany?'block':'none';
+  if(it){it.classList.toggle('btn-primary',!isCompany);it.classList.toggle('btn-outline',isCompany);}
+  if(ct){ct.classList.toggle('btn-primary',isCompany);ct.classList.toggle('btn-outline',!isCompany);}
+}
+</script></body></html>
